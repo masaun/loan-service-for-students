@@ -7,7 +7,7 @@ import Web3Info from "./components/Web3Info/index.js";
 import CounterUI from "./components/Counter/index.js";
 import Wallet from "./components/Wallet/index.js";
 import Instructions from "./components/Instructions/index.js";
-import { Loader } from 'rimble-ui';
+import { Loader, Card } from 'rimble-ui';
 
 import { zeppelinSolidityHotLoaderOptions } from '../config/webpack';
 
@@ -49,9 +49,12 @@ class App extends Component {
     let Wallet = {};
     let StudentLoanToken = {};
     try {
-      Counter = require("../../contracts/Counter.sol");
-      Wallet = require("../../contracts/Wallet.sol");
-      StudentLoanToken = require("../../contracts/StudentLoanToken.sol");
+      // Counter = require("../../contracts/Counter.sol");
+      // Wallet = require("../../contracts/Wallet.sol");
+      // StudentLoanToken = require("../../contracts/StudentLoanToken.sol");
+      Counter = require("../../build/contracts/Counter.json");
+      Wallet = require("../../build/contracts/Wallet.json");
+      StudentLoanToken = require("../../build/contracts/StudentLoanToken.json");  // Load ABI of contract of StudentLoanToken
     } catch (e) {
       console.log(e);
     }
@@ -259,16 +262,6 @@ class App extends Component {
     );
   }
 
-  renderFAQ() {
-    return (
-      <div className={styles.wrapper}>
-        <Instructions
-          ganacheAccounts={this.state.ganacheAccounts}
-          name="faq" accounts={this.state.accounts} />
-      </div>
-    );
-  }
-
   renderEVM() {
     return (
       <div className={styles.wrapper}>
@@ -301,15 +294,16 @@ class App extends Component {
 
     return (
       <div className={styles.wrapper}>
-      {!this.state.web3 && this.renderStudentLoanToken()}
+      {!this.state.web3 && this.renderLoader()}
       {this.state.web3 && !this.state.student_loan_token && (
         this.renderDeployCheck('student_loan_token')
       )}
-      {this.state.web3 && this.state.student_loan_token && (
+      {this.state.web3 && this.state.financial_token && (
         <div className={styles.contracts}>
           <h1>StudentLoanToken Contract is good to Go!</h1>
+
           <div className={styles.widgets}>
-            <p>テスト</p>
+            <p>StudentLoanToken Test</p>
           </div>
         </div>
       )}
