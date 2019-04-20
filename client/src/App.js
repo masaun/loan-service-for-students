@@ -104,36 +104,8 @@ class App extends Component {
   //////////////////////////////////// 
   ///// Dai.js
   ////////////////////////////////////
-  const maker = await Maker.create('http', {
-    privateKey: YOUR_PRIVATE_KEY, // '0xabc...'
-    url: 'http://some-ethereum-rpc-node.net',
-    provider: {
-      type: 'HTTP', // or 'TEST'
-      network: 'kovan'
-    },
-    web3: {
-      statusTimerDelay: 2000,
-      confirmedBlockCount: 8
-      transactionSettings: {
-        gasPrice: 12000000000
-      }
-    },
-    log: false
-  });
   
-  const maker = Maker.create('test');
-  await maker.authenticate();
-
-  transferDai(address, amount) {
-    const dai = maker.service('token').getToken('DAI');
-    return dai.transfer(address, amount);
-  }
-
-
-  // const cdp = await maker.openCdp();
-  // const info = await cdp.getInfo();
-  // console.log(info);
-
+  
 
 
   //////////////////////////////////// 
