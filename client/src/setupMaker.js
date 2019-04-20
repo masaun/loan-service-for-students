@@ -1,6 +1,7 @@
-import trezorPlugin from '@makerdao/dai-plugin-trezor-web';
-import ledgerPlugin from '@makerdao/dai-plugin-ledger-web';
-const Maker = require('@makerdao/dai');
+//import trezorPlugin from '@makerdao/dai-plugin-trezor-web';
+//import ledgerPlugin from '@makerdao/dai-plugin-ledger-web';
+import Maker from '@makerdao/dai';
+//const Maker = require('@makerdao/dai');
 
 // These are keys that are set up in our test chain with some Ether.
 export const keys = [
@@ -22,16 +23,20 @@ const TESTNET_URL = 'http://localhost:2000';      // Origin
 
 export default async function(useMetaMask) {
   window.Maker = Maker;
+  console.log('=== Maker ===', Maker);
   const maker = Maker.create(useMetaMask ? 'browser' : 'http', {
     url: TESTNET_URL,
     //url: KOVAN_INFURA_URL,
-    plugins: [trezorPlugin, ledgerPlugin],
+    //plugins: [trezorPlugin, ledgerPlugin],
+    plugins: [],
     accounts: {
       test1: { type: 'privateKey', key: keys[0] }
     }
   });
 
-  await maker.authenticate();
+  //await maker.authenticate();
+  //console.log('maker.authenticate()', maker.authenticate());
+
   if (maker.service('web3').networkId() !== 999) {
     alert(
       'To work with testchain accounts, configure MetaMask to use ' +
@@ -39,5 +44,6 @@ export default async function(useMetaMask) {
     );
   }
   window.maker = maker;
+  console.log('=== maker ===', maker);
   return maker;
 }

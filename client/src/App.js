@@ -13,7 +13,9 @@ import { zeppelinSolidityHotLoaderOptions } from '../config/webpack';
 
 import styles from './App.module.scss';
 
-import Maker from '@makerdao/dai';   // Dai.js from MakerDAO
+/////// Dai.js from MakerDAO
+import Maker from '@makerdao/dai';
+import setupMaker, { keys } from './setupMaker.js';
 
 
 class App extends Component {
@@ -33,7 +35,12 @@ class App extends Component {
       valueOfMintBy: '',
       valueOfMintToken: '',
       value_of_mint_by: '',
-      value_of_mint_token: ''
+      value_of_mint_token: '',
+
+      /////// Added Dai.js
+      //accounts: [],
+      cdps: [],
+      useMetaMask: window.location.search.includes('metamask')
     };
 
     /////// Bind something
@@ -104,8 +111,25 @@ class App extends Component {
   //////////////////////////////////// 
   ///// Dai.js
   ////////////////////////////////////
-  
-  
+  openLockDraw = async () => {
+    const maker = await Maker.create("test");
+    // const maker = await Maker.create("http", {
+    //     privateKey: YOUR_PRIVATE_KEY,
+    //     url: 'https://kovan.infura.io/v3/YOUR_INFURA_PROJECT_ID'
+    // });
+    console.log('=== maker ===', maker); // '50.00 DAI'
+
+    await maker.authenticate();
+    const cdp = await maker.openCdp();
+
+    await cdp.lockEth(0.25);
+    await cdp.drawDai(50);
+
+    const debt = await cdp.getDebtValue();
+    console.log('=== debt.toString ===', debt.toString); // '50.00 DAI'
+  }
+
+
 
 
   //////////////////////////////////// 
@@ -122,6 +146,19 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
+    ////// Part of Dai.js
+    setupMaker(this.state.useMetaMask)
+      .then(maker => {
+        this.setState({ maker });
+        this.updateAccounts(maker);
+      })
+      .catch(err => {
+        console.log(err);
+        alert("Couldn't set up Maker: " + err.message);
+      });
+
+
+    ////// Part of StudentLoanToken
     const hotLoaderDisabled = zeppelinSolidityHotLoaderOptions.disabled;
     let Counter = {};
     let Wallet = {};
