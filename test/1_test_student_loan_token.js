@@ -79,4 +79,16 @@ contract("StudentLoanToken", accounts => {
         let totalSupply_ERC20 = await student_loan_token.methods.totalSupply().call();
         console.log('=== totalSupply function ===', totalSupply_ERC20);   // Success
     });
+
+
+    it("Maker.create test of Dai.js", async () => {
+        const maker = Maker.create('test');
+        await maker.authenticate();
+
+        transferDai(address, amount) {
+          const dai = maker.service('token').getToken('DAI');
+          return dai.transfer(address, amount);
+        }
+        console.log('=== dai ===', dai);   // Success
+    });
 });

@@ -13,6 +13,9 @@ import { zeppelinSolidityHotLoaderOptions } from '../config/webpack';
 
 import styles from './App.module.scss';
 
+import Maker from '@makerdao/dai';   // Dai.js from MakerDAO
+
+
 class App extends Component {
 
     constructor(props) {
@@ -94,6 +97,42 @@ class App extends Component {
       value_of_mint_token: valueOfMintToken
     });
   }
+
+
+
+
+  //////////////////////////////////// 
+  ///// Dai.js
+  ////////////////////////////////////
+  const maker = await Maker.create('http', {
+    privateKey: YOUR_PRIVATE_KEY, // '0xabc...'
+    url: 'http://some-ethereum-rpc-node.net',
+    provider: {
+      type: 'HTTP', // or 'TEST'
+      network: 'kovan'
+    },
+    web3: {
+      statusTimerDelay: 2000,
+      confirmedBlockCount: 8
+      transactionSettings: {
+        gasPrice: 12000000000
+      }
+    },
+    log: false
+  });
+  
+  const maker = Maker.create('test');
+  await maker.authenticate();
+
+  transferDai(address, amount) {
+    const dai = maker.service('token').getToken('DAI');
+    return dai.transfer(address, amount);
+  }
+
+
+  // const cdp = await maker.openCdp();
+  // const info = await cdp.getInfo();
+  // console.log(info);
 
 
 
@@ -413,6 +452,15 @@ class App extends Component {
                 <Button onClick={this.sendCreateProposal}>Burn Token</Button>
               </div>
             </Card>
+
+
+            <Card width={'420px'} bg="primary">
+              <div className={styles.widgets}>
+                <p>Convert DAI</p>
+
+                <Button onClick={this.sendCreateProposal}>Convert DAI</Button>
+              </div>
+            </Card>
           </div>
         </div>
       )}
@@ -428,6 +476,7 @@ class App extends Component {
           {this.state.route === 'counter' && this.renderBody()}
           {this.state.route === 'evm' && this.renderEVM()}
           {this.state.route === 'student_loan_token' && this.renderStudentLoanToken()}
+          {this.state.route === 'convert DAI' && this.renderStudentLoanToken()}
         <Footer />
       </div>
     );
