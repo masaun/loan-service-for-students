@@ -52,4 +52,4 @@ const getGanacheWeb3 = () => {
 }
 
 export default getWeb3;
-export { getGanacheWeb3 };
+export { getGanacheWeb3, Web3 };
