@@ -19,12 +19,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
-    "client": "cd client && npm run start",
-    "console": "truffle console --network development",
-    "migrate": "truffle migrate --reset --network development",
-    "test": "truffle test/*",
-    "session": "zos session --network development --expires 7200"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
