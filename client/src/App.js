@@ -280,6 +280,27 @@ class App extends Component {
     );
   }
 
+  renderStudentLoanToken() {
+    const {} = this.state;
+
+    return (
+      <div className={styles.wrapper}>
+      {!this.state.web3 && this.renderStudentLoanToken()}
+      {this.state.web3 && !this.state.student_loan_token && (
+        this.renderDeployCheck('student_loan_token')
+      )}
+      {this.state.web3 && this.state.student_loan_token && (
+        <div className={styles.contracts}>
+          <h1>StudentLoanToken Contract is good to Go!</h1>
+          <div className={styles.widgets}>
+            <p>テスト</p>
+          </div>
+        </div>
+      )}
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className={styles.App}>
@@ -287,7 +308,7 @@ class App extends Component {
           {this.state.route === '' && this.renderInstructions()}
           {this.state.route === 'counter' && this.renderBody()}
           {this.state.route === 'evm' && this.renderEVM()}
-          {this.state.route === 'faq' && this.renderFAQ()}
+          {this.state.route === 'student_loan_token' && this.renderFAQ()}
         <Footer />
       </div>
     );
