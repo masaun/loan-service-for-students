@@ -47,9 +47,11 @@ class App extends Component {
     const hotLoaderDisabled = zeppelinSolidityHotLoaderOptions.disabled;
     let Counter = {};
     let Wallet = {};
+    let StudentLoanToken = {};
     try {
       Counter = require("../../contracts/Counter.sol");
       Wallet = require("../../contracts/Wallet.sol");
+      StudentLoanToken = require("../../contracts/StudentLoanToken.sol");
     } catch (e) {
       console.log(e);
     }
@@ -74,6 +76,7 @@ class App extends Component {
         balance = web3.utils.fromWei(balance, 'ether');
         let instance = null;
         let instanceWallet = null;
+        let instanceStudentLoanToken = null;
         let deployedNetwork = null;
         if (Counter.networks) {
           deployedNetwork = Counter.networks[networkId.toString()];
@@ -93,14 +96,24 @@ class App extends Component {
             );
           }
         }
-        if (instance || instanceWallet) {
+        if (StudentLoanToken.networks) {
+          deployedNetwork = StudentLoanToken.networks[networkId.toString()];
+          if (deployedNetwork) {
+            instanceStudentLoanToken = new web3.eth.Contract(
+              StudentLoanToken.abi,
+              deployedNetwork && deployedNetwork.address,
+            );
+            console.log('=== instanceStudentLoanToken ===', instanceStudentLoanToken);
+          }
+        }
+        if (instance || instanceWallet || instanceStudentLoanToken) {
           // Set web3, accounts, and contract to the state, and then proceed with an
           // example of interacting with the contract's methods.
           this.setState({ web3, ganacheAccounts, accounts, balance, networkId, networkType, hotLoaderDisabled,
-            isMetaMask, contract: instance, wallet: instanceWallet }, () => {
-              this.refreshValues(instance, instanceWallet);
+            isMetaMask, contract: instance, wallet: instanceWallet, student_loan_token: instanceStudentLoanToken }, () => {
+              this.refreshValues(instance, instanceWallet, instanceStudentLoanToken);
               setInterval(() => {
-                this.refreshValues(instance, instanceWallet);
+                this.refreshValues(instance, instanceWallet, instanceStudentLoanToken);
               }, 5000);
             });
         }
@@ -123,12 +136,15 @@ class App extends Component {
     }
   }
 
-  refreshValues = (instance, instanceWallet) => {
+  refreshValues = (instance, instanceWallet, instanceStudentLoanToken) => {
     if (instance) {
       this.getCount();
     }
     if (instanceWallet) {
       this.updateTokenOwner();
+    }
+    if (instanceStudentLoanToken) {
+      console.log('refreshValues of instanceStudentLoanToken');
     }
   }
 
@@ -308,7 +324,7 @@ class App extends Component {
           {this.state.route === '' && this.renderInstructions()}
           {this.state.route === 'counter' && this.renderBody()}
           {this.state.route === 'evm' && this.renderEVM()}
-          {this.state.route === 'student_loan_token' && this.renderFAQ()}
+          {this.state.route === 'student_loan_token' && this.renderStudentLoanToken()}
         <Footer />
       </div>
     );
