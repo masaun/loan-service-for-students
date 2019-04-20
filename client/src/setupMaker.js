@@ -37,13 +37,13 @@ export default async function(useMetaMask) {
   //await maker.authenticate();
   //console.log('maker.authenticate()', maker.authenticate());
 
-  if (maker.service('web3').networkId() !== 999) {
-    alert(
-      'To work with testchain accounts, configure MetaMask to use ' +
-        `"Custom RPC" with address "${TESTNET_URL}".`
-    );
-  }
+  // if (maker.service('web3').networkId() !== 999) {
+  //   alert(
+  //     'To work with testchain accounts, configure MetaMask to use ' +
+  //       `"Custom RPC" with address "${TESTNET_URL}".`
+  //   );
+  // }
   window.maker = maker;
-  console.log('=== maker ===', maker);
+  //console.log('=== maker ===', maker);
   return maker;
 }

@@ -111,23 +111,53 @@ class App extends Component {
   //////////////////////////////////// 
   ///// Dai.js
   ////////////////////////////////////
-  openLockDraw = async () => {
-    const maker = await Maker.create("test");
-    // const maker = await Maker.create("http", {
-    //     privateKey: YOUR_PRIVATE_KEY,
-    //     url: 'https://kovan.infura.io/v3/YOUR_INFURA_PROJECT_ID'
-    // });
-    console.log('=== maker ===', maker); // '50.00 DAI'
+  updateAccounts = async maker => {
+    if (!maker) maker = this.state.maker;
+    const accounts = await Promise.all(
+      maker.listAccounts().map(async account => {
+        return {
+          ...account,
+          balance: (await maker.getToken('ETH').balanceOf(account.address)).toString()
+        };
+      })
+    );
+    this.setState({
+      accounts,
+      currentAccount: maker.currentAccount()
+    });
+  };
 
-    await maker.authenticate();
+  useAccount = async name => {
+    const { maker } = this.state;
+    try{
+      maker.useAccount(name);
+    }catch(e){
+      alert(e);
+      return;
+    }
+    await this.updateAccounts();
+  };
+
+  useAccountWithAddress = async address => {
+    const { maker } = this.state;
+    try{
+      maker.useAccountWithAddress(address);
+    }catch(e){
+      alert(e);
+      return;
+    }
+    await this.updateAccounts();
+  };
+
+  openCdp = async () => {
+    const { maker } = this.state;
     const cdp = await maker.openCdp();
-
-    await cdp.lockEth(0.25);
-    await cdp.drawDai(50);
-
-    const debt = await cdp.getDebtValue();
-    console.log('=== debt.toString ===', debt.toString); // '50.00 DAI'
-  }
+    const info = await cdp.getInfo();
+    this.setState(({ cdps }) => ({
+      cdps: [...cdps, { id: cdp.id, owner: info.lad.toLowerCase() }]
+    }));
+    await this.updateAccounts();
+  };
 
 
 
