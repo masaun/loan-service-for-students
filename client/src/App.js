@@ -300,7 +300,7 @@ class App extends Component {
       )}
       {this.state.web3 && this.state.student_loan_token && (
         <div className={styles.contracts}>
-          <h1>StudentLoanToken Contract is good to Go!</h1>
+          <h1>Manager of Student Loan Token</h1>
 
           <div className={styles.widgets}>
             <Card width={'420px'} bg="primary">
