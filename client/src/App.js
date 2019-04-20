@@ -16,6 +16,17 @@ import styles from './App.module.scss';
 /////// Dai.js from MakerDAO
 import Maker from '@makerdao/dai';
 import setupMaker, { keys } from './setupMaker.js';
+const {
+  MKR,
+  DAI,
+  ETH,
+  WETH,
+  PETH,
+  USD_ETH,
+  USD_MKR,
+  USD_DAI
+} = Maker;
+
 
 
 class App extends Component {
@@ -159,7 +170,22 @@ class App extends Component {
     await this.updateAccounts();
   };
 
+  transferDai = async () => {
+    const { maker } = this.state;
+    const dai = maker.service('token').getToken('DAI');
 
+    const address = '0x5Eb9CdAE61c07ADD7bf703Eb12eDFD1cecc22A41';
+    const amount = 10;
+
+    //const response = await dai.transfer(address, amount);
+    const response = await dai.transfer(address, DAI(amount));
+    //response = await dai.transfer(address, amount);
+
+    console.log('=== response of transferDai ===', response);
+
+    return response;
+    //return dai.transfer(address, amount);
+  }
 
 
   //////////////////////////////////// 
@@ -495,11 +521,30 @@ class App extends Component {
 
             <Card width={'420px'} bg="primary">
               <div className={styles.widgets}>
+                <p>Open CDP</p>
+
+                <Button onClick={this.openCdp}>Open a CDP</Button>
+              </div>
+            </Card>
+
+            <Card width={'420px'} bg="primary">
+              <div className={styles.widgets}>
+                <p>Transfer DAI</p>
+
+                <Button onClick={this.transferDai}>Transfer Dai</Button>
+
+                {/* <Button onClick={this.sendCreateProposal}>Convert DAI</Button> */}
+              </div>
+            </Card>
+
+            <Card width={'420px'} bg="primary">
+              <div className={styles.widgets}>
                 <p>Convert DAI</p>
 
                 <Button onClick={this.sendCreateProposal}>Convert DAI</Button>
               </div>
             </Card>
+
           </div>
         </div>
       )}
