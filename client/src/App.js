@@ -7,7 +7,7 @@ import Web3Info from "./components/Web3Info/index.js";
 import CounterUI from "./components/Counter/index.js";
 import Wallet from "./components/Wallet/index.js";
 import Instructions from "./components/Instructions/index.js";
-import { Loader, Button, Card } from 'rimble-ui';
+import { Loader, Button, Card, Input } from 'rimble-ui';
 
 import { zeppelinSolidityHotLoaderOptions } from '../config/webpack';
 
@@ -27,12 +27,79 @@ class App extends Component {
       route: window.location.pathname.replace("/",""),
 
       /////// Added state
+      valueOfMintBy: '',
+      valueOfMintToken: '',
+      value_of_mint_by: '',
+      value_of_mint_token: ''
     };
 
     /////// Bind something
     //this.handleInput = this.handleInput.bind(this);
+    this.handleInputMintBy = this.handleInputMintBy.bind(this);
+    this.handleInputMintToken = this.handleInputMintToken.bind(this);
   }
 
+
+  getTotalSupply = async () => {
+    const { student_loan_token } = this.state;
+    const response = await student_loan_token.methods.totalSupply().call();
+    console.log('=== response of totalSupply function ===', response);
+
+    // Update state with the result.
+    this.setState({ total_supply: response });
+  };
+
+
+  getBalanceOf = async () => {
+    const { student_loan_token } = this.state;
+
+    ///// Import Web3 from /utils/getWeb3.js
+    const web3 = new Web3(window.ethereum);
+    const accounts = await web3.eth.getAccounts();
+    const _ownerAddress = accounts[0]
+
+    ///// Temporary (Constant)
+    //const _ownerAddress = '0x8Fc9d07b1B9542A71C4ba1702Cd230E160af6EB3'
+
+    const response = await student_loan_token.methods.balanceOf(_ownerAddress).call();
+    console.log('=== response of balanceOf function ===', response);
+
+    // Update state with the result.
+    this.setState({ balance_of: response });
+  };
+
+
+  ////// Send MintToken function
+  handleInputMintBy({ target: { value } }) {
+    this.setState({ valueOfMintBy: value });
+    console.log("=== [handleInputMintBy]： value ===", value); 
+  }
+
+  handleInputMintToken({ target: { value } }) {
+    this.setState({ valueOfMintToken: value });
+    console.log("=== [handleInputMintToken]： value ===", value); 
+  }
+
+  sendMintToken = async (to, value) => {
+    const { student_loan_token, accounts, valueOfMintBy, valueOfMintToken } = this.state;
+
+    const response = await student_loan_token.methods.mintToken(valueOfMintBy, valueOfMintToken).send({ from: accounts[0] })
+    console.log('=== response of mintToken function ===', response);
+
+    /////// Update state with the result.
+    this.setState({
+      valueOfMintBy: '',
+      valueOfMintToken: '',
+      value_of_mint_by: valueOfMintBy,
+      value_of_mint_token: valueOfMintToken
+    });
+  }
+
+
+
+  //////////////////////////////////// 
+  ///// Ganache
+  ////////////////////////////////////
   getGanacheAddresses = async () => {
     if (!this.ganacheProvider) {
       this.ganacheProvider = getGanacheWeb3();
@@ -290,7 +357,7 @@ class App extends Component {
   }
 
   renderStudentLoanToken() {
-    const {} = this.state;
+    const { total_supply, balance_of } = this.state;
 
     return (
       <div className={styles.wrapper}>
@@ -304,9 +371,47 @@ class App extends Component {
 
           <div className={styles.widgets}>
             <Card width={'420px'} bg="primary">
-              <p>StudentLoanToken Test</p>
+              <div className={styles.widgets}>
+                <p>Total Supply</p>
 
-              <Button>Test Button</Button>
+                <Button onClick={this.getTotalSupply}>Get Total Supply</Button>
+
+                <br />
+
+                {total_supply}
+              </div>
+            </Card>
+
+            <Card width={'420px'} bg="primary">
+              <div className={styles.widgets}>
+                <p>Balance</p>
+
+                <Button onClick={this.getBalanceOf}>Get Balance</Button>
+
+                {balance_of}
+              </div>
+            </Card>
+
+            <Card width={'420px'} bg="primary">
+              <div className={styles.widgets}>
+                <p>Mint Token</p> 
+
+                <p>To</p>
+                <Input type="text" value={this.state.valueOfMintBy} onChange={this.handleInputMintBy} />
+
+                <p>Value of minting token</p>
+                <Input type="text" value={this.state.valueOfMintToken} onChange={this.handleInputMintToken} />
+
+                <Button onClick={this.sendMintToken}>Mint Token</Button>
+              </div>
+            </Card>
+
+            <Card width={'420px'} bg="primary">
+              <div className={styles.widgets}>
+                <p>Burn Token</p>
+
+                <Button onClick={this.sendCreateProposal}>Burn Token</Button>
+              </div>
             </Card>
           </div>
         </div>
