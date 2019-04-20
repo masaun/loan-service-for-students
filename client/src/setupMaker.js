@@ -30,7 +30,11 @@ export default async function(useMetaMask) {
     //plugins: [trezorPlugin, ledgerPlugin],
     plugins: [],
     accounts: {
-      test1: { type: 'privateKey', key: keys[0] }
+      test0: { type: 'privateKey', key: keys[0] }
+      // test1: { type: 'privateKey', key: keys[1] },
+      // test2: { type: 'privateKey', key: keys[2] },
+      // test3: { type: 'privateKey', key: keys[3] },
+      // test4: { type: 'privateKey', key: keys[4] }
     }
   });
 

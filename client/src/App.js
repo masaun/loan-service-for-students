@@ -16,6 +16,8 @@ import styles from './App.module.scss';
 /////// Dai.js from MakerDAO
 import Maker from '@makerdao/dai';
 import setupMaker, { keys } from './setupMaker.js';
+
+const maker = Maker.create('test');  // "test" mode mean that it use a local testnet (e.g. Ganache) running at http://127.0.0.1:2000, and sign transactions using testnet-managed keys.
 const {
   MKR,
   DAI,
@@ -30,7 +32,6 @@ const {
 
 
 class App extends Component {
-
     constructor(props) {
     super(props);
 
@@ -50,6 +51,7 @@ class App extends Component {
 
       /////// Added Dai.js
       //accounts: [],
+      maker: null,
       cdps: [],
       useMetaMask: window.location.search.includes('metamask')
     };
@@ -117,8 +119,6 @@ class App extends Component {
   }
 
 
-
-
   //////////////////////////////////// 
   ///// Dai.js
   ////////////////////////////////////
@@ -136,6 +136,7 @@ class App extends Component {
       accounts,
       currentAccount: maker.currentAccount()
     });
+    console.log('=== accounts ===', accounts);
   };
 
   useAccount = async name => {
@@ -171,21 +172,31 @@ class App extends Component {
   };
 
   transferDai = async () => {
-    const { maker } = this.state;
-    const dai = maker.service('token').getToken('DAI');
+    const { maker } = this.state;    
+    const tokenService = maker.service('token');
+    const dai = tokenService.getToken(DAI);
+    console.log('=== dai ===', dai);  // Debug: OK
 
-    const address = '0x5Eb9CdAE61c07ADD7bf703Eb12eDFD1cecc22A41';
+    const address = '0x8a002199541f32d49f8a12fc5c307bef74436929';
     const amount = 10;
 
-    //const response = await dai.transfer(address, amount);
     const response = await dai.transfer(address, DAI(amount));
     //response = await dai.transfer(address, amount);
 
     console.log('=== response of transferDai ===', response);
-
-    return response;
     //return dai.transfer(address, amount);
   }
+
+  convertEthToPeth = async () => {
+    const { maker } = this.state;    
+    const conversionService = maker.service('token');
+    const response = await conversionService.convertEthToPeth(ETH(10));
+
+    console.log('=== response of convertEthToPeth ===', response);
+  }
+
+
+
 
 
   //////////////////////////////////// 
@@ -541,7 +552,7 @@ class App extends Component {
               <div className={styles.widgets}>
                 <p>Convert DAI</p>
 
-                <Button onClick={this.sendCreateProposal}>Convert DAI</Button>
+                <Button onClick={this.convertEthToPeth}>Convert DAI</Button>
               </div>
             </Card>
 
