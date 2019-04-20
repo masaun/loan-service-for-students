@@ -7,7 +7,7 @@ import Web3Info from "./components/Web3Info/index.js";
 import CounterUI from "./components/Counter/index.js";
 import Wallet from "./components/Wallet/index.js";
 import Instructions from "./components/Instructions/index.js";
-import { Loader, Card } from 'rimble-ui';
+import { Loader, Button, Card } from 'rimble-ui';
 
 import { zeppelinSolidityHotLoaderOptions } from '../config/webpack';
 
@@ -298,12 +298,16 @@ class App extends Component {
       {this.state.web3 && !this.state.student_loan_token && (
         this.renderDeployCheck('student_loan_token')
       )}
-      {this.state.web3 && this.state.financial_token && (
+      {this.state.web3 && this.state.student_loan_token && (
         <div className={styles.contracts}>
           <h1>StudentLoanToken Contract is good to Go!</h1>
 
           <div className={styles.widgets}>
-            <p>StudentLoanToken Test</p>
+            <Card width={'420px'} bg="primary">
+              <p>StudentLoanToken Test</p>
+
+              <Button>Test Button</Button>
+            </Card>
           </div>
         </div>
       )}
