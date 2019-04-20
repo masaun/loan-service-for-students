@@ -14,13 +14,24 @@ import { zeppelinSolidityHotLoaderOptions } from '../config/webpack';
 import styles from './App.module.scss';
 
 class App extends Component {
-  state = {
-    storageValue: 0,
-    web3: null,
-    accounts: null,
-    contract: null,
-    route: window.location.pathname.replace("/","")
-  };
+
+    constructor(props) {
+    super(props);
+
+    this.state = {
+      /////// Default state
+      storageValue: 0,
+      web3: null,
+      accounts: null,
+      contract: null,
+      route: window.location.pathname.replace("/",""),
+
+      /////// Added state
+    };
+
+    /////// Bind something
+    //this.handleInput = this.handleInput.bind(this);
+  }
 
   getGanacheAddresses = async () => {
     if (!this.ganacheProvider) {
