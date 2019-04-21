@@ -23,7 +23,6 @@ const TESTNET_URL = 'http://localhost:2000';      // Origin
 
 export default async function(useMetaMask) {
   window.Maker = Maker;
-  console.log('=== Maker ===', Maker);
   const maker = Maker.create(useMetaMask ? 'browser' : 'http', {
     url: TESTNET_URL,
     //url: KOVAN_INFURA_URL,
@@ -37,6 +36,7 @@ export default async function(useMetaMask) {
       // test4: { type: 'privateKey', key: keys[4] }
     }
   });
+  console.log('=== maker ===', maker);
 
   //await maker.authenticate();
   //console.log('maker.authenticate()', maker.authenticate());

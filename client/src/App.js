@@ -17,7 +17,9 @@ import styles from './App.module.scss';
 import Maker from '@makerdao/dai';
 import setupMaker, { keys } from './setupMaker.js';
 
-const maker = Maker.create('test');  // "test" mode mean that it use a local testnet (e.g. Ganache) running at http://127.0.0.1:2000, and sign transactions using testnet-managed keys.
+/* @notice It is already defined below in setupMaker.js */  
+//const maker = Maker.create('test');  // "test" mode mean that it use a local testnet (e.g. Ganache) running at http://127.0.0.1:2000, and sign transactions using testnet-managed keys.
+
 const {
   MKR,
   DAI,
