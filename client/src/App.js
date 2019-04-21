@@ -191,7 +191,7 @@ class App extends Component {
 
   convertEthToPeth = async () => {
     const { maker } = this.state;    
-    const conversionService = maker.service('token');
+    const conversionService = maker.service('conversion');
     const response = await conversionService.convertEthToPeth(ETH(10));
 
     console.log('=== response of convertEthToPeth ===', response);
