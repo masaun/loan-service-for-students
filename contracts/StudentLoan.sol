@@ -13,13 +13,14 @@ contract StudentLoan {
     
     struct Borrower {
         uint borrowerId;
+        string borrowerName;
         address addr;
         uint balance; 
-
     }
     
     struct Lender {
         uint lenderId;
+        string lenderName;
         address addr;
         uint balance; 
     }
@@ -28,11 +29,11 @@ contract StudentLoan {
     uint public loanId;     // A unique number that increments with every newly created loan
 
     struct LoanData {
-        uint id;                                // Loan ID
-        string name;                            // Name of  the Loan
-        uint revisionNumber;                    // Shall increment with every update to the loan
-        address registeringParty;               // Party who registered the loan. Possible unnecessary because of mapping  loanToRegistrar
-        string dataString;                      // formerly "purpose", now general data string
+        uint id;                                 // Loan ID
+        string name;                             // Name of  the Loan
+        mapping (uint => Borrower) borrowers;
+        mapping (uint => Lender) lenders;        
+        
         uint regTime;                           // UNIX Timestamp
         mapping (address => uint) userToId;     // Gets local user id belonging (mapped to) an address in loan
         uint[] loanAmounts;                     // corresponding to participants
@@ -48,7 +49,7 @@ contract StudentLoan {
     userData[] public users;
 
     mapping (address => userData) addressToUserData;
-    mapping (address => mapping (uint => bool)) addressAssociated;
+    //mapping (address => mapping (uint => bool)) addressAssociated;
     mapping (uint => address) loanToRegistrar;
     mapping (address => uint) userLoanCount;
 
@@ -63,9 +64,6 @@ contract StudentLoan {
         LoanData memory ln;
         ln.id = loanId;
         ln.name = _name;
-        ln.revisionNumber = 0;
-        ln.registeringParty = msg.sender;
-        ln.dataString = _dataString;
         ln.regTime = now;
 
         loans.push(ln);
@@ -73,6 +71,30 @@ contract StudentLoan {
         // Add loan creator himself/herself
         addUserToLoan(loanId, msg.sender);
         loanId++; // Increment unique number
+    }
+
+
+    /*
+    Function to add new users to a loan, checks if user has been added before
+    */
+    function addUserToLoan (uint _loanId, address _account) public onlyRegistrar(_loanId) returns (uint){
+
+        // The following three lines check that the zero-address cant be added and prohibit double registration
+        require(_account != address(0));
+        require(addressAssociated[_account][_loanId] == false, "User already exists in loan");
+        addressAssociated[_account][_loanId] = true;
+
+        userLoanCount[_account]++;
+        uint userNum = loans[_loanId].numOfUsers++;
+        // Adds user to mapping of loan (analog to incremented numOfUsers)
+        loans[_loanId].userToId[_account] = userNum;
+        // Pushes address to userList array (to retrieve all users, iterate)
+        loans[_loanId].userList.push(_account);
+
+        // Let size of arrays that correspond with users grow in size
+        loans[_loanId].approvalStatus.length++;
+        loans[_loanId].loanAmounts.length++;
+        return userNum;
     }
 
 
