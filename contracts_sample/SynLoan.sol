@@ -1,11 +1,21 @@
-pragma solidity ^0.5.0;
+// Reference from https://github.com/lition-blockchain/syndicate-loan-use-case/blob/master/contracts/SynLoan.sol
 
-/**
- * [In progress] The Student Loan contract that has basic function of borrow and lend.
- */
-contract StudentLoan {
+pragma solidity ^0.5.2;
+
+// necessary because some functions return structs
+pragma experimental ABIEncoderV2;
+
+/*
+Contract for Syndicate Loan MVP by Lition Technologie AG - www.lition.io
+version 0.2.3.5
+creator: Marcel Jackisch
+*/
+
+contract SynLoanData {
 
     uint public loanId;     // A unique number that increments with every newly created loan
+
+    LoanData[] public loans;
 
     struct LoanData {
         uint id;                                // Loan ID
@@ -20,8 +30,11 @@ contract StudentLoan {
         address[] userList;
         uint8 numOfUsers;
     }
-    LoanData[] public loans;
 
+
+/*
+Struct user defines key data of participants such as banks and businesses
+*/
     struct userData {
         string name;
         string role;        // Borrower or Lender
@@ -42,6 +55,7 @@ contract StudentLoan {
 
     // counts the amount of loans belonging to the address
     mapping (address => uint) userLoanCount;
+
 
     /*
     Modifier to check that sender is the registrar of the loan
