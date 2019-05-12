@@ -55,7 +55,10 @@ class App extends Component {
       //accounts: [],
       maker: null,
       cdps: [],
-      useMetaMask: window.location.search.includes('metamask')
+      useMetaMask: window.location.search.includes('metamask'),
+
+      /////// Loan
+      // in progress
     };
 
     /////// Bind something
@@ -555,6 +558,27 @@ class App extends Component {
                 <p>Convert DAI</p>
 
                 <Button onClick={this.convertEthToPeth}>Convert DAI</Button>
+              </div>
+            </Card>
+
+
+            <Card width={'420px'} bg="primary">
+              <div className={styles.widgets}>
+                <h3>Create Loan</h3>
+
+                <p>Borrower (address)</p>
+                <Input type="text" value={this.state.valueOfMintBy} onChange={this.handleInputMintBy} />
+
+                <p>Lender (address)</p>
+                <Input type="text" value={this.state.valueOfMintBy} onChange={this.handleInputMintBy} />
+
+                <p>Loan name</p>
+                <Input type="text" value={this.state.valueOfMintToken} onChange={this.handleInputMintToken} />
+
+                <p>Loan description</p>
+                <Input type="text" value={this.state.valueOfMintToken} onChange={this.handleInputMintToken} />
+
+                <Button onClick={this.sendMintToken}>Create Loan</Button>
               </div>
             </Card>
 
