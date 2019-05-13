@@ -157,11 +157,11 @@ class App extends Component {
     this.setState({ valueOfLoanDescription: value });
   }
 
-  sendCreateLoan = async ( _name, _description, _borrowerAddr, _lenderAddr) => {
+  sendCreateLoan = async (_name, _description, _borrowerAddr, _lenderAddr) => {
     const { student_loan, accounts, valueOfLoanName, valueOfLoanDescription, valueOfBorrowerAddress, valueOfLenderAddress } = this.state;
 
     const response = await student_loan.methods.createLoan(valueOfLoanName, valueOfLoanDescription, valueOfBorrowerAddress, valueOfLenderAddress).send({ from: accounts[0] })
-    console.log('=== response of mintToken function ===', response);
+    console.log('=== response of createLoan function ===', response);
 
     /////// Update state with the result.
     this.setState({

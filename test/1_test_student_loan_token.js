@@ -1,4 +1,5 @@
 const StudentLoanToken = artifacts.require("./StudentLoanToken.sol");
+const StudentLoan = artifacts.require("./StudentLoan.sol");
 
 contract("StudentLoanToken", accounts => {
     it("...should put 100FNL in the first account.", async () => {
@@ -76,19 +77,35 @@ contract("StudentLoanToken", accounts => {
 
         let student_loan_token = await new web3.eth.Contract(StudentLoanToken.abi, StudentLoanToken.address);
 
-        let totalSupply_ERC20 = await student_loan_token.methods.totalSupply().call();
+        let totalSupply_ERC20 = await student_loan_token.methods.totalSupply().send({ from: accounts[0] });
         console.log('=== totalSupply function ===', totalSupply_ERC20);   // Success
     });
 
 
-    it("Maker.create test of Dai.js", async () => {
-        const maker = Maker.create('test');
-        await maker.authenticate();
+    // it("Maker.create test of Dai.js", async () => {
+    //     const maker = Maker.create('test');
+    //     await maker.authenticate();
 
-        transferDai(address, amount) {
-          const dai = maker.service('token').getToken('DAI');
-          return dai.transfer(address, amount);
-        }
-        console.log('=== dai ===', dai);   // Success
+    //     transferDai(address, amount) {
+    //       const dai = maker.service('token').getToken('DAI');
+    //       return dai.transfer(address, amount);
+    //     }
+    //     console.log('=== dai ===', dai);   // Success
+    // });
+
+
+    it("createLoan", async () => {
+        const accounts = await web3.eth.getAccounts();
+
+        const _name = 'test name';
+        const _description = 'test description';
+        const _borrowerAddr = '0xb4ce4aa17223b553b12abd9f865893c452273526'; 
+        const _lenderAddr = '0x0e24d686a336afecfe654798dc01bf03ea2caeb4';
+
+        let student_loan = await new web3.eth.Contract(StudentLoan.abi, StudentLoan.address);
+
+        let response = await student_loan.methods.createLoan(_name, _description, _borrowerAddr, _lenderAddr).send({ from: accounts[0] });
+        console.log('=== createLoan function ===', response);   // Success
     });
+
 });
