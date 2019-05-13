@@ -48,7 +48,7 @@ contract StudentLoan {
         string memory _description,
         address _borrowerAddr,
         address _lenderAddr
-    ) public 
+    ) public returns (string memory, string memory, address, address)
     {
         LoanData storage ln = loans[loanId];
         ln.id = loanId;
@@ -66,6 +66,7 @@ contract StudentLoan {
         setLender(lenderId, _lenderAddr);
         lenderId++;
 
+        return (_name, _description, _borrowerAddr, _lenderAddr);
     }
 
 
