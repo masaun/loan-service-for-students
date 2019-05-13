@@ -155,6 +155,7 @@ class App extends Component {
 
   handleInputLoanDescription({ target: { value } }) {
     this.setState({ valueOfLoanDescription: value });
+    //console.log('=== valueOfLoanDescription ===', value);
   }
 
   sendCreateLoan = async (_name, _description, _borrowerAddr, _lenderAddr) => {

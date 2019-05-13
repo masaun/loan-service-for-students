@@ -43,6 +43,29 @@ contract StudentLoan {
     event SetLender(uint indexed lenderId, address indexed _lenderAddr);
     
 
+    constructor () public {
+        string memory name = 'first user';
+
+        LoanData memory ln = LoanData({
+            id: loanId,
+            name: name,
+            recordTime: now
+        });
+        loans.push(ln);
+ 
+
+        string memory nameOfFirstBorrower = 'first borrower';
+        address addressOfFirstBorrower;
+
+        Borrower memory borrower = Borrower({
+            id: borrowerId,
+            name: nameOfFirstBorrower,
+            addr: addressOfFirstBorrower,
+            balance: 150
+        });
+    }
+
+
     function createLoan (
         string memory _name, 
         string memory _description,
