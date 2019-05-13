@@ -33,7 +33,7 @@ contract StudentLoan {
         uint id;                                 // Id of Loan
         string name;                             // Name ofLoan
         mapping (uint => Borrower) borrowers;
-        mapping (uint => Lender) lenders;        
+        mapping (uint => Lender) lenders;
         uint recordTime;                         // timestamp from UNIX
     }
     LoanData[] public loans;
@@ -61,6 +61,17 @@ contract StudentLoan {
             id: borrowerId,
             name: nameOfFirstBorrower,
             addr: addressOfFirstBorrower,
+            balance: 150
+        });
+
+
+        string memory nameOfFirstLender = 'first lender';
+        address addressOfFirstLender;
+
+        Lender memory lender = Lender({
+            id: lenderId,
+            name: nameOfFirstLender,
+            addr: addressOfFirstLender,
             balance: 150
         });
     }
