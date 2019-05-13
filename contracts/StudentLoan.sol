@@ -34,6 +34,8 @@ contract StudentLoan {
         string name;                             // Name ofLoan
         mapping (uint => Borrower) borrowers;
         mapping (uint => Lender) lenders;
+        uint term;                               // Term of Repay of Loan
+        uint rate;                               // Rate of Loan
         uint recordTime;                         // timestamp from UNIX
     }
     LoanData[] public loans;
