@@ -59,12 +59,25 @@ class App extends Component {
 
       /////// Loan
       // in progress
+      valueOfBorrowerAddress: '',
+      valueOfLenderAddress: '',
+      valueOfLoanName: '',
+      valueOfLoanDescription: '',
+      value_of_loan_name: '',
+      value_of_loan_description: '',
+      value_of_borrower_address: '',
+      value_of_lender_address: ''
     };
 
     /////// Bind something
     //this.handleInput = this.handleInput.bind(this);
     this.handleInputMintBy = this.handleInputMintBy.bind(this);
     this.handleInputMintToken = this.handleInputMintToken.bind(this);
+
+    this.handleInputBorrowerAddress = this.handleInputBorrowerAddress.bind(this);
+    this.handleInputLenderAddress = this.handleInputLenderAddress.bind(this);
+    this.handleInputLoanName = this.handleInputLoanName.bind(this);
+    this.handleInputLoanDescription = this.handleInputLoanDescription.bind(this);
   }
 
 
@@ -120,6 +133,47 @@ class App extends Component {
       valueOfMintToken: '',
       value_of_mint_by: valueOfMintBy,
       value_of_mint_token: valueOfMintToken
+    });
+  }
+
+
+  //////////////////////////////////// 
+  ///// Student Loan
+  ////////////////////////////////////
+
+  handleInputBorrowerAddress({ target: { value } }) {
+    this.setState({ valueOfBorrowerAddress: value });
+  }
+
+  handleInputLenderAddress({ target: { value } }) {
+    this.setState({ valueOfLenderAddress: value });
+  }
+
+  handleInputLoanName({ target: { value } }) {
+    this.setState({ valueOfLoanName: value });
+  }
+
+  handleInputLoanDescription({ target: { value } }) {
+    this.setState({ valueOfLoanDescription: value });
+  }
+
+  sendCreateLoan = async ( _name, _description, _borrowerAddr, _lenderAddr) => {
+    const { student_loan, accounts, valueOfLoanName, valueOfLoanDescription, valueOfBorrowerAddress, valueOfLenderAddress } = this.state;
+
+    const response = await student_loan.methods.createLoan(valueOfLoanName, valueOfLoanDescription, valueOfBorrowerAddress, valueOfLenderAddress).send({ from: accounts[0] })
+    console.log('=== response of mintToken function ===', response);
+
+    /////// Update state with the result.
+    this.setState({
+      valueOfLoanName: '',
+      valueOfLoanDescription: '',
+      valueOfBorrowerAddress: '',
+      valueOfLenderAddress: '',
+
+      value_of_loan_name: valueOfLoanName,
+      value_of_loan_description: valueOfLoanDescription,
+      value_of_borrower_address: valueOfBorrowerAddress,
+      value_of_lender_address: valueOfLenderAddress
     });
   }
 
@@ -235,6 +289,7 @@ class App extends Component {
     let Counter = {};
     let Wallet = {};
     let StudentLoanToken = {};
+    let StudentLoan = {};
     try {
       // Counter = require("../../contracts/Counter.sol");
       // Wallet = require("../../contracts/Wallet.sol");
@@ -242,6 +297,7 @@ class App extends Component {
       Counter = require("../../build/contracts/Counter.json");
       Wallet = require("../../build/contracts/Wallet.json");
       StudentLoanToken = require("../../build/contracts/StudentLoanToken.json");  // Load ABI of contract of StudentLoanToken
+      StudentLoan = require("../../build/contracts/StudentLoan.json");            // Load ABI of contract of StudentLoan
     } catch (e) {
       console.log(e);
     }
@@ -267,6 +323,7 @@ class App extends Component {
         let instance = null;
         let instanceWallet = null;
         let instanceStudentLoanToken = null;
+        let instanceStudentLoan = null;
         let deployedNetwork = null;
         if (Counter.networks) {
           deployedNetwork = Counter.networks[networkId.toString()];
@@ -296,14 +353,24 @@ class App extends Component {
             console.log('=== instanceStudentLoanToken ===', instanceStudentLoanToken);
           }
         }
-        if (instance || instanceWallet || instanceStudentLoanToken) {
+        if (StudentLoan.networks) {
+          deployedNetwork = StudentLoan.networks[networkId.toString()];
+          if (deployedNetwork) {
+            instanceStudentLoan = new web3.eth.Contract(
+              StudentLoan.abi,
+              deployedNetwork && deployedNetwork.address,
+            );
+            console.log('=== instanceStudentLoan ===', instanceStudentLoan);
+          }
+        }
+        if (instance || instanceWallet || instanceStudentLoanToken || instanceStudentLoan) {
           // Set web3, accounts, and contract to the state, and then proceed with an
           // example of interacting with the contract's methods.
           this.setState({ web3, ganacheAccounts, accounts, balance, networkId, networkType, hotLoaderDisabled,
-            isMetaMask, contract: instance, wallet: instanceWallet, student_loan_token: instanceStudentLoanToken }, () => {
-              this.refreshValues(instance, instanceWallet, instanceStudentLoanToken);
+            isMetaMask, contract: instance, wallet: instanceWallet, student_loan_token: instanceStudentLoanToken, student_loan: instanceStudentLoan }, () => {
+              this.refreshValues(instance, instanceWallet, instanceStudentLoanToken, instanceStudentLoan);
               setInterval(() => {
-                this.refreshValues(instance, instanceWallet, instanceStudentLoanToken);
+                this.refreshValues(instance, instanceWallet, instanceStudentLoanToken, instanceStudentLoan);
               }, 5000);
             });
         }
@@ -326,7 +393,7 @@ class App extends Component {
     }
   }
 
-  refreshValues = (instance, instanceWallet, instanceStudentLoanToken) => {
+  refreshValues = (instance, instanceWallet, instanceStudentLoanToken, instanceStudentLoan) => {
     if (instance) {
       this.getCount();
     }
@@ -335,6 +402,9 @@ class App extends Component {
     }
     if (instanceStudentLoanToken) {
       console.log('refreshValues of instanceStudentLoanToken');
+    }
+    if (instanceStudentLoan) {
+      console.log('refreshValues of instanceStudentLoan');
     }
   }
 
@@ -567,18 +637,18 @@ class App extends Component {
                 <h3>Create Loan</h3>
 
                 <p>Borrower (address)</p>
-                <Input type="text" value={this.state.valueOfMintBy} onChange={this.handleInputMintBy} />
+                <Input type="text" value={this.state.valueOfBorrowerAddress} onChange={this.handleInputBorrowerAddress} />
 
                 <p>Lender (address)</p>
-                <Input type="text" value={this.state.valueOfMintBy} onChange={this.handleInputMintBy} />
+                <Input type="text" value={this.state.valueOfLenderAddress} onChange={this.handleInputLenderAddress} />
 
                 <p>Loan name</p>
-                <Input type="text" value={this.state.valueOfMintToken} onChange={this.handleInputMintToken} />
+                <Input type="text" value={this.state.valueOfLoanName} onChange={this.handleInputLoanName} />
 
                 <p>Loan description</p>
-                <Input type="text" value={this.state.valueOfMintToken} onChange={this.handleInputMintToken} />
+                <Input type="text" value={this.state.valueOfLoanDescription} onChange={this.handleInputLoanDescription} />
 
-                <Button onClick={this.sendMintToken}>Create Loan</Button>
+                <Button onClick={this.sendCreateLoan}>Create Loan</Button>
               </div>
             </Card>
 
