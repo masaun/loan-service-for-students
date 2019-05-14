@@ -5,7 +5,7 @@ contract("StudentLoan", accounts => {
     it("setBorrower", async () => {
         const accounts = await web3.eth.getAccounts();
 
-        const borrowerId = 0
+        const borrowerId = 0;
         const _borrowerAddr = '0x46eE041Dc142117FD9a9D1011178Df5066e29d42';
 
         let student_loan = await new web3.eth.Contract(StudentLoan.abi, StudentLoan.address);
