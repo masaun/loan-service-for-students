@@ -2,6 +2,11 @@ const path = require("path");
 require('dotenv').config();
 const mnemonic = process.env.MNENOMIC;
 const HDWalletProvider = require("truffle-hdwallet-provider");
+
+// PrivateKeyProvider uses your private key sign the smart contract deployment transaction
+let PrivateKeyProvider = require("truffle-privatekey-provider");
+let privateKey = process.env.PRIVATE_KEY;
+
 // Create your own key for Production environments (https://infura.io/)
 const infura_api_key = process.env.INFURA_API_KEY;
 
@@ -15,6 +20,20 @@ module.exports = {
       //port: 8545,   // Ganache-CLI
       network_id: "*",
     },
+
+    // SKALE Side-Chain
+    hd_wallet: {
+        provider: new HDWalletProvider(mnemonic, "[YOUR_SKALE_CHAIN_ENDPOINT]"),
+        gasPrice: 0,
+        network_id: "*"
+    },
+    private_key: {
+        provider: new PrivateKeyProvider(privateKey, "[YOUR_SKALE_CHAIN_ENDPOINT]"),
+        gasPrice: 0,
+        gas: 8000000,
+        network_id: "*"
+    },
+
     ropsten: {
       provider: function() {
         return new HDWalletProvider(mnemonic, 'https://ropsten.infura.io/' + process.env.infura_api_key)

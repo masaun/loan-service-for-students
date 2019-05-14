@@ -46,11 +46,15 @@ contract StudentLoan {
     
 
     constructor () public {
-        string memory name = 'first user';
+        string memory _name = 'first user';
+        uint _term = 90 days;
+        uint _rate = 5;
 
         LoanData memory ln = LoanData({
             id: loanId,
-            name: name,
+            name: _name,
+            term: _term,
+            rate: _rate,
             recordTime: now
         });
         loans.push(ln);
