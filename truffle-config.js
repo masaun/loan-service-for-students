@@ -1,6 +1,6 @@
 const path = require("path");
 require('dotenv').config();
-const mnemonic = process.env.MNENOMIC;
+const mnemonic = process.env.MNEMONIC;
 const HDWalletProvider = require("truffle-hdwallet-provider");
 
 // PrivateKeyProvider uses your private key sign the smart contract deployment transaction
@@ -22,17 +22,17 @@ module.exports = {
     },
 
     // SKALE Side-Chain
-    hd_wallet: {
-        provider: new HDWalletProvider(mnemonic, "[YOUR_SKALE_CHAIN_ENDPOINT]"),
-        gasPrice: 0,
-        network_id: "*"
-    },
-    private_key: {
-        provider: new PrivateKeyProvider(privateKey, "[YOUR_SKALE_CHAIN_ENDPOINT]"),
-        gasPrice: 0,
-        gas: 8000000,
-        network_id: "*"
-    },
+    // hd_wallet: {
+    //     provider: new HDWalletProvider(mnemonic, "[YOUR_SKALE_CHAIN_ENDPOINT]"),
+    //     gasPrice: 0,
+    //     network_id: "*"
+    // },
+    // private_key: {
+    //     provider: new PrivateKeyProvider(privateKey, "[YOUR_SKALE_CHAIN_ENDPOINT]"),
+    //     gasPrice: 0,
+    //     gas: 8000000,
+    //     network_id: "*"
+    // },
 
     ropsten: {
       provider: function() {
