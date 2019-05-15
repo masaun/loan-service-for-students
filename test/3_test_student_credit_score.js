@@ -14,6 +14,12 @@ contract("StudentCreditScore", accounts => {
 
         let response = await student_credit_score.methods.createCreditScore(_studentAddr, _annualIncome, _age, _creditOfCourse).send({ from: accounts[1], gas:3000000 });
         console.log('=== createCreditScore function ===', response);   // Success
+
+        const creditScoreId_from_event = response.events.CreateCreditScore.returnValues.creditScoreId;
+        console.log('=== creditScoreId from event ===', creditScoreId_from_event);   // Success
+
+        let response_2 = await student_credit_score.methods.saveCreditScore(creditScoreId_from_event).send({ from: accounts[1], gas:3000000 });
+        console.log('=== saveCreditScore function ===', response_2);   // Success 
     });
 
 

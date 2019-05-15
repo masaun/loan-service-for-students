@@ -12,6 +12,9 @@ contract StudentCreditScore {
         uint creditOfCourse;  // Number of being got credit of course in University where student has gone.
     }
     CreditScore[] public scores;
+
+
+    event CreateCreditScore(address _studentAddr, uint _annualIncome, uint _age, uint _creditOfCourse, uint creditScoreId);
     
 
     constructor () public {
@@ -44,7 +47,7 @@ contract StudentCreditScore {
         uint _annualIncome,
         uint _age,
         uint _creditOfCourse 
-    ) public returns (address, uint, uint, uint)
+    ) public returns (address, uint, uint, uint, uint)
     {
     
         CreditScore memory score = CreditScore({
@@ -54,8 +57,10 @@ contract StudentCreditScore {
             creditOfCourse: _creditOfCourse
         });
         scores.push(score);
+
+        emit CreateCreditScore(_studentAddr, _annualIncome, _age, _creditOfCourse, creditScoreId);
     
-        return (_studentAddr, _annualIncome, _age, _creditOfCourse);
+        return (_studentAddr, _annualIncome, _age, _creditOfCourse, creditScoreId);
     }
     
     
