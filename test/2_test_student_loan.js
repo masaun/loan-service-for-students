@@ -10,7 +10,7 @@ contract("StudentLoan", accounts => {
 
         let student_loan = await new web3.eth.Contract(StudentLoan.abi, StudentLoan.address);
 
-        let response = await student_loan.methods.setBorrower(0, accounts[1]).send({ from: accounts[0] });
+        let response = await student_loan.methods.setBorrower(0, accounts[1]).send({ from: accounts[0], gas:3000000 });
         //let response = await student_loan.methods.createLoan(_name, _description, _borrowerAddr, _lenderAddr).send({ from: accounts[0] });
         console.log('=== setBorrower function ===', response);   // Success
     });
@@ -28,7 +28,7 @@ contract("StudentLoan", accounts => {
         //console.log('=== student_loan ===', student_loan);   // Success
 
         //let response = await student_loan.methods.createLoan(_name, _description).send({ from: accounts[0] });
-        let response = await student_loan.methods.createLoan(_name, _description, _borrowerAddr, _lenderAddr).send({ from: accounts[0] });
+        let response = await student_loan.methods.createLoan(_name, _description, _borrowerAddr, _lenderAddr).send({ from: accounts[0], gas:3000000 });
         console.log('=== createLoan function ===', response);   // Success
     });
 
