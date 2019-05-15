@@ -3,6 +3,7 @@ pragma solidity ^0.5.0;
 
 contract StudentCreditScore {
 
+    address private admin;
     uint creditScoreId;  // creditScoreId = 0
 
     struct CreditScore {
@@ -15,10 +16,11 @@ contract StudentCreditScore {
 
 
     event CreateCreditScore(address _studentAddr, uint _annualIncome, uint _age, uint _creditOfCourse, uint creditScoreId);
+    event GetCreditScore(address _studentAddr, uint _annualIncome, uint _age, uint _creditOfCourse);
     
 
     constructor () public {
-        // In progress
+        //admin == msg.sender;
     }    
 
 
@@ -49,6 +51,7 @@ contract StudentCreditScore {
         uint _creditOfCourse 
     ) public returns (address, uint, uint, uint, uint)
     {
+        //require (admin == msg.sender, "You are not admin !!");
     
         CreditScore memory score = CreditScore({
             studentAddr: _studentAddr,
@@ -73,5 +76,15 @@ contract StudentCreditScore {
 
         creditScoreId++;
     }
+
+
+    function getCreditScore(uint id) public returns (address, uint, uint, uint) {
+        CreditScore storage score = scores[id];
+
+        emit GetCreditScore(score.studentAddr, score.annualIncome, score.age, score.creditOfCourse);
+
+        return (score.studentAddr, score.annualIncome, score.age, score.creditOfCourse);
+    }
+    
 
 }

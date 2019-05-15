@@ -23,4 +23,19 @@ contract("StudentCreditScore", accounts => {
     });
 
 
+    it("getCreditScore", async () => {
+        const accounts = await web3.eth.getAccounts();
+
+        let student_credit_score = await new web3.eth.Contract(StudentCreditScore.abi, StudentCreditScore.address);
+
+        const _id = 0;
+
+        let response = await student_credit_score.methods.getCreditScore(_id).send({ from: accounts[1], gas:3000000 });
+        console.log('=== getCreditScore function ===', response);   // Success
+
+        const creditScoreId_from_event = response.events.GetCreditScore.returnValues._studentAddr;
+        console.log('=== getCreditScore from event ===', creditScoreId_from_event);   // Success
+
+    });
+
 });
