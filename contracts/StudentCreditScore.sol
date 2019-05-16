@@ -12,6 +12,8 @@ contract StudentCreditScore {
         uint annualIncome;    // It is yearly salaly
         uint age;
         uint creditOfCourse;  // Number of being got credit of course in University where student has gone.
+        uint reputation;
+        uint borrowLimit;
     }
     //CreditScore[] public scores;
 
@@ -99,6 +101,8 @@ contract StudentCreditScore {
         // score.annualIncome = scores[creditScoreId].annualIncome;
         // score.age = scores[creditScoreId].age;
         // score.creditOfCourse = scores[creditScoreId].creditOfCourse;
+        score.reputation = getReputation(_studentAddress);
+        score.borrowLimit = getBorrowLimit(_studentAddress);
 
         // creditScoreId++;
 
@@ -106,6 +110,18 @@ contract StudentCreditScore {
     
         return (_annualIncome, _age, _creditOfCourse);
     }
+
+    function getReputation(address _studentAddress) private returns (uint) {
+        uint _reputation = 100;  // [In progress] It mean score of reputation. It assign figure of constant so far.
+        return _reputation;
+    }
+    
+    function getBorrowLimit(address _studentAddress) private returns (uint) {
+        uint _borrowLimit = 100;  // [In progress] It mean amount of limit of borrow. It assign figure of constant so far.
+        return _borrowLimit;
+    }
+
+
 
 
     function getCreditScore(uint _studentId, address _studentAddress) public returns (uint, uint, uint) {
@@ -120,6 +136,8 @@ contract StudentCreditScore {
         //return (score.studentAddr, score.annualIncome, score.age, score.creditOfCourse);
     }
     
+
+
 
 
 
