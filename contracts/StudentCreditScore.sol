@@ -4,19 +4,32 @@ pragma solidity ^0.5.0;
 contract StudentCreditScore {
 
     address private admin;
-    uint creditScoreId;  // creditScoreId = 0
+    //uint creditScoreId;  // creditScoreId = 0
+    uint studentId;        // studentId = 0
 
     struct CreditScore {
-        address studentAddr;
+        //address studentAddr;
         uint annualIncome;    // It is yearly salaly
         uint age;
         uint creditOfCourse;  // Number of being got credit of course in University where student has gone.
     }
-    CreditScore[] public scores;
+    //CreditScore[] public scores;
 
 
-    event CreateCreditScore(address _studentAddr, uint _annualIncome, uint _age, uint _creditOfCourse, uint creditScoreId);
-    event GetCreditScore(address _studentAddr, uint _annualIncome, uint _age, uint _creditOfCourse);
+    // When Student who is a borrower login, register infomation below 
+    struct StudentProfile {
+        address studentAddress;
+        string studentName;
+        string universityName;
+        uint grade;
+        mapping (address => CreditScore) scores;
+    }
+    StudentProfile[] public profiles;
+
+    event CreateCreditScore(uint _annualIncome, uint _age, uint _creditOfCourse);
+    //event CreateCreditScore(address _studentAddr, uint _annualIncome, uint _age, uint _creditOfCourse, uint creditScoreId);
+    event GetCreditScore(uint _annualIncome, uint _age, uint _creditOfCourse);
+    //event GetCreditScore(address _studentAddr, uint _annualIncome, uint _age, uint _creditOfCourse);
     
 
     constructor () public {
@@ -44,47 +57,70 @@ contract StudentCreditScore {
     // }
     
 
-    function createCreditScore(
-        address _studentAddr,
+    // function createCreditScore(
+    //     address _studentAddr,
+    //     uint _annualIncome,
+    //     uint _age,
+    //     uint _creditOfCourse 
+    // ) public returns (address, uint, uint, uint, uint)
+    // {
+    //     //require (admin == msg.sender, "You are not admin !!");
+
+    //     CreditScore memory score = CreditScore({
+    //         studentAddr: _studentAddr,
+    //         annualIncome: _annualIncome,
+    //         age: _age,
+    //         creditOfCourse: _creditOfCourse
+    //     });
+    //     scores.push(score);
+
+    //     emit CreateCreditScore(_studentAddr, _annualIncome, _age, _creditOfCourse, creditScoreId);
+    
+    //     return (_studentAddr, _annualIncome, _age, _creditOfCourse, creditScoreId);
+    // }
+    
+    
+    function saveCreditScore(
+        uint _studentId, 
+        address _studentAddress,
         uint _annualIncome,
         uint _age,
         uint _creditOfCourse 
-    ) public returns (address, uint, uint, uint, uint)
+    ) public returns (uint, uint, uint)
     {
-        //require (admin == msg.sender, "You are not admin !!");
-    
-        CreditScore memory score = CreditScore({
-            studentAddr: _studentAddr,
-            annualIncome: _annualIncome,
-            age: _age,
-            creditOfCourse: _creditOfCourse
-        });
-        scores.push(score);
+    //function saveCreditScore(uint creditScoreId) public {
+        CreditScore storage score = profiles[_studentId].scores[_studentAddress];
+        //CreditScore storage score = scores[creditScoreId];
 
-        emit CreateCreditScore(_studentAddr, _annualIncome, _age, _creditOfCourse, creditScoreId);
-    
-        return (_studentAddr, _annualIncome, _age, _creditOfCourse, creditScoreId);
-    }
-    
-    
-    function saveCreditScore(uint creditScoreId) public {
-        CreditScore storage score = scores[creditScoreId];
-        score.studentAddr = scores[creditScoreId].studentAddr;
-        score.annualIncome = scores[creditScoreId].annualIncome;
-        score.age = scores[creditScoreId].age;
-        score.creditOfCourse = scores[creditScoreId].creditOfCourse;
+        score.annualIncome = profiles[_studentId].scores[_studentAddress].annualIncome;
+        score.age = profiles[_studentId].scores[_studentAddress].age;
+        score.creditOfCourse = profiles[_studentId].scores[_studentAddress].creditOfCourse;
+        // score.studentAddr = scores[creditScoreId].studentAddr;
+        // score.annualIncome = scores[creditScoreId].annualIncome;
+        // score.age = scores[creditScoreId].age;
+        // score.creditOfCourse = scores[creditScoreId].creditOfCourse;
 
-        creditScoreId++;
+        // creditScoreId++;
+
+        emit CreateCreditScore(_annualIncome, _age, _creditOfCourse);
+    
+        return (_annualIncome, _age, _creditOfCourse);
     }
 
 
-    function getCreditScore(uint id) public returns (address, uint, uint, uint) {
-        CreditScore storage score = scores[id];
+    function getCreditScore(uint _studentId, address _studentAddress) public returns (uint, uint, uint) {
+    //function getCreditScore(uint id) public returns (address, uint, uint, uint) {
+        CreditScore storage score = profiles[_studentId].scores[_studentAddress];
+        //CreditScore storage score = scores[id];
 
-        emit GetCreditScore(score.studentAddr, score.annualIncome, score.age, score.creditOfCourse);
+        emit GetCreditScore(score.annualIncome, score.age, score.creditOfCourse);
+        //emit GetCreditScore(score.studentAddr, score.annualIncome, score.age, score.creditOfCourse);
 
-        return (score.studentAddr, score.annualIncome, score.age, score.creditOfCourse);
+        return (score.annualIncome, score.age, score.creditOfCourse);
+        //return (score.studentAddr, score.annualIncome, score.age, score.creditOfCourse);
     }
     
+
+
 
 }

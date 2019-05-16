@@ -66,4 +66,8 @@ zos.dev-*
 # contracts build
 build
 
+# session information of zeppelinOS
 .zos.session
+
+# reference code of sample
+.contracts_sample
