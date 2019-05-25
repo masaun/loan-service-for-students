@@ -263,6 +263,7 @@
       "type": "function"
     }
   ],
+<<<<<<< HEAD
   "bytecode": "0x6060604052341561000f57600080fd5b60008054600160a060020a033316600160a060020a03199091161790556108838061003b6000396000f30060606040526004361061007f5763ffffffff60e060020a60003504166324a793c48114610084578063359ef75b146100b3578063435b26be146100ec578063465f22f0146100ff5780635c7460d6146101365780638da5cb5b14610149578063a34b80b01461015c578063a6f9dae11461016f578063ced7f4491461018e575b600080fd5b341561008f57600080fd5b6100976101a1565b604051600160a060020a03909116815260200160405180910390f35b34156100be57600080fd5b6100ea600160a060020a03600435811690602435811690604435811690606435811690608435166101b0565b005b34156100f757600080fd5b6100976102fa565b341561010a57600080fd5b6100ea600160a060020a0360043581169060243581169060443581169060643581169060843516610309565b341561014157600080fd5b610097610790565b341561015457600080fd5b61009761079f565b341561016757600080fd5b6100976107ae565b341561017a57600080fd5b6100ea600160a060020a03600435166107bd565b341561019957600080fd5b610097610848565b600254600160a060020a031681565b60005433600160a060020a039081169116146101cb57600080fd5b600160a060020a038516158015906101eb5750600160a060020a03841615155b80156101ff5750600160a060020a03831615155b80156102135750600160a060020a03821615155b80156102275750600160a060020a03811615155b801561023c5750600154600160a060020a0316155b80156102515750600254600160a060020a0316155b80156102665750600354600160a060020a0316155b801561027b5750600454600160a060020a0316155b80156102905750600554600160a060020a0316155b151561029b57600080fd5b60018054600160a060020a0319908116600160a060020a03978816179091556002805482169587169590951790945560038054851693861693909317909255600480548416918516919091179055600580549092169216919091179055565b600554600160a060020a031681565b60005433600160a060020a0390811691161461032457600080fd5b600160a060020a03851615610405576001547f57b4acdcce9a438138db0edef11e09ded2de1339e2c693a3860053b29f02d44590600160a060020a031686604051600160a060020a039283168152911660208201526040908101905180910390a1600154600160a060020a0316631c1b87728660405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401600060405180830381600087803b15156103d557600080fd5b6102c65a03f115156103e657600080fd5b505060018054600160a060020a031916600160a060020a038816179055505b600160a060020a038416156104e6576002547fa3ff37cf1ad096a94e6667f5facb596aa4b4f621e71271d970f96525f7f88ddd90600160a060020a031685604051600160a060020a039283168152911660208201526040908101905180910390a1600254600160a060020a0316631c1b87728560405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401600060405180830381600087803b15156104b657600080fd5b6102c65a03f115156104c757600080fd5b505060028054600160a060020a031916600160a060020a038716179055505b600160a060020a038316156105c7576003547fcac1d34085b7588b77cec2769da366a1890d791e11088ceebcab67af051532bc90600160a060020a031684604051600160a060020a039283168152911660208201526040908101905180910390a1600354600160a060020a0316631c1b87728460405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401600060405180830381600087803b151561059757600080fd5b6102c65a03f115156105a857600080fd5b505060038054600160a060020a031916600160a060020a038616179055505b600160a060020a038216156106a8576004547f555c7135f0d1bfae914030424949bff6469f6670e044dca599239b31ba74e2fa90600160a060020a031683604051600160a060020a039283168152911660208201526040908101905180910390a1600454600160a060020a0316631c1b87728360405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401600060405180830381600087803b151561067857600080fd5b6102c65a03f1151561068957600080fd5b505060048054600160a060020a031916600160a060020a038516179055505b600160a060020a03811615610789576005547f37c2b164f8bd4e4a2b0cca866d1260948db487dfaaa8411aacddb72542c1f86590600160a060020a031682604051600160a060020a039283168152911660208201526040908101905180910390a1600554600160a060020a0316631c1b87728260405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401600060405180830381600087803b151561075957600080fd5b6102c65a03f1151561076a57600080fd5b505060058054600160a060020a031916600160a060020a038416179055505b5050505050565b600154600160a060020a031681565b600054600160a060020a031681565b600454600160a060020a031681565b60005433600160a060020a039081169116146107d857600080fd5b600160a060020a03811615156107ed57600080fd5b60008054600160a060020a031916600160a060020a0383161790557f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af1681604051600160a060020a03909116815260200160405180910390a150565b600354600160a060020a0316815600a165627a7a723058208f4b2dffa61aa8f0e3ca0f90e61c3dec099a7ce07a66969d0af9663a947ab0fa0029",
   "deployedBytecode": "0x60606040526004361061007f5763ffffffff60e060020a60003504166324a793c48114610084578063359ef75b146100b3578063435b26be146100ec578063465f22f0146100ff5780635c7460d6146101365780638da5cb5b14610149578063a34b80b01461015c578063a6f9dae11461016f578063ced7f4491461018e575b600080fd5b341561008f57600080fd5b6100976101a1565b604051600160a060020a03909116815260200160405180910390f35b34156100be57600080fd5b6100ea600160a060020a03600435811690602435811690604435811690606435811690608435166101b0565b005b34156100f757600080fd5b6100976102fa565b341561010a57600080fd5b6100ea600160a060020a0360043581169060243581169060443581169060643581169060843516610309565b341561014157600080fd5b610097610790565b341561015457600080fd5b61009761079f565b341561016757600080fd5b6100976107ae565b341561017a57600080fd5b6100ea600160a060020a03600435166107bd565b341561019957600080fd5b610097610848565b600254600160a060020a031681565b60005433600160a060020a039081169116146101cb57600080fd5b600160a060020a038516158015906101eb5750600160a060020a03841615155b80156101ff5750600160a060020a03831615155b80156102135750600160a060020a03821615155b80156102275750600160a060020a03811615155b801561023c5750600154600160a060020a0316155b80156102515750600254600160a060020a0316155b80156102665750600354600160a060020a0316155b801561027b5750600454600160a060020a0316155b80156102905750600554600160a060020a0316155b151561029b57600080fd5b60018054600160a060020a0319908116600160a060020a03978816179091556002805482169587169590951790945560038054851693861693909317909255600480548416918516919091179055600580549092169216919091179055565b600554600160a060020a031681565b60005433600160a060020a0390811691161461032457600080fd5b600160a060020a03851615610405576001547f57b4acdcce9a438138db0edef11e09ded2de1339e2c693a3860053b29f02d44590600160a060020a031686604051600160a060020a039283168152911660208201526040908101905180910390a1600154600160a060020a0316631c1b87728660405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401600060405180830381600087803b15156103d557600080fd5b6102c65a03f115156103e657600080fd5b505060018054600160a060020a031916600160a060020a038816179055505b600160a060020a038416156104e6576002547fa3ff37cf1ad096a94e6667f5facb596aa4b4f621e71271d970f96525f7f88ddd90600160a060020a031685604051600160a060020a039283168152911660208201526040908101905180910390a1600254600160a060020a0316631c1b87728560405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401600060405180830381600087803b15156104b657600080fd5b6102c65a03f115156104c757600080fd5b505060028054600160a060020a031916600160a060020a038716179055505b600160a060020a038316156105c7576003547fcac1d34085b7588b77cec2769da366a1890d791e11088ceebcab67af051532bc90600160a060020a031684604051600160a060020a039283168152911660208201526040908101905180910390a1600354600160a060020a0316631c1b87728460405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401600060405180830381600087803b151561059757600080fd5b6102c65a03f115156105a857600080fd5b505060038054600160a060020a031916600160a060020a038616179055505b600160a060020a038216156106a8576004547f555c7135f0d1bfae914030424949bff6469f6670e044dca599239b31ba74e2fa90600160a060020a031683604051600160a060020a039283168152911660208201526040908101905180910390a1600454600160a060020a0316631c1b87728360405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401600060405180830381600087803b151561067857600080fd5b6102c65a03f1151561068957600080fd5b505060048054600160a060020a031916600160a060020a038516179055505b600160a060020a03811615610789576005547f37c2b164f8bd4e4a2b0cca866d1260948db487dfaaa8411aacddb72542c1f86590600160a060020a031682604051600160a060020a039283168152911660208201526040908101905180910390a1600554600160a060020a0316631c1b87728260405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401600060405180830381600087803b151561075957600080fd5b6102c65a03f1151561076a57600080fd5b505060058054600160a060020a031916600160a060020a038416179055505b5050505050565b600154600160a060020a031681565b600054600160a060020a031681565b600454600160a060020a031681565b60005433600160a060020a039081169116146107d857600080fd5b600160a060020a03811615156107ed57600080fd5b60008054600160a060020a031916600160a060020a0383161790557f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af1681604051600160a060020a03909116815260200160405180910390a150565b600354600160a060020a0316815600a165627a7a723058208f4b2dffa61aa8f0e3ca0f90e61c3dec099a7ce07a66969d0af9663a947ab0fa0029",
   "sourceMap": "1061:4142:9:-;;;1681:69;;;;;;;;1259:5:14;:18;;-1:-1:-1;;;;;1710:10:9;1259:18:14;-1:-1:-1;;;;;;1259:18:14;;;;;;1061:4142:9;;;;;;",
@@ -271,6 +272,16 @@
   "sourcePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/CoO.sol",
   "ast": {
     "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/CoO.sol",
+=======
+  "bytecode": "0x608060405234801561001057600080fd5b5060008054600160a060020a03191633179055610886806100326000396000f3006080604052600436106100985763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166324a793c4811461009d578063359ef75b146100ce578063435b26be14610109578063465f22f01461011e5780635c7460d6146101575780638da5cb5b1461016c578063a34b80b014610181578063a6f9dae114610196578063ced7f449146101b7575b600080fd5b3480156100a957600080fd5b506100b26101cc565b60408051600160a060020a039092168252519081900360200190f35b3480156100da57600080fd5b50610107600160a060020a03600435811690602435811690604435811690606435811690608435166101db565b005b34801561011557600080fd5b506100b2610321565b34801561012a57600080fd5b50610107600160a060020a0360043581169060243581169060443581169060643581169060843516610330565b34801561016357600080fd5b506100b261079e565b34801561017857600080fd5b506100b26107ad565b34801561018d57600080fd5b506100b26107bc565b3480156101a257600080fd5b50610107600160a060020a03600435166107cb565b3480156101c357600080fd5b506100b261084b565b600254600160a060020a031681565b600054600160a060020a031633146101f257600080fd5b600160a060020a038516158015906102125750600160a060020a03841615155b80156102265750600160a060020a03831615155b801561023a5750600160a060020a03821615155b801561024e5750600160a060020a03811615155b80156102635750600154600160a060020a0316155b80156102785750600254600160a060020a0316155b801561028d5750600354600160a060020a0316155b80156102a25750600454600160a060020a0316155b80156102b75750600554600160a060020a0316155b15156102c257600080fd5b60018054600160a060020a0319908116600160a060020a03978816179091556002805482169587169590951790945560038054851693861693909317909255600480548416918516919091179055600580549092169216919091179055565b600554600160a060020a031681565b600054600160a060020a0316331461034757600080fd5b600160a060020a038516156104235760015460408051600160a060020a039283168152918716602083015280517f57b4acdcce9a438138db0edef11e09ded2de1339e2c693a3860053b29f02d4459281900390910190a16001546040805160e160020a630e0dc3b9028152600160a060020a03888116600483015291519190921691631c1b877291602480830192600092919082900301818387803b1580156103ef57600080fd5b505af1158015610403573d6000803e3d6000fd5b505060018054600160a060020a031916600160a060020a03891617905550505b600160a060020a038416156104ff5760025460408051600160a060020a039283168152918616602083015280517fa3ff37cf1ad096a94e6667f5facb596aa4b4f621e71271d970f96525f7f88ddd9281900390910190a16002546040805160e160020a630e0dc3b9028152600160a060020a03878116600483015291519190921691631c1b877291602480830192600092919082900301818387803b1580156104cb57600080fd5b505af11580156104df573d6000803e3d6000fd5b505060028054600160a060020a031916600160a060020a03881617905550505b600160a060020a038316156105db5760035460408051600160a060020a039283168152918516602083015280517fcac1d34085b7588b77cec2769da366a1890d791e11088ceebcab67af051532bc9281900390910190a16003546040805160e160020a630e0dc3b9028152600160a060020a03868116600483015291519190921691631c1b877291602480830192600092919082900301818387803b1580156105a757600080fd5b505af11580156105bb573d6000803e3d6000fd5b505060038054600160a060020a031916600160a060020a03871617905550505b600160a060020a038216156106bb5760045460408051600160a060020a039283168152918416602083015280517f555c7135f0d1bfae914030424949bff6469f6670e044dca599239b31ba74e2fa9281900390910190a1600480546040805160e160020a630e0dc3b9028152600160a060020a038681169482019490945290519290911691631c1b87729160248082019260009290919082900301818387803b15801561068757600080fd5b505af115801561069b573d6000803e3d6000fd5b505060048054600160a060020a031916600160a060020a03861617905550505b600160a060020a038116156107975760055460408051600160a060020a039283168152918316602083015280517f37c2b164f8bd4e4a2b0cca866d1260948db487dfaaa8411aacddb72542c1f8659281900390910190a16005546040805160e160020a630e0dc3b9028152600160a060020a03848116600483015291519190921691631c1b877291602480830192600092919082900301818387803b15801561076357600080fd5b505af1158015610777573d6000803e3d6000fd5b505060058054600160a060020a031916600160a060020a03851617905550505b5050505050565b600154600160a060020a031681565b600054600160a060020a031681565b600454600160a060020a031681565b600054600160a060020a031633146107e257600080fd5b600160a060020a03811615156107f757600080fd5b60008054600160a060020a038316600160a060020a0319909116811790915560408051918252517f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af169181900360200190a150565b600354600160a060020a0316815600a165627a7a72305820e26b7ac285b5667d416db2f18d5abffe1ff1a29cf11f6b4c3f77c990f13db3a40029",
+  "deployedBytecode": "0x6080604052600436106100985763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166324a793c4811461009d578063359ef75b146100ce578063435b26be14610109578063465f22f01461011e5780635c7460d6146101575780638da5cb5b1461016c578063a34b80b014610181578063a6f9dae114610196578063ced7f449146101b7575b600080fd5b3480156100a957600080fd5b506100b26101cc565b60408051600160a060020a039092168252519081900360200190f35b3480156100da57600080fd5b50610107600160a060020a03600435811690602435811690604435811690606435811690608435166101db565b005b34801561011557600080fd5b506100b2610321565b34801561012a57600080fd5b50610107600160a060020a0360043581169060243581169060443581169060643581169060843516610330565b34801561016357600080fd5b506100b261079e565b34801561017857600080fd5b506100b26107ad565b34801561018d57600080fd5b506100b26107bc565b3480156101a257600080fd5b50610107600160a060020a03600435166107cb565b3480156101c357600080fd5b506100b261084b565b600254600160a060020a031681565b600054600160a060020a031633146101f257600080fd5b600160a060020a038516158015906102125750600160a060020a03841615155b80156102265750600160a060020a03831615155b801561023a5750600160a060020a03821615155b801561024e5750600160a060020a03811615155b80156102635750600154600160a060020a0316155b80156102785750600254600160a060020a0316155b801561028d5750600354600160a060020a0316155b80156102a25750600454600160a060020a0316155b80156102b75750600554600160a060020a0316155b15156102c257600080fd5b60018054600160a060020a0319908116600160a060020a03978816179091556002805482169587169590951790945560038054851693861693909317909255600480548416918516919091179055600580549092169216919091179055565b600554600160a060020a031681565b600054600160a060020a0316331461034757600080fd5b600160a060020a038516156104235760015460408051600160a060020a039283168152918716602083015280517f57b4acdcce9a438138db0edef11e09ded2de1339e2c693a3860053b29f02d4459281900390910190a16001546040805160e160020a630e0dc3b9028152600160a060020a03888116600483015291519190921691631c1b877291602480830192600092919082900301818387803b1580156103ef57600080fd5b505af1158015610403573d6000803e3d6000fd5b505060018054600160a060020a031916600160a060020a03891617905550505b600160a060020a038416156104ff5760025460408051600160a060020a039283168152918616602083015280517fa3ff37cf1ad096a94e6667f5facb596aa4b4f621e71271d970f96525f7f88ddd9281900390910190a16002546040805160e160020a630e0dc3b9028152600160a060020a03878116600483015291519190921691631c1b877291602480830192600092919082900301818387803b1580156104cb57600080fd5b505af11580156104df573d6000803e3d6000fd5b505060028054600160a060020a031916600160a060020a03881617905550505b600160a060020a038316156105db5760035460408051600160a060020a039283168152918516602083015280517fcac1d34085b7588b77cec2769da366a1890d791e11088ceebcab67af051532bc9281900390910190a16003546040805160e160020a630e0dc3b9028152600160a060020a03868116600483015291519190921691631c1b877291602480830192600092919082900301818387803b1580156105a757600080fd5b505af11580156105bb573d6000803e3d6000fd5b505060038054600160a060020a031916600160a060020a03871617905550505b600160a060020a038216156106bb5760045460408051600160a060020a039283168152918416602083015280517f555c7135f0d1bfae914030424949bff6469f6670e044dca599239b31ba74e2fa9281900390910190a1600480546040805160e160020a630e0dc3b9028152600160a060020a038681169482019490945290519290911691631c1b87729160248082019260009290919082900301818387803b15801561068757600080fd5b505af115801561069b573d6000803e3d6000fd5b505060048054600160a060020a031916600160a060020a03861617905550505b600160a060020a038116156107975760055460408051600160a060020a039283168152918316602083015280517f37c2b164f8bd4e4a2b0cca866d1260948db487dfaaa8411aacddb72542c1f8659281900390910190a16005546040805160e160020a630e0dc3b9028152600160a060020a03848116600483015291519190921691631c1b877291602480830192600092919082900301818387803b15801561076357600080fd5b505af1158015610777573d6000803e3d6000fd5b505060058054600160a060020a031916600160a060020a03851617905550505b5050505050565b600154600160a060020a031681565b600054600160a060020a031681565b600454600160a060020a031681565b600054600160a060020a031633146107e257600080fd5b600160a060020a03811615156107f757600080fd5b60008054600160a060020a038316600160a060020a0319909116811790915560408051918252517f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af169181900360200190a150565b600354600160a060020a0316815600a165627a7a72305820e26b7ac285b5667d416db2f18d5abffe1ff1a29cf11f6b4c3f77c990f13db3a40029",
+  "sourceMap": "1061:4142:9:-;;;1681:69;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1259:5:14;:18;;-1:-1:-1;;;;;;1259:18:14;1710:10:9;1259:18:14;;;1061:4142:9;;;;;;",
+  "deployedSourceMap": "1061:4142:9:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1465:39;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1465:39:9;;;;;;;;-1:-1:-1;;;;;1465:39:9;;;;;;;;;;;;;;2239:929;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;2239:929:9;-1:-1:-1;;;;;2239:929:9;;;;;;;;;;;;;;;;;;;;;;;;;;;1589:39;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1589:39:9;;;;3650:1551;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;3650:1551:9;-1:-1:-1;;;;;3650:1551:9;;;;;;;;;;;;;;;;;;;;;;;;;1430:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1430:29:9;;;;1115:20:14;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1115:20:14;;;;1552:31:9;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1552:31:9;;;;1447:169:14;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1447:169:14;-1:-1:-1;;;;;1447:169:14;;;;;1510:36:9;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1510:36:9;;;;1465:39;;;-1:-1:-1;;;;;1465:39:9;;:::o;2239:929::-;1051:5:14;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;-1:-1:-1;;;;;2532:27:9;;;;;;:68;;-1:-1:-1;;;;;;2563:37:9;;;;2532:68;:106;;;;-1:-1:-1;;;;;;2604:34:9;;;;2532:106;:139;;;;-1:-1:-1;;;;;;2642:29:9;;;;2532:139;:180;;;;-1:-1:-1;;;;;;2675:37:9;;;;2532:180;:222;;;;-1:-1:-1;2728:12:9;;-1:-1:-1;;;;;2728:12:9;:26;2532:222;:262;;;;-1:-1:-1;2758:22:9;;-1:-1:-1;;;;;2758:22:9;:36;2532:262;:299;;;;-1:-1:-1;2798:19:9;;-1:-1:-1;;;;;2798:19:9;:33;2532:299;:331;;;;-1:-1:-1;2835:14:9;;-1:-1:-1;;;;;2835:14:9;:28;2532:331;:371;;;;-1:-1:-1;2867:22:9;;-1:-1:-1;;;;;2867:22:9;:36;2532:371;2507:406;;;;;;;;2923:12;:28;;-1:-1:-1;;;;;;2923:28:9;;;-1:-1:-1;;;;;2923:28:9;;;;;;;2961:22;:48;;;;;;;;;;;;;;3019:19;:42;;;;;;;;;;;;;;3071:14;:32;;;;;;;;;;;;;3113:22;:48;;;;;;;;;;;;;2239:929::o;1589:39::-;;;-1:-1:-1;;;;;1589:39:9;;:::o;3650:1551::-;1051:5:14;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;-1:-1:-1;;;;;3923:27:9;;;3919:200;;3990:12;;3967:51;;;-1:-1:-1;;;;;3990:12:9;;;3967:51;;;;;;;;;;;;;;;;;;;;;4032:12;;:34;;;-1:-1:-1;;;;;4032:34:9;;-1:-1:-1;;;;;4032:34:9;;;;;;;;;:12;;;;;:19;;:34;;;;;:12;;:34;;;;;;;:12;;:34;;;5:2:-1;;;;30:1;27;20:12;5:2;4032:34:9;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;;4080:12:9;:28;;-1:-1:-1;;;;;;4080:28:9;-1:-1:-1;;;;;4080:28:9;;;;;-1:-1:-1;;3919:200:9;-1:-1:-1;;;;;4133:37:9;;;4129:279;;4219:22;;4186:81;;;-1:-1:-1;;;;;4219:22:9;;;4186:81;;;;;;;;;;;;;;;;;;;;;4281:22;;:54;;;-1:-1:-1;;;;;4281:54:9;;-1:-1:-1;;;;;4281:54:9;;;;;;;;;:22;;;;;:29;;:54;;;;;:22;;:54;;;;;;;:22;;:54;;;5:2:-1;;;;30:1;27;20:12;5:2;4281:54:9;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;;4349:22:9;:48;;-1:-1:-1;;;;;;4349:48:9;-1:-1:-1;;;;;4349:48:9;;;;;-1:-1:-1;;4129:279:9;-1:-1:-1;;;;;4422:34:9;;;4418:255;;4502:19;;4472:72;;;-1:-1:-1;;;;;4502:19:9;;;4472:72;;;;;;;;;;;;;;;;;;;;;4558:19;;:48;;;-1:-1:-1;;;;;4558:48:9;;-1:-1:-1;;;;;4558:48:9;;;;;;;;;:19;;;;;:26;;:48;;;;;:19;;:48;;;;;;;:19;;:48;;;5:2:-1;;;;30:1;27;20:12;5:2;4558:48:9;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;;4620:19:9;:42;;-1:-1:-1;;;;;;4620:42:9;-1:-1:-1;;;;;4620:42:9;;;;;-1:-1:-1;;4418:255:9;-1:-1:-1;;;;;4687:29:9;;;4683:215;;4757:14;;4732:57;;;-1:-1:-1;;;;;4757:14:9;;;4732:57;;;;;;;;;;;;;;;;;;;;;4803:14;;;:38;;;-1:-1:-1;;;;;4803:38:9;;-1:-1:-1;;;;;4803:38:9;;;;;;;;;;;;:14;;;;;:21;;:38;;;;;:14;;:38;;;;;;;;:14;;:38;;;5:2:-1;;;;30:1;27;20:12;5:2;4803:38:9;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;;4855:14:9;:32;;-1:-1:-1;;;;;;4855:32:9;-1:-1:-1;;;;;4855:32:9;;;;;-1:-1:-1;;4683:215:9;-1:-1:-1;;;;;4911:37:9;;;4908:278;;4997:22;;4964:81;;;-1:-1:-1;;;;;4997:22:9;;;4964:81;;;;;;;;;;;;;;;;;;;;;5059:22;;:54;;;-1:-1:-1;;;;;5059:54:9;;-1:-1:-1;;;;;5059:54:9;;;;;;;;;:22;;;;;:29;;:54;;;;;:22;;:54;;;;;;;:22;;:54;;;5:2:-1;;;;30:1;27;20:12;5:2;5059:54:9;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;;5127:22:9;:48;;-1:-1:-1;;;;;;5127:48:9;-1:-1:-1;;;;;5127:48:9;;;;;-1:-1:-1;;4908:278:9;3650:1551;;;;;:::o;1430:29::-;;;-1:-1:-1;;;;;1430:29:9;;:::o;1115:20:14:-;;;-1:-1:-1;;;;;1115:20:14;;:::o;1552:31:9:-;;;-1:-1:-1;;;;;1552:31:9;;:::o;1447:169:14:-;1051:5;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;-1:-1:-1;;;;;1523:23:14;;;;1515:32;;;;;;1557:5;:17;;-1:-1:-1;;;;;1557:17:14;;-1:-1:-1;;;;;;1557:17:14;;;;;;;;1584:25;;;;;;;;;;;;;;;;1447:169;:::o;1510:36:9:-;;;-1:-1:-1;;;;;1510:36:9;;:::o",
+  "source": "// Copyright 2018 Energy Web Foundation\n// This file is part of the Origin Application brought to you by the Energy Web Foundation,\n// a global non-profit organization focused on accelerating blockchain technology across the energy sector, \n// incorporated in Zug, Switzerland.\n//\n// The Origin Application is free software: you can redistribute it and/or modify\n// it under the terms of the GNU General Public License as published by\n// the Free Software Foundation, either version 3 of the License, or\n// (at your option) any later version.\n// This is distributed in the hope that it will be useful,\n// but WITHOUT ANY WARRANTY and without an implied warranty of\n// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n// GNU General Public License for more details, at <http://www.gnu.org/licenses/>.\n//\n// @authors: slock.it GmbH, Martin Kuechler, martin.kuchler@slock.it\n\npragma solidity ^0.4.17;\n\nimport \"./Owned.sol\";\nimport \"./Updatable.sol\";\n\n/// @title Contract for storing the current logic-contracts-addresses for the certificate of origin\ncontract CoO is Owned {\n\n    event LogUserRegistryUpdated(address _old, address _new);\n    event LogAssetProducingRegistryUpdated(address _old, address _new);\n    event LogCertificateRegistryUpdated(address _old, address _new);\n    event LogDemandRegistryUpdated(address _old, address _new);\n    event LogAssetConsumingRegistryUpdated(address _old, address _new);\n\n    Updatable public userRegistry;\n    Updatable public assetProducingRegistry;\n    Updatable public certificateRegistry;\n    Updatable public demandRegistry;\n    Updatable public assetConsumingRegistry;\n\n    /// @notice The constructor of the UserDB\n    function CoO()\n        Owned(msg.sender) \n        public\n    {\n\n    } \n\n    /// @notice function to initialize the contracts, setting the needed contract-addresses\n    /// @param _userRegistry user-registry logic contract address\n    /// @param _assetProducingRegistry producing-asset-registry logic contract address\n    /// @param _certificateRegistry certificate-registry logic contract address\n    /// @param _demandRegistry demand-registry logic contract address\n    /// @param _assetConsumingRegistry consuming-asset-registry logic contract address\n    function init(\n        Updatable _userRegistry, \n        Updatable _assetProducingRegistry, \n        Updatable _certificateRegistry, \n        Updatable _demandRegistry, \n        Updatable _assetConsumingRegistry\n    ) \n        onlyOwner\n        external\n    {\n        require(    \n            _userRegistry != address(0) && _assetProducingRegistry != address(0) && _certificateRegistry != address(0) && _demandRegistry != address(0) && _assetConsumingRegistry != address(0)\n            && userRegistry == address(0) && assetProducingRegistry == address(0) && certificateRegistry == address(0) && demandRegistry == address(0) && assetConsumingRegistry == address(0)\n        );\n        userRegistry = _userRegistry;\n        assetProducingRegistry = _assetProducingRegistry;\n        certificateRegistry = _certificateRegistry;\n        demandRegistry = _demandRegistry;\n        assetConsumingRegistry = _assetConsumingRegistry;\n    }\n\n    /// @notice function to update one or more logic-contracts\n    /// @param _userRegistry address of the new user-registry-logic-contract\n    /// @param _assetProducingRegistry address of the new asset-registry-logic-contract\n    /// @param _certificateRegistry address of the new certificate-registry-logic-contract\n    /// @param _demandRegistry demand-registry logic contract address\n    /// @param _assetConsumingRegistry consuming-asset-registry logic contract address\n    function update(\n        Updatable _userRegistry,\n        Updatable _assetProducingRegistry, \n        Updatable _certificateRegistry, \n        Updatable _demandRegistry, \n        Updatable _assetConsumingRegistry\n    )\n        onlyOwner \n        external\n    {\n        if (_userRegistry != address(0)) {\n\n            LogUserRegistryUpdated(userRegistry, _userRegistry);\n            userRegistry.update(_userRegistry);\n            userRegistry = _userRegistry;\n        }\n\n        if (_assetProducingRegistry != address(0)) {\n            LogAssetProducingRegistryUpdated(assetProducingRegistry, _assetProducingRegistry);\n            assetProducingRegistry.update(_assetProducingRegistry);\n            assetProducingRegistry = _assetProducingRegistry;\n        }\n\n        if (_certificateRegistry != address(0)) {\n            LogCertificateRegistryUpdated(certificateRegistry, _certificateRegistry);\n            certificateRegistry.update(_certificateRegistry);\n            certificateRegistry = _certificateRegistry;\n        }\n\n        if (_demandRegistry != address(0)) {\n            LogDemandRegistryUpdated(demandRegistry, _demandRegistry);\n            demandRegistry.update(_demandRegistry);\n            demandRegistry = _demandRegistry;\n        }\n\n        if(_assetConsumingRegistry != address(0)) {\n            LogAssetConsumingRegistryUpdated(assetConsumingRegistry, _assetConsumingRegistry);\n            assetConsumingRegistry.update(_assetConsumingRegistry);\n            assetConsumingRegistry = _assetConsumingRegistry;\n        }        \n\n    }\n}",
+  "sourcePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/CoO.sol",
+  "ast": {
+    "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/CoO.sol",
+>>>>>>> master
     "exportedSymbols": {
       "CoO": [
         4418
@@ -291,7 +302,11 @@
         "src": "886:24:9"
       },
       {
+<<<<<<< HEAD
         "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Owned.sol",
+=======
+        "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Owned.sol",
+>>>>>>> master
         "file": "./Owned.sol",
         "id": 4142,
         "nodeType": "ImportDirective",
@@ -302,7 +317,11 @@
         "unitAlias": ""
       },
       {
+<<<<<<< HEAD
         "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Updatable.sol",
+=======
+        "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Updatable.sol",
+>>>>>>> master
         "file": "./Updatable.sol",
         "id": 4143,
         "nodeType": "ImportDirective",
@@ -315,7 +334,11 @@
       {
         "baseContracts": [
           {
+<<<<<<< HEAD
             "arguments": [],
+=======
+            "arguments": null,
+>>>>>>> master
             "baseName": {
               "contractScope": null,
               "id": 4144,
@@ -349,6 +372,10 @@
         "nodes": [
           {
             "anonymous": false,
+<<<<<<< HEAD
+=======
+            "documentation": null,
+>>>>>>> master
             "id": 4151,
             "name": "LogUserRegistryUpdated",
             "nodeType": "EventDefinition",
@@ -417,6 +444,10 @@
           },
           {
             "anonymous": false,
+<<<<<<< HEAD
+=======
+            "documentation": null,
+>>>>>>> master
             "id": 4157,
             "name": "LogAssetProducingRegistryUpdated",
             "nodeType": "EventDefinition",
@@ -485,6 +516,10 @@
           },
           {
             "anonymous": false,
+<<<<<<< HEAD
+=======
+            "documentation": null,
+>>>>>>> master
             "id": 4163,
             "name": "LogCertificateRegistryUpdated",
             "nodeType": "EventDefinition",
@@ -553,6 +588,10 @@
           },
           {
             "anonymous": false,
+<<<<<<< HEAD
+=======
+            "documentation": null,
+>>>>>>> master
             "id": 4169,
             "name": "LogDemandRegistryUpdated",
             "nodeType": "EventDefinition",
@@ -621,6 +660,10 @@
           },
           {
             "anonymous": false,
+<<<<<<< HEAD
+=======
+            "documentation": null,
+>>>>>>> master
             "id": 4175,
             "name": "LogAssetConsumingRegistryUpdated",
             "nodeType": "EventDefinition",
@@ -834,6 +877,10 @@
               "src": "1742:8:9",
               "statements": []
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice The constructor of the UserDB",
+>>>>>>> master
             "id": 4193,
             "implemented": true,
             "isConstructor": true,
@@ -849,7 +896,11 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
+<<<<<<< HEAD
                       "referencedDeclaration": 8958,
+=======
+                      "referencedDeclaration": 8961,
+>>>>>>> master
                       "src": "1710:3:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -1982,8 +2033,16 @@
                       "id": 4208,
                       "name": "require",
                       "nodeType": "Identifier",
+<<<<<<< HEAD
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 8961,
+=======
+                      "overloadedDeclarations": [
+                        8964,
+                        8965
+                      ],
+                      "referencedDeclaration": 8964,
+>>>>>>> master
                       "src": "2507:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2240,13 +2299,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice function to initialize the contracts, setting the needed contract-addresses\n @param _userRegistry user-registry logic contract address\n @param _assetProducingRegistry producing-asset-registry logic contract address\n @param _certificateRegistry certificate-registry logic contract address\n @param _demandRegistry demand-registry logic contract address\n @param _assetConsumingRegistry consuming-asset-registry logic contract address",
+>>>>>>> master
             "id": 4291,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 4206,
                 "modifierName": {
                   "argumentTypes": null,
@@ -3875,13 +3942,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice function to update one or more logic-contracts\n @param _userRegistry address of the new user-registry-logic-contract\n @param _assetProducingRegistry address of the new asset-registry-logic-contract\n @param _certificateRegistry address of the new certificate-registry-logic-contract\n @param _demandRegistry demand-registry logic contract address\n @param _assetConsumingRegistry consuming-asset-registry logic contract address",
+>>>>>>> master
             "id": 4417,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 4304,
                 "modifierName": {
                   "argumentTypes": null,
@@ -4070,7 +4145,11 @@
     "src": "886:4317:9"
   },
   "legacyAST": {
+<<<<<<< HEAD
     "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/CoO.sol",
+=======
+    "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/CoO.sol",
+>>>>>>> master
     "exportedSymbols": {
       "CoO": [
         4418
@@ -4091,7 +4170,11 @@
         "src": "886:24:9"
       },
       {
+<<<<<<< HEAD
         "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Owned.sol",
+=======
+        "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Owned.sol",
+>>>>>>> master
         "file": "./Owned.sol",
         "id": 4142,
         "nodeType": "ImportDirective",
@@ -4102,7 +4185,11 @@
         "unitAlias": ""
       },
       {
+<<<<<<< HEAD
         "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Updatable.sol",
+=======
+        "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Updatable.sol",
+>>>>>>> master
         "file": "./Updatable.sol",
         "id": 4143,
         "nodeType": "ImportDirective",
@@ -4115,7 +4202,11 @@
       {
         "baseContracts": [
           {
+<<<<<<< HEAD
             "arguments": [],
+=======
+            "arguments": null,
+>>>>>>> master
             "baseName": {
               "contractScope": null,
               "id": 4144,
@@ -4149,6 +4240,10 @@
         "nodes": [
           {
             "anonymous": false,
+<<<<<<< HEAD
+=======
+            "documentation": null,
+>>>>>>> master
             "id": 4151,
             "name": "LogUserRegistryUpdated",
             "nodeType": "EventDefinition",
@@ -4217,6 +4312,10 @@
           },
           {
             "anonymous": false,
+<<<<<<< HEAD
+=======
+            "documentation": null,
+>>>>>>> master
             "id": 4157,
             "name": "LogAssetProducingRegistryUpdated",
             "nodeType": "EventDefinition",
@@ -4285,6 +4384,10 @@
           },
           {
             "anonymous": false,
+<<<<<<< HEAD
+=======
+            "documentation": null,
+>>>>>>> master
             "id": 4163,
             "name": "LogCertificateRegistryUpdated",
             "nodeType": "EventDefinition",
@@ -4353,6 +4456,10 @@
           },
           {
             "anonymous": false,
+<<<<<<< HEAD
+=======
+            "documentation": null,
+>>>>>>> master
             "id": 4169,
             "name": "LogDemandRegistryUpdated",
             "nodeType": "EventDefinition",
@@ -4421,6 +4528,10 @@
           },
           {
             "anonymous": false,
+<<<<<<< HEAD
+=======
+            "documentation": null,
+>>>>>>> master
             "id": 4175,
             "name": "LogAssetConsumingRegistryUpdated",
             "nodeType": "EventDefinition",
@@ -4634,6 +4745,10 @@
               "src": "1742:8:9",
               "statements": []
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice The constructor of the UserDB",
+>>>>>>> master
             "id": 4193,
             "implemented": true,
             "isConstructor": true,
@@ -4649,7 +4764,11 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
+<<<<<<< HEAD
                       "referencedDeclaration": 8958,
+=======
+                      "referencedDeclaration": 8961,
+>>>>>>> master
                       "src": "1710:3:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -5782,8 +5901,16 @@
                       "id": 4208,
                       "name": "require",
                       "nodeType": "Identifier",
+<<<<<<< HEAD
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 8961,
+=======
+                      "overloadedDeclarations": [
+                        8964,
+                        8965
+                      ],
+                      "referencedDeclaration": 8964,
+>>>>>>> master
                       "src": "2507:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -6040,13 +6167,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice function to initialize the contracts, setting the needed contract-addresses\n @param _userRegistry user-registry logic contract address\n @param _assetProducingRegistry producing-asset-registry logic contract address\n @param _certificateRegistry certificate-registry logic contract address\n @param _demandRegistry demand-registry logic contract address\n @param _assetConsumingRegistry consuming-asset-registry logic contract address",
+>>>>>>> master
             "id": 4291,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 4206,
                 "modifierName": {
                   "argumentTypes": null,
@@ -7675,13 +7810,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice function to update one or more logic-contracts\n @param _userRegistry address of the new user-registry-logic-contract\n @param _assetProducingRegistry address of the new asset-registry-logic-contract\n @param _certificateRegistry address of the new certificate-registry-logic-contract\n @param _demandRegistry demand-registry logic contract address\n @param _assetConsumingRegistry consuming-asset-registry logic contract address",
+>>>>>>> master
             "id": 4417,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 4304,
                 "modifierName": {
                   "argumentTypes": null,
@@ -7871,9 +8014,24 @@
   },
   "compiler": {
     "name": "solc",
+<<<<<<< HEAD
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.0",
   "updatedAt": "2018-07-31T09:06:35.546Z"
+=======
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {
+    "1558785329949": {
+      "events": {},
+      "links": {},
+      "address": "0x3251af4228147ae39e60619f9e021d09bcd10fcc",
+      "transactionHash": "0x88ca12258b3cbc0498b614bfe2b93e68527bee9cfee401e961a475599501b3fd"
+    }
+  },
+  "schemaVersion": "2.0.2",
+  "updatedAt": "2019-05-25T11:56:11.273Z"
+>>>>>>> master
 }

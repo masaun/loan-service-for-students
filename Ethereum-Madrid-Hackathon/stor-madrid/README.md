@@ -162,6 +162,9 @@ Only these certificates can be matched with demands:
 
 # Blockchain Facade  (JavaScript-Interface)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 ## _Getting Started_
 

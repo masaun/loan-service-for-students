@@ -260,6 +260,7 @@
       "type": "function"
     }
   ],
+<<<<<<< HEAD
   "bytecode": "0x6060604052341561000f57600080fd5b6040516020806108c38339810160405280805160008054600160a060020a03909216600160a060020a0319909216919091179055505061086f806100546000396000f3006060604052600436106100ae5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166306ec898281146100b357806342c366a5146100d757806351640fee1461011d57806384e814ef146101855780638da5cb5b146101b7578063a6f9dae1146101ca578063af277395146101e9578063bdd75048146101fc578063cf6ebee71461021e578063d50bba1a14610248578063d90561ba1461025e575b600080fd5b34156100be57600080fd5b6100d5600435600160a060020a0360243516610274565b005b34156100e257600080fd5b61010b600435600160a060020a0360243581169060443590606435906084359060a435166102d8565b60405190815260200160405180910390f35b341561012857600080fd5b61013360043561041d565b604051978852600160a060020a0396871660208901526040808901969096529315156060880152608087019290925260a086015290921660c084015260e0830191909152610100909101905180910390f35b341561019057600080fd5b61019b6004356104fc565b604051600160a060020a03909116815260200160405180910390f35b34156101c257600080fd5b61019b610549565b34156101d557600080fd5b6100d5600160a060020a0360043516610558565b34156101f457600080fd5b61010b6105f0565b341561020757600080fd5b6100d5600435600160a060020a0360243516610614565b341561022957600080fd5b610234600435610678565b604051901515815260200160405180910390f35b341561025357600080fd5b6100d56004356106bf565b341561026957600080fd5b61019b60043561070f565b60005433600160a060020a0390811691161461028f57600080fd5b8060018381548110151561029f57fe5b906000526020600020906008020160060160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b6000805433600160a060020a039081169116146102f457600080fd5b50600180549081808201610308838261075c565b9160005260206000209060080201600061010060405190810160409081528b8252600160a060020a03808c1660208401529082018a9052600060608301526080820189905260a08201889052861660c08201524260e082015291905081518155602082015160018201805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a039290921691909117905560408201518160020155606082015160038201805460ff19169115159190911790556080820151600482015560a0820151816005015560c082015160068201805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a039290921691909117905560e082015181600701555050509695505050505050565b60008060008060008060008061043161078d565b600180548b90811061043f57fe5b90600052602060002090600802016101006040519081016040908152825482526001830154600160a060020a039081166020840152600284015491830191909152600383015460ff161515606083015260048301546080830152600583015460a083015260068301541660c082015260079091015460e0820152905080519850806020015197508060400151965080606001519550806080015194508060a0015193508060c0015192508060e00151915050919395975091939597565b6000805433600160a060020a0390811691161461051857600080fd5b600180548390811061052657fe5b6000918252602090912060089091020160010154600160a060020a031692915050565b600054600160a060020a031681565b60005433600160a060020a0390811691161461057357600080fd5b600160a060020a038116151561058857600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790557f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af1681604051600160a060020a03909116815260200160405180910390a150565b6000805433600160a060020a0390811691161461060c57600080fd5b506001545b90565b60005433600160a060020a0390811691161461062f57600080fd5b8060018381548110151561063f57fe5b906000526020600020906008020160010160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b6000805433600160a060020a0390811691161461069457600080fd5b60018054839081106106a257fe5b600091825260209091206008909102016003015460ff1692915050565b60005433600160a060020a039081169116146106da57600080fd5b600180828154811015156106ea57fe5b60009182526020909120600890910201600301805460ff191691151591909117905550565b6000805433600160a060020a0390811691161461072b57600080fd5b600180548390811061073957fe5b6000918252602090912060089091020160060154600160a060020a031692915050565b8154818355818115116107885760080281600802836000526020600020918201910161078891906107d1565b505050565b6101006040519081016040908152600080835260208301819052908201819052606082018190526080820181905260a0820181905260c0820181905260e082015290565b61061191905b8082111561083f57600080825560018201805473ffffffffffffffffffffffffffffffffffffffff199081169091556002830182905560038301805460ff191690556004830182905560058301829055600683018054909116905560078201556008016107d7565b50905600a165627a7a72305820cb80db9c4eaaf48982fc14cfb0e52c330090710372456af3cf61f296ae1745ef0029",
   "deployedBytecode": "0x6060604052600436106100ae5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166306ec898281146100b357806342c366a5146100d757806351640fee1461011d57806384e814ef146101855780638da5cb5b146101b7578063a6f9dae1146101ca578063af277395146101e9578063bdd75048146101fc578063cf6ebee71461021e578063d50bba1a14610248578063d90561ba1461025e575b600080fd5b34156100be57600080fd5b6100d5600435600160a060020a0360243516610274565b005b34156100e257600080fd5b61010b600435600160a060020a0360243581169060443590606435906084359060a435166102d8565b60405190815260200160405180910390f35b341561012857600080fd5b61013360043561041d565b604051978852600160a060020a0396871660208901526040808901969096529315156060880152608087019290925260a086015290921660c084015260e0830191909152610100909101905180910390f35b341561019057600080fd5b61019b6004356104fc565b604051600160a060020a03909116815260200160405180910390f35b34156101c257600080fd5b61019b610549565b34156101d557600080fd5b6100d5600160a060020a0360043516610558565b34156101f457600080fd5b61010b6105f0565b341561020757600080fd5b6100d5600435600160a060020a0360243516610614565b341561022957600080fd5b610234600435610678565b604051901515815260200160405180910390f35b341561025357600080fd5b6100d56004356106bf565b341561026957600080fd5b61019b60043561070f565b60005433600160a060020a0390811691161461028f57600080fd5b8060018381548110151561029f57fe5b906000526020600020906008020160060160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b6000805433600160a060020a039081169116146102f457600080fd5b50600180549081808201610308838261075c565b9160005260206000209060080201600061010060405190810160409081528b8252600160a060020a03808c1660208401529082018a9052600060608301526080820189905260a08201889052861660c08201524260e082015291905081518155602082015160018201805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a039290921691909117905560408201518160020155606082015160038201805460ff19169115159190911790556080820151600482015560a0820151816005015560c082015160068201805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a039290921691909117905560e082015181600701555050509695505050505050565b60008060008060008060008061043161078d565b600180548b90811061043f57fe5b90600052602060002090600802016101006040519081016040908152825482526001830154600160a060020a039081166020840152600284015491830191909152600383015460ff161515606083015260048301546080830152600583015460a083015260068301541660c082015260079091015460e0820152905080519850806020015197508060400151965080606001519550806080015194508060a0015193508060c0015192508060e00151915050919395975091939597565b6000805433600160a060020a0390811691161461051857600080fd5b600180548390811061052657fe5b6000918252602090912060089091020160010154600160a060020a031692915050565b600054600160a060020a031681565b60005433600160a060020a0390811691161461057357600080fd5b600160a060020a038116151561058857600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790557f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af1681604051600160a060020a03909116815260200160405180910390a150565b6000805433600160a060020a0390811691161461060c57600080fd5b506001545b90565b60005433600160a060020a0390811691161461062f57600080fd5b8060018381548110151561063f57fe5b906000526020600020906008020160010160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b6000805433600160a060020a0390811691161461069457600080fd5b60018054839081106106a257fe5b600091825260209091206008909102016003015460ff1692915050565b60005433600160a060020a039081169116146106da57600080fd5b600180828154811015156106ea57fe5b60009182526020909120600890910201600301805460ff191691151591909117905550565b6000805433600160a060020a0390811691161461072b57600080fd5b600180548390811061073957fe5b6000918252602090912060089091020160060154600160a060020a031692915050565b8154818355818115116107885760080281600802836000526020600020918201910161078891906107d1565b505050565b6101006040519081016040908152600080835260208301819052908201819052606082018190526080820181905260a0820181905260c0820181905260e082015290565b61061191905b8082111561083f57600080825560018201805473ffffffffffffffffffffffffffffffffffffffff199081169091556002830182905560038301805460ff191690556004830182905560058301829055600683018054909116905560078201556008016107d7565b50905600a165627a7a72305820cb80db9c4eaaf48982fc14cfb0e52c330090710372456af3cf61f296ae1745ef0029",
   "sourceMap": "1065:4392:7:-;;;1665:89;;;;;;;;;;;;;;;;;;;;;;1259:5:14;:18;;-1:-1:-1;;;;;1259:18:14;;;-1:-1:-1;;;;;;1259:18:14;;;;;;;;;-1:-1:-1;;1065:4392:7;;;;;;",
@@ -268,6 +269,16 @@
   "sourcePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/CertificateDB.sol",
   "ast": {
     "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/CertificateDB.sol",
+=======
+  "bytecode": "0x608060405234801561001057600080fd5b5060405160208061090b833981016040525160008054600160a060020a03909216600160a060020a03199092169190911790556108b9806100526000396000f3006080604052600436106100ae5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166306ec898281146100b357806342c366a5146100d957806351640fee1461012157806384e814ef146101885780638da5cb5b146101bc578063a6f9dae1146101d1578063af277395146101f2578063bdd7504814610207578063cf6ebee71461022b578063d50bba1a14610257578063d90561ba1461026f575b600080fd5b3480156100bf57600080fd5b506100d7600435600160a060020a0360243516610287565b005b3480156100e557600080fd5b5061010f600435600160a060020a0360243581169060443590606435906084359060a435166102e7565b60408051918252519081900360200190f35b34801561012d57600080fd5b506101396004356104d7565b60408051988952600160a060020a0397881660208a0152888101969096529315156060880152608087019290925260a086015290921660c084015260e083019190915251908190036101000190f35b34801561019457600080fd5b506101a060043561060d565b60408051600160a060020a039092168252519081900360200190f35b3480156101c857600080fd5b506101a0610656565b3480156101dd57600080fd5b506100d7600160a060020a0360043516610665565b3480156101fe57600080fd5b5061010f6106f2565b34801561021357600080fd5b506100d7600435600160a060020a0360243516610711565b34801561023757600080fd5b50610243600435610771565b604080519115158252519081900360200190f35b34801561026357600080fd5b506100d76004356107b4565b34801561027b57600080fd5b506101a0600435610800565b600054600160a060020a0316331461029e57600080fd5b806001838154811015156102ae57fe5b906000526020600020906008020160060160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b60008054600160a060020a031633146102ff57600080fd5b50600180546040805161010081018252988952600160a060020a0397881660208a01908152908901968752600060608a0181815260808b0197885260a08b0196875294891660c08b019081524260e08c019081528486018655949091529851600883027fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf681019190915590517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf782018054918a1673ffffffffffffffffffffffffffffffffffffffff1992831617905596517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf882015592517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf98401805491151560ff1990921691909117905593517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cfa83015591517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cfb82015594517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cfc8601805491909516931692909217909255517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cfd9092019190915590565b6000806000806000806000806104eb610849565b600180548b9081106104f957fe5b90600052602060002090600802016101006040519081016040529081600082015481526020016001820160009054906101000a9004600160a060020a0316600160a060020a0316600160a060020a03168152602001600282015481526020016003820160009054906101000a900460ff16151515158152602001600482015460001916600019168152602001600582015481526020016006820160009054906101000a9004600160a060020a0316600160a060020a0316600160a060020a03168152602001600782015481525050905080600001519850806020015197508060400151965080606001519550806080015194508060a0015193508060c0015192508060e00151915050919395975091939597565b60008054600160a060020a0316331461062557600080fd5b600180548390811061063357fe5b6000918252602090912060089091020160010154600160a060020a031692915050565b600054600160a060020a031681565b600054600160a060020a0316331461067c57600080fd5b600160a060020a038116151561069157600080fd5b60008054600160a060020a03831673ffffffffffffffffffffffffffffffffffffffff19909116811790915560408051918252517f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af169181900360200190a150565b60008054600160a060020a0316331461070a57600080fd5b5060015490565b600054600160a060020a0316331461072857600080fd5b8060018381548110151561073857fe5b906000526020600020906008020160010160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b60008054600160a060020a0316331461078957600080fd5b600180548390811061079757fe5b600091825260209091206008909102016003015460ff1692915050565b600054600160a060020a031633146107cb57600080fd5b600180828154811015156107db57fe5b60009182526020909120600890910201600301805460ff191691151591909117905550565b60008054600160a060020a0316331461081857600080fd5b600180548390811061082657fe5b6000918252602090912060089091020160060154600160a060020a031692915050565b6040805161010081018252600080825260208201819052918101829052606081018290526080810182905260a0810182905260c0810182905260e0810191909152905600a165627a7a72305820f6567a2012ad6f4ea680ad966ca79e31f965f45d871fb07818573a3b2847ab9a0029",
+  "deployedBytecode": "0x6080604052600436106100ae5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166306ec898281146100b357806342c366a5146100d957806351640fee1461012157806384e814ef146101885780638da5cb5b146101bc578063a6f9dae1146101d1578063af277395146101f2578063bdd7504814610207578063cf6ebee71461022b578063d50bba1a14610257578063d90561ba1461026f575b600080fd5b3480156100bf57600080fd5b506100d7600435600160a060020a0360243516610287565b005b3480156100e557600080fd5b5061010f600435600160a060020a0360243581169060443590606435906084359060a435166102e7565b60408051918252519081900360200190f35b34801561012d57600080fd5b506101396004356104d7565b60408051988952600160a060020a0397881660208a0152888101969096529315156060880152608087019290925260a086015290921660c084015260e083019190915251908190036101000190f35b34801561019457600080fd5b506101a060043561060d565b60408051600160a060020a039092168252519081900360200190f35b3480156101c857600080fd5b506101a0610656565b3480156101dd57600080fd5b506100d7600160a060020a0360043516610665565b3480156101fe57600080fd5b5061010f6106f2565b34801561021357600080fd5b506100d7600435600160a060020a0360243516610711565b34801561023757600080fd5b50610243600435610771565b604080519115158252519081900360200190f35b34801561026357600080fd5b506100d76004356107b4565b34801561027b57600080fd5b506101a0600435610800565b600054600160a060020a0316331461029e57600080fd5b806001838154811015156102ae57fe5b906000526020600020906008020160060160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b60008054600160a060020a031633146102ff57600080fd5b50600180546040805161010081018252988952600160a060020a0397881660208a01908152908901968752600060608a0181815260808b0197885260a08b0196875294891660c08b019081524260e08c019081528486018655949091529851600883027fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf681019190915590517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf782018054918a1673ffffffffffffffffffffffffffffffffffffffff1992831617905596517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf882015592517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf98401805491151560ff1990921691909117905593517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cfa83015591517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cfb82015594517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cfc8601805491909516931692909217909255517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cfd9092019190915590565b6000806000806000806000806104eb610849565b600180548b9081106104f957fe5b90600052602060002090600802016101006040519081016040529081600082015481526020016001820160009054906101000a9004600160a060020a0316600160a060020a0316600160a060020a03168152602001600282015481526020016003820160009054906101000a900460ff16151515158152602001600482015460001916600019168152602001600582015481526020016006820160009054906101000a9004600160a060020a0316600160a060020a0316600160a060020a03168152602001600782015481525050905080600001519850806020015197508060400151965080606001519550806080015194508060a0015193508060c0015192508060e00151915050919395975091939597565b60008054600160a060020a0316331461062557600080fd5b600180548390811061063357fe5b6000918252602090912060089091020160010154600160a060020a031692915050565b600054600160a060020a031681565b600054600160a060020a0316331461067c57600080fd5b600160a060020a038116151561069157600080fd5b60008054600160a060020a03831673ffffffffffffffffffffffffffffffffffffffff19909116811790915560408051918252517f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af169181900360200190a150565b60008054600160a060020a0316331461070a57600080fd5b5060015490565b600054600160a060020a0316331461072857600080fd5b8060018381548110151561073857fe5b906000526020600020906008020160010160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b60008054600160a060020a0316331461078957600080fd5b600180548390811061079757fe5b600091825260209091206008909102016003015460ff1692915050565b600054600160a060020a031633146107cb57600080fd5b600180828154811015156107db57fe5b60009182526020909120600890910201600301805460ff191691151591909117905550565b60008054600160a060020a0316331461081857600080fd5b600180548390811061082657fe5b6000918252602090912060089091020160060154600160a060020a031692915050565b6040805161010081018252600080825260208201819052918101829052606081018290526080810182905260a0810182905260c0810182905260e0810191909152905600a165627a7a72305820f6567a2012ad6f4ea680ad966ca79e31f965f45d871fb07818573a3b2847ab9a0029",
+  "sourceMap": "1065:4392:7:-;;;1665:89;8:9:-1;5:2;;;30:1;27;20:12;5:2;1665:89:7;;;;;;;;;;;;;1259:5:14;:18;;-1:-1:-1;;;;;1259:18:14;;;-1:-1:-1;;;;;;1259:18:14;;;;;;;;;1065:4392:7;;;;;;",
+  "deployedSourceMap": "1065:4392:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2488:170;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;2488:170:7;;;-1:-1:-1;;;;;2488:170:7;;;;;;;2012:327;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;2012:327:7;;;-1:-1:-1;;;;;2012:327:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3474:667;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;3474:667:7;;;;;;;;;;;;-1:-1:-1;;;;;3474:667:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4307:191;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;4307:191:7;;;;;;;;;-1:-1:-1;;;;;4307:191:7;;;;;;;;;;;;;;1115:20:14;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1115:20:14;;;;1447:169;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1447:169:14;-1:-1:-1;;;;;1447:169:14;;;;;4952:160:7;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4952:160:7;;;;2847:146;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;2847:146:7;;;-1:-1:-1;;;;;2847:146:7;;;;;4655:181;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;4655:181:7;;;;;;;;;;;;;;;;;;;;;;;3129:128;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;3129:128:7;;;;;5262:192;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;5262:192:7;;;;;2488:170;1051:5:14;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;2644:7:7;2603:15;2619:14;2603:31;;;;;;;;;;;;;;;;;;;;:38;;;:48;;;;;-1:-1:-1;;;;;2603:48:7;;;;;-1:-1:-1;;;;;2603:48:7;;;;;;2488:170;;:::o;2012:327::-;2162:12;1051:5:14;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;-1:-1:-1;2196:15:7;:22;;2249:81;;;;;;;;;;;-1:-1:-1;;;;;2249:81:7;;;;;;;;;;;;;;;-1:-1:-1;2249:81:7;;;;;;;;;;;;;;;;;;;;;;;;;;;2326:3;2249:81;;;;;;23:18:-1;;;45:23;;2228:103:7;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;2228:103:7;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;2228:103:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2196:22;2012:327::o;3474:667::-;3580:13;3608:14;3637;3666:13;3694:16;3725:13;3753:15;3783:18;3827:20;;:::i;:::-;3850:15;:31;;3866:14;;3850:31;;;;;;;;;;;;;;;;3827:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;3827:54:7;-1:-1:-1;;;;;3827:54:7;-1:-1:-1;;;;;3827:54:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;3827:54:7;-1:-1:-1;;;;;3827:54:7;-1:-1:-1;;;;;3827:54:7;;;;;;;;;;;;;;;3903:1;:9;;;3892:20;;3931:1;:7;;;3922:16;;3960:1;:10;;;3948:22;;3992:1;:9;;;3981:20;;4022:1;:9;;;4011:20;;4053:1;:9;;;4042:20;;4082:1;:8;;;4072:18;;4116:1;:14;;;4100:30;;3474:667;;;;;;;;;;:::o;4307:191::-;4424:7;1051:5:14;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;4454:15:7;:31;;4470:14;;4454:31;;;;;;;;;;;;;;;;;;;:37;;;-1:-1:-1;;;;;4454:37:7;;4307:191;-1:-1:-1;;4307:191:7:o;1115:20:14:-;;;-1:-1:-1;;;;;1115:20:14;;:::o;1447:169::-;1051:5;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;-1:-1:-1;;;;;1523:23:14;;;;1515:32;;;;;;1557:5;:17;;-1:-1:-1;;;;;1557:17:14;;-1:-1:-1;;1557:17:14;;;;;;;;1584:25;;;;;;;;;;;;;;;;1447:169;:::o;4952:160:7:-;5055:4;1051:5:14;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;-1:-1:-1;5083:15:7;:22;4952:160;:::o;2847:146::-;1051:5:14;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;2980:6:7;2940:15;2956:14;2940:31;;;;;;;;;;;;;;;;;;;;:37;;;:46;;;;;-1:-1:-1;;;;;2940:46:7;;;;;-1:-1:-1;;;;;2940:46:7;;;;;;2847:146;;:::o;4655:181::-;4762:4;1051:5:14;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;4790:15:7;:31;;4806:14;;4790:31;;;;;;;;;;;;;;;;;;;:39;;;;;;4655:181;-1:-1:-1;;4655:181:7:o;3129:128::-;1051:5:14;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;3246:4:7;3204:15;3220:14;3204:31;;;;;;;;;;;;;;;;;;;;;;;:39;;:46;;-1:-1:-1;;3204:46:7;;;;;;;;;;-1:-1:-1;3129:128:7:o;5262:192::-;5378:7;1051:5:14;;-1:-1:-1;;;;;1051:5:14;1037:10;:19;1028:29;;;;;;5409:15:7;:31;;5425:14;;5409:31;;;;;;;;;;;;;;;;;;;:38;;;-1:-1:-1;;;;;5409:38:7;;5262:192;-1:-1:-1;;5262:192:7:o;1065:4392::-;;;;;;;;;-1:-1:-1;1065:4392:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// Copyright 2018 Energy Web Foundation\n// This file is part of the Origin Application brought to you by the Energy Web Foundation,\n// a global non-profit organization focused on accelerating blockchain technology across the energy sector, \n// incorporated in Zug, Switzerland.\n//\n// The Origin Application is free software: you can redistribute it and/or modify\n// it under the terms of the GNU General Public License as published by\n// the Free Software Foundation, either version 3 of the License, or\n// (at your option) any later version.\n// This is distributed in the hope that it will be useful,\n// but WITHOUT ANY WARRANTY and without an implied warranty of\n// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n// GNU General Public License for more details, at <http://www.gnu.org/licenses/>.\n//\n// @authors: slock.it GmbH, Jonas Bentke, jonas.bentke@slock.it\n\npragma solidity ^0.4.17;\n\n/// @title The Database contract for the Certificate of Origin list\n/// @notice This contract only provides getter and setter methods\n\nimport \"./Owned.sol\";\n\ncontract CertificateDB is Owned {\n\n    struct Certificate {\n        uint assetId;\n        address owner;\n        uint powerInW;\n        bool retired;\n        bytes32 dataLog;\n        uint coSaved;\n        address escrow;\n        uint creationTime;\n    }\n\n    /// @notice An array containing all created certificates\n    Certificate[] private certificateList; // why is it private read? People can still read it, just not use from within a smart contract (even there it is possible)\n    \n    /// @notice Constructor\n    /// @param _certificateLogic The address of the corresbonding logic contract\n    function CertificateDB(address _certificateLogic) Owned(_certificateLogic) public {\n    }\n\n    /// @notice Creates a new certificate\n    /// @param _assetId The id of the Certificate\n    /// @param _owner The owner of the Certificate\n    /// @param _powerInW The amount of Watts the Certificate holds\n    /// @return The id of the certificate\n    function createCertificate(uint _assetId, address _owner, uint _powerInW, bytes32 _dataLog, uint _coSaved, address _escrow) public onlyOwner returns (uint _certId) {\n        _certId = certificateList.length;\n        certificateList.push(Certificate(_assetId, _owner, _powerInW, false, _dataLog, _coSaved, _escrow, now)); \n    }\n\n    /// @notice sets the escrow-address of a certificate\n    /// @param _certificateId certificateId\n    /// @param _escrow new escrow-address\n    function setCertificateEscrow(uint _certificateId, address _escrow)\n        public\n        onlyOwner\n    {\n        certificateList[_certificateId].escrow = _escrow;\n    }\n\n    /// @notice Sets the owner of a certificate\n    /// @param _certificateId The array position in which the certificate is stored\n    /// @param _owner The address of the new owner\n    function setCertificateOwner(uint _certificateId, address _owner) public onlyOwner {\n        certificateList[_certificateId].owner = _owner;\n    }\n\n    /// @notice Sets a certificate to retired\n    /// @param _certificateId The array position in which the certificate is stored\n    function retireCertificate(uint _certificateId) public onlyOwner {\n        certificateList[_certificateId].retired = true;\n    }\n\n    /// @notice Returns the certificate that corresponds to the given array id\n    /// @param _certificateId The array position in which the certificate is stored\n    /// @return all elements of the certificate\n    function getCertificate(uint _certificateId) \n        public \n        view \n        returns (\n            uint _assetId, \n            address _owner, \n            uint _powerInW, \n            bool _retired, \n            bytes32 _dataLog, \n            uint _coSaved, \n            address _escrow, \n            uint _creationTime\n        ) \n    {\n        Certificate memory c = certificateList[_certificateId];\n\n        _assetId = c.assetId;\n        _owner = c.owner;\n        _powerInW = c.powerInW; \n        _retired = c.retired;\n        _dataLog = c.dataLog; \n        _coSaved = c.coSaved;\n        _escrow = c.escrow;\n        _creationTime = c.creationTime;    \n    }\n\n    /// @notice Returns the certificate owner\n    /// @param _certificateId The array position in which the certificate is stored\n    /// @return address owner\n    function getCertificateOwner(uint _certificateId) \n        public \n        onlyOwner \n        view \n        returns (address)\n    {\n        return certificateList[_certificateId].owner;\n    }\n\n    /// @notice Getter for state of retirement\n    /// @param _certificateId The id of the requested certificate\n    /// @return bool if it is retired\n    function isRetired(uint _certificateId) \n        public \n        onlyOwner \n        view \n        returns (bool) \n    {\n        return certificateList[_certificateId].retired;\n    }\n\n    /// @notice function to get the amount of all certificates\n    /// @return the amount of all certificates\n    function getCertificateListLength() \n        public \n        onlyOwner \n        view \n        returns (uint) \n    {\n        return certificateList.length;\n    }\n\n    /// @notice function to get the escrow-address of a certificate\n    /// @param _certificateId certificate-ID\n    /// @return escrow-address\n    function getCertificateEscrow(uint _certificateId) \n        public\n        onlyOwner\n        view \n        returns (address) \n    {\n        return certificateList[_certificateId].escrow;\n    } \n}",
+  "sourcePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/CertificateDB.sol",
+  "ast": {
+    "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/CertificateDB.sol",
+>>>>>>> master
     "exportedSymbols": {
       "CertificateDB": [
         3627
@@ -288,7 +299,11 @@
         "src": "881:24:7"
       },
       {
+<<<<<<< HEAD
         "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Owned.sol",
+=======
+        "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Owned.sol",
+>>>>>>> master
         "file": "./Owned.sol",
         "id": 3382,
         "nodeType": "ImportDirective",
@@ -301,7 +316,11 @@
       {
         "baseContracts": [
           {
+<<<<<<< HEAD
             "arguments": [],
+=======
+            "arguments": null,
+>>>>>>> master
             "baseName": {
               "contractScope": null,
               "id": 3383,
@@ -563,7 +582,11 @@
             "storageLocation": "default",
             "typeDescriptions": {
               "typeIdentifier": "t_array$_t_struct$_Certificate_$3401_storage_$dyn_storage",
+<<<<<<< HEAD
               "typeString": "struct CertificateDB.Certificate storage ref[] storage ref"
+=======
+              "typeString": "struct CertificateDB.Certificate[]"
+>>>>>>> master
             },
             "typeName": {
               "baseType": {
@@ -575,7 +598,11 @@
                 "src": "1385:11:7",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_Certificate_$3401_storage_ptr",
+<<<<<<< HEAD
                   "typeString": "struct CertificateDB.Certificate storage pointer"
+=======
+                  "typeString": "struct CertificateDB.Certificate"
+>>>>>>> master
                 }
               },
               "id": 3403,
@@ -584,7 +611,11 @@
               "src": "1385:13:7",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_struct$_Certificate_$3401_storage_$dyn_storage_ptr",
+<<<<<<< HEAD
                 "typeString": "struct CertificateDB.Certificate storage ref[] storage pointer"
+=======
+                "typeString": "struct CertificateDB.Certificate[]"
+>>>>>>> master
               }
             },
             "value": null,
@@ -597,6 +628,10 @@
               "src": "1747:7:7",
               "statements": []
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Constructor\n @param _certificateLogic The address of the corresbonding logic contract",
+>>>>>>> master
             "id": 3413,
             "implemented": true,
             "isConstructor": true,
@@ -861,7 +896,11 @@
                             "name": "now",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
+<<<<<<< HEAD
                             "referencedDeclaration": 8960,
+=======
+                            "referencedDeclaration": 8963,
+>>>>>>> master
                             "src": "2326:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -984,13 +1023,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Creates a new certificate\n @param _assetId The id of the Certificate\n @param _owner The owner of the Certificate\n @param _powerInW The amount of Watts the Certificate holds\n @return The id of the certificate",
+>>>>>>> master
             "id": 3453,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3428,
                 "modifierName": {
                   "argumentTypes": null,
@@ -1311,13 +1358,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice sets the escrow-address of a certificate\n @param _certificateId certificateId\n @param _escrow new escrow-address",
+>>>>>>> master
             "id": 3470,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3460,
                 "modifierName": {
                   "argumentTypes": null,
@@ -1507,13 +1562,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Sets the owner of a certificate\n @param _certificateId The array position in which the certificate is stored\n @param _owner The address of the new owner",
+>>>>>>> master
             "id": 3487,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3477,
                 "modifierName": {
                   "argumentTypes": null,
@@ -1708,13 +1771,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Sets a certificate to retired\n @param _certificateId The array position in which the certificate is stored",
+>>>>>>> master
             "id": 3502,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3492,
                 "modifierName": {
                   "argumentTypes": null,
@@ -1803,7 +1874,11 @@
                       "storageLocation": "memory",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Certificate_$3401_memory_ptr",
+<<<<<<< HEAD
                         "typeString": "struct CertificateDB.Certificate memory"
+=======
+                        "typeString": "struct CertificateDB.Certificate"
+>>>>>>> master
                       },
                       "typeName": {
                         "contractScope": null,
@@ -1814,7 +1889,11 @@
                         "src": "3827:11:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Certificate_$3401_storage_ptr",
+<<<<<<< HEAD
                           "typeString": "struct CertificateDB.Certificate storage pointer"
+=======
+                          "typeString": "struct CertificateDB.Certificate"
+>>>>>>> master
                         }
                       },
                       "value": null,
@@ -2363,6 +2442,10 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Returns the certificate that corresponds to the given array id\n @param _certificateId The array position in which the certificate is stored\n @return all elements of the certificate",
+>>>>>>> master
             "id": 3570,
             "implemented": true,
             "isConstructor": false,
@@ -2695,13 +2778,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Returns the certificate owner\n @param _certificateId The array position in which the certificate is stored\n @return address owner",
+>>>>>>> master
             "id": 3585,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3575,
                 "modifierName": {
                   "argumentTypes": null,
@@ -2865,13 +2956,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Getter for state of retirement\n @param _certificateId The id of the requested certificate\n @return bool if it is retired",
+>>>>>>> master
             "id": 3600,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3590,
                 "modifierName": {
                   "argumentTypes": null,
@@ -3008,13 +3107,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice function to get the amount of all certificates\n @return the amount of all certificates",
+>>>>>>> master
             "id": 3611,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3603,
                 "modifierName": {
                   "argumentTypes": null,
@@ -3151,13 +3258,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice function to get the escrow-address of a certificate\n @param _certificateId certificate-ID\n @return escrow-address",
+>>>>>>> master
             "id": 3626,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3616,
                 "modifierName": {
                   "argumentTypes": null,
@@ -3259,7 +3374,11 @@
     "src": "881:4576:7"
   },
   "legacyAST": {
+<<<<<<< HEAD
     "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/CertificateDB.sol",
+=======
+    "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/CertificateDB.sol",
+>>>>>>> master
     "exportedSymbols": {
       "CertificateDB": [
         3627
@@ -3280,7 +3399,11 @@
         "src": "881:24:7"
       },
       {
+<<<<<<< HEAD
         "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Owned.sol",
+=======
+        "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Owned.sol",
+>>>>>>> master
         "file": "./Owned.sol",
         "id": 3382,
         "nodeType": "ImportDirective",
@@ -3293,7 +3416,11 @@
       {
         "baseContracts": [
           {
+<<<<<<< HEAD
             "arguments": [],
+=======
+            "arguments": null,
+>>>>>>> master
             "baseName": {
               "contractScope": null,
               "id": 3383,
@@ -3555,7 +3682,11 @@
             "storageLocation": "default",
             "typeDescriptions": {
               "typeIdentifier": "t_array$_t_struct$_Certificate_$3401_storage_$dyn_storage",
+<<<<<<< HEAD
               "typeString": "struct CertificateDB.Certificate storage ref[] storage ref"
+=======
+              "typeString": "struct CertificateDB.Certificate[]"
+>>>>>>> master
             },
             "typeName": {
               "baseType": {
@@ -3567,7 +3698,11 @@
                 "src": "1385:11:7",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_Certificate_$3401_storage_ptr",
+<<<<<<< HEAD
                   "typeString": "struct CertificateDB.Certificate storage pointer"
+=======
+                  "typeString": "struct CertificateDB.Certificate"
+>>>>>>> master
                 }
               },
               "id": 3403,
@@ -3576,7 +3711,11 @@
               "src": "1385:13:7",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_struct$_Certificate_$3401_storage_$dyn_storage_ptr",
+<<<<<<< HEAD
                 "typeString": "struct CertificateDB.Certificate storage ref[] storage pointer"
+=======
+                "typeString": "struct CertificateDB.Certificate[]"
+>>>>>>> master
               }
             },
             "value": null,
@@ -3589,6 +3728,10 @@
               "src": "1747:7:7",
               "statements": []
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Constructor\n @param _certificateLogic The address of the corresbonding logic contract",
+>>>>>>> master
             "id": 3413,
             "implemented": true,
             "isConstructor": true,
@@ -3853,7 +3996,11 @@
                             "name": "now",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
+<<<<<<< HEAD
                             "referencedDeclaration": 8960,
+=======
+                            "referencedDeclaration": 8963,
+>>>>>>> master
                             "src": "2326:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -3976,13 +4123,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Creates a new certificate\n @param _assetId The id of the Certificate\n @param _owner The owner of the Certificate\n @param _powerInW The amount of Watts the Certificate holds\n @return The id of the certificate",
+>>>>>>> master
             "id": 3453,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3428,
                 "modifierName": {
                   "argumentTypes": null,
@@ -4303,13 +4458,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice sets the escrow-address of a certificate\n @param _certificateId certificateId\n @param _escrow new escrow-address",
+>>>>>>> master
             "id": 3470,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3460,
                 "modifierName": {
                   "argumentTypes": null,
@@ -4499,13 +4662,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Sets the owner of a certificate\n @param _certificateId The array position in which the certificate is stored\n @param _owner The address of the new owner",
+>>>>>>> master
             "id": 3487,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3477,
                 "modifierName": {
                   "argumentTypes": null,
@@ -4700,13 +4871,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Sets a certificate to retired\n @param _certificateId The array position in which the certificate is stored",
+>>>>>>> master
             "id": 3502,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3492,
                 "modifierName": {
                   "argumentTypes": null,
@@ -4795,7 +4974,11 @@
                       "storageLocation": "memory",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Certificate_$3401_memory_ptr",
+<<<<<<< HEAD
                         "typeString": "struct CertificateDB.Certificate memory"
+=======
+                        "typeString": "struct CertificateDB.Certificate"
+>>>>>>> master
                       },
                       "typeName": {
                         "contractScope": null,
@@ -4806,7 +4989,11 @@
                         "src": "3827:11:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Certificate_$3401_storage_ptr",
+<<<<<<< HEAD
                           "typeString": "struct CertificateDB.Certificate storage pointer"
+=======
+                          "typeString": "struct CertificateDB.Certificate"
+>>>>>>> master
                         }
                       },
                       "value": null,
@@ -5355,6 +5542,10 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Returns the certificate that corresponds to the given array id\n @param _certificateId The array position in which the certificate is stored\n @return all elements of the certificate",
+>>>>>>> master
             "id": 3570,
             "implemented": true,
             "isConstructor": false,
@@ -5687,13 +5878,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Returns the certificate owner\n @param _certificateId The array position in which the certificate is stored\n @return address owner",
+>>>>>>> master
             "id": 3585,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3575,
                 "modifierName": {
                   "argumentTypes": null,
@@ -5857,13 +6056,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice Getter for state of retirement\n @param _certificateId The id of the requested certificate\n @return bool if it is retired",
+>>>>>>> master
             "id": 3600,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3590,
                 "modifierName": {
                   "argumentTypes": null,
@@ -6000,13 +6207,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice function to get the amount of all certificates\n @return the amount of all certificates",
+>>>>>>> master
             "id": 3611,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3603,
                 "modifierName": {
                   "argumentTypes": null,
@@ -6143,13 +6358,21 @@
                 }
               ]
             },
+<<<<<<< HEAD
+=======
+            "documentation": "@notice function to get the escrow-address of a certificate\n @param _certificateId certificate-ID\n @return escrow-address",
+>>>>>>> master
             "id": 3626,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
+<<<<<<< HEAD
                 "arguments": [],
+=======
+                "arguments": null,
+>>>>>>> master
                 "id": 3616,
                 "modifierName": {
                   "argumentTypes": null,
@@ -6252,9 +6475,24 @@
   },
   "compiler": {
     "name": "solc",
+<<<<<<< HEAD
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.0",
   "updatedAt": "2018-07-31T09:06:35.540Z"
+=======
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {
+    "1558785329949": {
+      "events": {},
+      "links": {},
+      "address": "0x359c2c4a9cb9dffe672b0979fbeaa717a1ddf118",
+      "transactionHash": "0x8c23251aeba81c83e52e25965e5158baacbb9f45a144be0ea6d53dd5d050b66d"
+    }
+  },
+  "schemaVersion": "2.0.2",
+  "updatedAt": "2019-05-25T11:56:11.302Z"
+>>>>>>> master
 }
