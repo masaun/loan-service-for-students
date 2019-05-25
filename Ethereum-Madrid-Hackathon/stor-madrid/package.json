@@ -1,0 +1,51 @@
+{
+  "name": "ewf-coo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/ts/index.js",
+  "types": "build/ts/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test-facade": "rm -rf build && truffle migrate && node_modules/typescript/bin/tsc && mocha build/ts/test",
+    "build-ts": "rm -rf build/ts && node_modules/typescript/bin/tsc && cp src/types/*.d.ts build/ts/types/",
+    "compile": "rm -rf build/contracts && truffle compile",
+    "migrate": "rm -rf build/contracts && truffle migrate",
+    "deploy": "rm -rf build/contracts && truffle deploy",
+    "test": "rm -rf build && truffle compile && truffle test",
+    "startSim": "truffle exec contract-scripts/simulation.js",
+    "coverage": "./node_modules/.bin/solidity-coverage",
+    "wincompile": "rmdir build /s && truffle compile",
+    "winmigrate": "rmdir build /s && truffle migrate",
+    "windeploy": "rmdir build /s && truffle deploy",
+    "wintest": "rmdir build /s && truffle compile && truffle test",
+    "start-ganache": "ganache-cli -m 'outer moment twin salmon shuffle amused twice evil rapid hotel burst stand' -g 0 -l 80000000 -e 1000000 -a 20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/energywebfoundation/ew-origin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/energywebfoundation/ew-origin"
+  },
+  "homepage": "https://github.com/energywebfoundation/ew-origin#readme",
+  "dependencies": {
+    "ethereumjs-tx": "^1.3.4",
+    "ganache-cli": "^6.1.0",
+    "solidity-coverage": "^0.4.9",
+    "truffle": "^4.1.0",
+    "typescript": "^2.7.1",
+    "web3": "1.0.0-beta.33",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "9.4.5",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1"
+  }
+}

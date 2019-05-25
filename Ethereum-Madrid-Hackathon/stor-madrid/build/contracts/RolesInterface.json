@@ -1,0 +1,470 @@
+{
+  "contractName": "RolesInterface",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "getRolesRights",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "doesUserExist",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// Copyright 2018 Energy Web Foundation\n// This file is part of the Origin Application brought to you by the Energy Web Foundation,\n// a global non-profit organization focused on accelerating blockchain technology across the energy sector, \n// incorporated in Zug, Switzerland.\n//\n// The Origin Application is free software: you can redistribute it and/or modify\n// it under the terms of the GNU General Public License as published by\n// the Free Software Foundation, either version 3 of the License, or\n// (at your option) any later version.\n// This is distributed in the hope that it will be useful,\n// but WITHOUT ANY WARRANTY and without an implied warranty of\n// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n// GNU General Public License for more details, at <http://www.gnu.org/licenses/>.\n//\n// @authors: slock.it GmbH, Martin Kuechler, martin.kuchler@slock.it\n\npragma solidity ^0.4.17;\n\n/// @title this interface defines functions for defining functions of the user-logic in order to call them in different contracts\ninterface RolesInterface {\n   \n    /// @notice function to retrieve the rights of an user\n    /// @dev if the user does not exist in the mapping it will return 0x0 thus preventing them from accidently getting any rights\n    /// @param _user user someone wants to know its rights\n    /// @return bitmask with the rights of the user\n    function getRolesRights(address _user) external view returns (uint);\n\n    /// @notice function that checks if there is an user for the provided ethereum-address\n    /// @param _user ethereum-address of that user\n    /// @return bool if the user exists\n    function doesUserExist(address _user) external  view returns (bool);\n}",
+  "sourcePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/RolesInterface.sol",
+  "ast": {
+    "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/RolesInterface.sol",
+    "exportedSymbols": {
+      "RolesInterface": [
+        7674
+      ]
+    },
+    "id": 7675,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7659,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "886:24:16"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title this interface defines functions for defining functions of the user-logic in order to call them in different contracts",
+        "fullyImplemented": false,
+        "id": 7674,
+        "linearizedBaseContracts": [
+          7674
+        ],
+        "name": "RolesInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice function to retrieve the rights of an user\n @dev if the user does not exist in the mapping it will return 0x0 thus preventing them from accidently getting any rights\n @param _user user someone wants to know its rights\n @return bitmask with the rights of the user",
+            "id": 7666,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getRolesRights",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7662,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7661,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7666,
+                  "src": "1401:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7660,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1401:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1400:15:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7665,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7664,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7666,
+                  "src": "1439:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7663,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1439:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1438:6:16"
+            },
+            "scope": 7674,
+            "src": "1377:68:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice function that checks if there is an user for the provided ethereum-address\n @param _user ethereum-address of that user\n @return bool if the user exists",
+            "id": 7673,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "doesUserExist",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7669,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7668,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7673,
+                  "src": "1656:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7667,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1656:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1655:15:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7672,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7671,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7673,
+                  "src": "1695:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7670,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1695:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1694:6:16"
+            },
+            "scope": 7674,
+            "src": "1633:68:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7675,
+        "src": "1042:661:16"
+      }
+    ],
+    "src": "886:817:16"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/RolesInterface.sol",
+    "exportedSymbols": {
+      "RolesInterface": [
+        7674
+      ]
+    },
+    "id": 7675,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7659,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "886:24:16"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title this interface defines functions for defining functions of the user-logic in order to call them in different contracts",
+        "fullyImplemented": false,
+        "id": 7674,
+        "linearizedBaseContracts": [
+          7674
+        ],
+        "name": "RolesInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice function to retrieve the rights of an user\n @dev if the user does not exist in the mapping it will return 0x0 thus preventing them from accidently getting any rights\n @param _user user someone wants to know its rights\n @return bitmask with the rights of the user",
+            "id": 7666,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getRolesRights",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7662,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7661,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7666,
+                  "src": "1401:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7660,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1401:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1400:15:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7665,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7664,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7666,
+                  "src": "1439:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7663,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1439:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1438:6:16"
+            },
+            "scope": 7674,
+            "src": "1377:68:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice function that checks if there is an user for the provided ethereum-address\n @param _user ethereum-address of that user\n @return bool if the user exists",
+            "id": 7673,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "doesUserExist",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7669,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7668,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7673,
+                  "src": "1656:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7667,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1656:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1655:15:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7672,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7671,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7673,
+                  "src": "1695:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7670,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1695:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1694:6:16"
+            },
+            "scope": 7674,
+            "src": "1633:68:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7675,
+        "src": "1042:661:16"
+      }
+    ],
+    "src": "886:817:16"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.2",
+  "updatedAt": "2019-05-25T11:56:04.208Z"
+}
