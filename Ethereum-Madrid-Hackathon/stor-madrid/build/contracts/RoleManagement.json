@@ -50,16 +50,6 @@
       "type": "function"
     }
   ],
-<<<<<<< HEAD
-  "bytecode": "0x6060604052341561000f57600080fd5b6040516020806102c58339810160405280805160008054600160a060020a03909216600160a060020a03199092169190911790555050610271806100546000396000f3006060604052600436106100325763ffffffff60e060020a600035041663b1f2cc9d8114610037578063bb5a389e14610066575b600080fd5b341561004257600080fd5b61004a61009f565b604051600160a060020a03909116815260200160405180910390f35b341561007157600080fd5b61008b60ff60043516600160a060020a03602435166100ae565b604051901515815260200160405180910390f35b600054600160a060020a031681565b600080600060078560068111156100c157fe5b11156100cc57600080fd5b60008054600160a060020a0380871692911690638da5cb5b90604051602001526040518163ffffffff1660e060020a028152600401602060405180830381600087803b151561011a57600080fd5b6102c65a03f1151561012b57600080fd5b50505060405180519050600160a060020a0316141561014d576001925061023d565b60008054600160a060020a031690635c7460d690604051602001526040518163ffffffff1660e060020a028152600401602060405180830381600087803b151561019657600080fd5b6102c65a03f115156101a757600080fd5b50505060405180519050600160a060020a031663265209f28560006040516020015260405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401602060405180830381600087803b151561020757600080fd5b6102c65a03f1151561021857600080fd5b50505060405180519050915084600681111561023057fe5b60020a8281161515935090505b5050929150505600a165627a7a723058201d1e41c87c93ed330f2f3a6dc6ba1f19fe7450c72d05912114e31accd08c95000029",
-  "deployedBytecode": "0x6060604052600436106100325763ffffffff60e060020a600035041663b1f2cc9d8114610037578063bb5a389e14610066575b600080fd5b341561004257600080fd5b61004a61009f565b604051600160a060020a03909116815260200160405180910390f35b341561007157600080fd5b61008b60ff60043516600160a060020a03602435166100ae565b604051901515815260200160405180910390f35b600054600160a060020a031681565b600080600060078560068111156100c157fe5b11156100cc57600080fd5b60008054600160a060020a0380871692911690638da5cb5b90604051602001526040518163ffffffff1660e060020a028152600401602060405180830381600087803b151561011a57600080fd5b6102c65a03f1151561012b57600080fd5b50505060405180519050600160a060020a0316141561014d576001925061023d565b60008054600160a060020a031690635c7460d690604051602001526040518163ffffffff1660e060020a028152600401602060405180830381600087803b151561019657600080fd5b6102c65a03f115156101a757600080fd5b50505060405180519050600160a060020a031663265209f28560006040516020015260405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401602060405180830381600087803b151561020757600080fd5b6102c65a03f1151561021857600080fd5b50505060405180519050915084600681111561023057fe5b60020a8281161515935090505b5050929150505600a165627a7a723058201d1e41c87c93ed330f2f3a6dc6ba1f19fe7450c72d05912114e31accd08c95000029",
-  "sourceMap": "1020:2409:15:-;;;2292:93;;;;;;;;;;;;;;;;;;;;;;2352:11;:26;;-1:-1:-1;;;;;2352:26:15;;;-1:-1:-1;;;;;;2352:26:15;;;;;;;;;-1:-1:-1;;1020:2409:15;;;;;;",
-  "deployedSourceMap": "1020:2409:15:-;;;;;;;;;-1:-1:-1;;;1020:2409:15;;;;;;;;;;;;;;;;;;1094:22;;;;;;;;;;;;;;;-1:-1:-1;;;;;1094:22:15;;;;;;;;;;;;;;2651:776;;;;;;;;;;;;;;-1:-1:-1;;;;;2651:776:15;;;;;;;;;;;;;;;;;;;;;;1094:22;;;-1:-1:-1;;;;;1094:22:15;;:::o;2651:776::-;2732:4;2939:11;3101:9;2772:1;2762:5;2757:11;;;;;;;;:16;;2749:25;;;;;;2788:11;;;-1:-1:-1;;;;;2788:30:15;;;;:11;;;:17;;:19;;;;;;;;;;-1:-1:-1;;;2788:19:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;2788:30:15;;2784:72;;;2841:4;2834:11;;;;2784:72;2968:11;;;-1:-1:-1;;;;;2968:11:15;;:24;;:26;;;;;;;;;;-1:-1:-1;;;2968:26:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;2953:57:15;;3011:7;2953:66;;;;;;;;-1:-1:-1;;;2953:66:15;;;;;;-1:-1:-1;;;;;2953:66:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2939:80;;3129:5;3124:11;;;;;;;;3118:1;3113:22;3401:13;;;:18;;;-1:-1:-1;3113:22:15;-1:-1:-1;2651:776:15;;;;;;;:::o",
-  "source": "// Copyright 2018 Energy Web Foundation\n// This file is part of the Origin Application brought to you by the Energy Web Foundation,\n// a global non-profit organization focused on accelerating blockchain technology across the energy sector, \n// incorporated in Zug, Switzerland.\n//\n// The Origin Application is free software: you can redistribute it and/or modify\n// it under the terms of the GNU General Public License as published by\n// the Free Software Foundation, either version 3 of the License, or\n// (at your option) any later version.\n// This is distributed in the hope that it will be useful,\n// but WITHOUT ANY WARRANTY and without an implied warranty of\n// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n// GNU General Public License for more details, at <http://www.gnu.org/licenses/>.\n//\n// @authors: slock.it GmbH, Martin Kuechler, martin.kuchler@slock.it\n\n\npragma solidity ^0.4.17;\n\nimport \"./CoO.sol\";\nimport \"./RolesInterface.sol\";\n\n/// @notice contract for managing the rights and roles\ncontract RoleManagement {\n\n    /// @notice central registry contract \n    CoO public cooContract;\n\n    /// @notice all possible available roles\n    /*\n    no role:        0x0...0000000\n    TopAdmin:       0x0...------1\n    UserAdmin:      0x0...-----1-\n    AssetAdmin:     0x0...----1--\n    AgreementAdmin: 0x0...---1---\n    AssetManager:   0x0...--1----\n    Trader:         0x0...-1-----\n    Matcher:        0x0...1-----\n    */\n    enum Role{\n        TopAdmin, \n        UserAdmin,\n        AssetAdmin,\n        AgreementAdmin, \n        AssetManager,  \n        Trader, \n        Matcher\n    } \n\n    /// @notice modifier for checking if an user is allowed to execute the intended action\n    modifier onlyRole (RoleManagement.Role _role) { \n        require (isRole(_role, msg.sender)); \n        _; \n    }\n\n    modifier onlyAccount(address accountAddress) {\n        require(msg.sender == accountAddress);\n        _;\n    }\n\n    modifier userExists(address _user){\n        require(RolesInterface(cooContract.userRegistry()).doesUserExist(_user));\n        _;\n    }\n\n    modifier userHasRole(RoleManagement.Role _role, address _user){\n        require (isRole(_role, _user)); \n        _; \n    }\n\n    /// @notice constructor \n    /// @param _cooContract CoO.sol-registry contract\n    function RoleManagement (CoO _cooContract) public {\n        cooContract = _cooContract;\n    }\n\n    /// @notice funciton for comparing the role and the needed rights of an user\n    /// @param _role role of a user\n    /// @param _caller the address calling that function\n    /// @return whether the user has the corresponding rights for the intended action\n    function isRole(RoleManagement.Role _role, address _caller) public view returns (bool) { \n        require(uint(_role) <= 7);\n        if (cooContract.owner() == _caller) {\n            return true;\n        }\n        /// @dev reading the rights for the user from the userDB-contract\n        uint rights = RolesInterface(cooContract.userRegistry()).getRolesRights(_caller);\n        /// @dev converting the used enum to the corresponding bitmask \n        uint role = uint(2) ** uint(_role);\n        /// @dev comparing rights and roles, if the result is not 0 the user has the right (bitwise comparison)\n        /// we also don't have to check for a potential overflow here, because the used enum will prevent using roles that do not exist\n        return (rights & role != 0);\n    }\n}",
-  "sourcePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/RoleManagement.sol",
-  "ast": {
-    "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/RoleManagement.sol",
-=======
   "bytecode": "0x608060405234801561001057600080fd5b50604051602080610320833981016040525160008054600160a060020a03909216600160a060020a03199092169190911790556102ce806100526000396000f3006080604052600436106100325763ffffffff60e060020a600035041663b1f2cc9d8114610037578063bb5a389e14610068575b600080fd5b34801561004357600080fd5b5061004c6100a3565b60408051600160a060020a039092168252519081900360200190f35b34801561007457600080fd5b5061008f60ff60043516600160a060020a03602435166100b2565b604080519115158252519081900360200190f35b600054600160a060020a031681565b600080600060078560068111156100c557fe5b11156100d057600080fd5b83600160a060020a03166000809054906101000a9004600160a060020a0316600160a060020a0316638da5cb5b6040518163ffffffff1660e060020a028152600401602060405180830381600087803b15801561012c57600080fd5b505af1158015610140573d6000803e3d6000fd5b505050506040513d602081101561015657600080fd5b5051600160a060020a03161415610170576001925061029a565b6000809054906101000a9004600160a060020a0316600160a060020a0316635c7460d66040518163ffffffff1660e060020a028152600401602060405180830381600087803b1580156101c257600080fd5b505af11580156101d6573d6000803e3d6000fd5b505050506040513d60208110156101ec57600080fd5b5051604080517f265209f2000000000000000000000000000000000000000000000000000000008152600160a060020a0387811660048301529151919092169163265209f29160248083019260209291908290030181600087803b15801561025357600080fd5b505af1158015610267573d6000803e3d6000fd5b505050506040513d602081101561027d57600080fd5b5051915084600681111561028d57fe5b60020a8281161515935090505b5050929150505600a165627a7a72305820f489363c59cfd41ec23622807aa18eb6c80fdf720e442e71868976f26fb9e6ef0029",
   "deployedBytecode": "0x6080604052600436106100325763ffffffff60e060020a600035041663b1f2cc9d8114610037578063bb5a389e14610068575b600080fd5b34801561004357600080fd5b5061004c6100a3565b60408051600160a060020a039092168252519081900360200190f35b34801561007457600080fd5b5061008f60ff60043516600160a060020a03602435166100b2565b604080519115158252519081900360200190f35b600054600160a060020a031681565b600080600060078560068111156100c557fe5b11156100d057600080fd5b83600160a060020a03166000809054906101000a9004600160a060020a0316600160a060020a0316638da5cb5b6040518163ffffffff1660e060020a028152600401602060405180830381600087803b15801561012c57600080fd5b505af1158015610140573d6000803e3d6000fd5b505050506040513d602081101561015657600080fd5b5051600160a060020a03161415610170576001925061029a565b6000809054906101000a9004600160a060020a0316600160a060020a0316635c7460d66040518163ffffffff1660e060020a028152600401602060405180830381600087803b1580156101c257600080fd5b505af11580156101d6573d6000803e3d6000fd5b505050506040513d60208110156101ec57600080fd5b5051604080517f265209f2000000000000000000000000000000000000000000000000000000008152600160a060020a0387811660048301529151919092169163265209f29160248083019260209291908290030181600087803b15801561025357600080fd5b505af1158015610267573d6000803e3d6000fd5b505050506040513d602081101561027d57600080fd5b5051915084600681111561028d57fe5b60020a8281161515935090505b5050929150505600a165627a7a72305820f489363c59cfd41ec23622807aa18eb6c80fdf720e442e71868976f26fb9e6ef0029",
   "sourceMap": "1020:2409:15:-;;;2292:93;8:9:-1;5:2;;;30:1;27;20:12;5:2;2292:93:15;;;;;;;;;;;;;2352:11;:26;;-1:-1:-1;;;;;2352:26:15;;;-1:-1:-1;;;;;;2352:26:15;;;;;;;;;1020:2409;;;;;;",
@@ -68,7 +58,6 @@
   "sourcePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/RoleManagement.sol",
   "ast": {
     "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/RoleManagement.sol",
->>>>>>> master
     "exportedSymbols": {
       "RoleManagement": [
         7657
@@ -89,11 +78,7 @@
         "src": "887:24:15"
       },
       {
-<<<<<<< HEAD
-        "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/CoO.sol",
-=======
         "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/CoO.sol",
->>>>>>> master
         "file": "./CoO.sol",
         "id": 7521,
         "nodeType": "ImportDirective",
@@ -104,11 +89,7 @@
         "unitAlias": ""
       },
       {
-<<<<<<< HEAD
-        "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/RolesInterface.sol",
-=======
         "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/RolesInterface.sol",
->>>>>>> master
         "file": "./RolesInterface.sol",
         "id": 7522,
         "nodeType": "ImportDirective",
@@ -244,11 +225,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-<<<<<<< HEAD
-                              "referencedDeclaration": 8958,
-=======
                               "referencedDeclaration": 8961,
->>>>>>> master
                               "src": "1787:3:15",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -317,16 +294,11 @@
                       "id": 7536,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "1764:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -358,10 +330,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice modifier for checking if an user is allowed to execute the intended action",
->>>>>>> master
             "id": 7546,
             "name": "onlyRole",
             "nodeType": "ModifierDefinition",
@@ -432,11 +401,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-<<<<<<< HEAD
-                            "referencedDeclaration": 8958,
-=======
                             "referencedDeclaration": 8961,
->>>>>>> master
                             "src": "1888:3:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -489,16 +454,11 @@
                       "id": 7550,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "1880:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -530,10 +490,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7559,
             "name": "onlyAccount",
             "nodeType": "ModifierDefinition",
@@ -728,16 +685,11 @@
                       "id": 7563,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "1985:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -769,10 +721,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7576,
             "name": "userExists",
             "nodeType": "ModifierDefinition",
@@ -899,16 +848,11 @@
                       "id": 7582,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "2153:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -940,10 +884,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7591,
             "name": "userHasRole",
             "nodeType": "ModifierDefinition",
@@ -1065,10 +1006,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice constructor \n @param _cooContract CoO.sol-registry contract",
->>>>>>> master
             "id": 7601,
             "implemented": true,
             "isConstructor": true,
@@ -1233,16 +1171,11 @@
                       "id": 7610,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "2749:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1821,10 +1754,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice funciton for comparing the role and the needed rights of an user\n @param _role role of a user\n @param _caller the address calling that function\n @return whether the user has the corresponding rights for the intended action",
->>>>>>> master
             "id": 7656,
             "implemented": true,
             "isConstructor": false,
@@ -1941,11 +1871,7 @@
     "src": "887:2542:15"
   },
   "legacyAST": {
-<<<<<<< HEAD
-    "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/RoleManagement.sol",
-=======
     "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/RoleManagement.sol",
->>>>>>> master
     "exportedSymbols": {
       "RoleManagement": [
         7657
@@ -1966,11 +1892,7 @@
         "src": "887:24:15"
       },
       {
-<<<<<<< HEAD
-        "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/CoO.sol",
-=======
         "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/CoO.sol",
->>>>>>> master
         "file": "./CoO.sol",
         "id": 7521,
         "nodeType": "ImportDirective",
@@ -1981,11 +1903,7 @@
         "unitAlias": ""
       },
       {
-<<<<<<< HEAD
-        "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/RolesInterface.sol",
-=======
         "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/RolesInterface.sol",
->>>>>>> master
         "file": "./RolesInterface.sol",
         "id": 7522,
         "nodeType": "ImportDirective",
@@ -2121,11 +2039,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-<<<<<<< HEAD
-                              "referencedDeclaration": 8958,
-=======
                               "referencedDeclaration": 8961,
->>>>>>> master
                               "src": "1787:3:15",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -2194,16 +2108,11 @@
                       "id": 7536,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "1764:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2235,10 +2144,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice modifier for checking if an user is allowed to execute the intended action",
->>>>>>> master
             "id": 7546,
             "name": "onlyRole",
             "nodeType": "ModifierDefinition",
@@ -2309,11 +2215,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-<<<<<<< HEAD
-                            "referencedDeclaration": 8958,
-=======
                             "referencedDeclaration": 8961,
->>>>>>> master
                             "src": "1888:3:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2366,16 +2268,11 @@
                       "id": 7550,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "1880:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2407,10 +2304,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7559,
             "name": "onlyAccount",
             "nodeType": "ModifierDefinition",
@@ -2605,16 +2499,11 @@
                       "id": 7563,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "1985:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2646,10 +2535,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7576,
             "name": "userExists",
             "nodeType": "ModifierDefinition",
@@ -2776,16 +2662,11 @@
                       "id": 7582,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "2153:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2817,10 +2698,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7591,
             "name": "userHasRole",
             "nodeType": "ModifierDefinition",
@@ -2942,10 +2820,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice constructor \n @param _cooContract CoO.sol-registry contract",
->>>>>>> master
             "id": 7601,
             "implemented": true,
             "isConstructor": true,
@@ -3110,16 +2985,11 @@
                       "id": 7610,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "2749:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3698,10 +3568,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice funciton for comparing the role and the needed rights of an user\n @param _role role of a user\n @param _caller the address calling that function\n @return whether the user has the corresponding rights for the intended action",
->>>>>>> master
             "id": 7656,
             "implemented": true,
             "isConstructor": false,
@@ -3819,17 +3686,9 @@
   },
   "compiler": {
     "name": "solc",
-<<<<<<< HEAD
-    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
-  },
-  "networks": {},
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-07-31T09:06:35.575Z"
-=======
     "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.2",
-  "updatedAt": "2019-05-25T11:56:04.207Z"
->>>>>>> master
+  "updatedAt": "2019-05-25T12:04:17.961Z"
 }

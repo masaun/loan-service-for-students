@@ -53,16 +53,6 @@
       "type": "function"
     }
   ],
-<<<<<<< HEAD
-  "bytecode": "0x6060604052341561000f57600080fd5b6040516020806101c78339810160405280805160008054600160a060020a03909216600160a060020a03199092169190911790555050610173806100546000396000f30060606040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461007f575b600080fd5b341561005b57600080fd5b6100636100a0565b604051600160a060020a03909116815260200160405180910390f35b341561008a57600080fd5b61009e600160a060020a03600435166100af565b005b600054600160a060020a031681565b60005433600160a060020a039081169116146100ca57600080fd5b600160a060020a03811615156100df57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790557f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af1681604051600160a060020a03909116815260200160405180910390a1505600a165627a7a7230582034fc53a4a27b2fd56c28c2dedf031944ba05763828d66f5b0e437f8816039a200029",
-  "deployedBytecode": "0x60606040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461007f575b600080fd5b341561005b57600080fd5b6100636100a0565b604051600160a060020a03909116815260200160405180910390f35b341561008a57600080fd5b61009e600160a060020a03600435166100af565b005b600054600160a060020a031681565b60005433600160a060020a039081169116146100ca57600080fd5b600160a060020a03811615156100df57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790557f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af1681604051600160a060020a03909116815260200160405180910390a1505600a165627a7a7230582034fc53a4a27b2fd56c28c2dedf031944ba05763828d66f5b0e437f8816039a200029",
-  "sourceMap": "910:708:14:-;;;1215:64;;;;;;;;;;;;;;;;;;;;;;1259:5;:18;;-1:-1:-1;;;;;1259:18:14;;;-1:-1:-1;;;;;;1259:18:14;;;;;;;;;-1:-1:-1;;910:708:14;;;;;;",
-  "deployedSourceMap": "910:708:14:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;1115:20;;;;;;;;;;;;;;;-1:-1:-1;;;;;1115:20:14;;;;;;;;;;;;;;1447:169;;;;;;;;;;-1:-1:-1;;;;;1447:169:14;;;;;;;1115:20;;;-1:-1:-1;;;;;1115:20:14;;:::o;1447:169::-;1051:5;;1037:10;-1:-1:-1;;;;;1037:19:14;;;1051:5;;1037:19;1028:29;;;;;;-1:-1:-1;;;;;1523:23:14;;;;1515:32;;;;;;1557:5;:17;;-1:-1:-1;;1557:17:14;-1:-1:-1;;;;;1557:17:14;;;;;1584:25;1557:17;1584:25;;-1:-1:-1;;;;;1584:25:14;;;;;;;;;;;;;;1447:169;:::o",
-  "source": "// Copyright 2018 Energy Web Foundation\n// This file is part of the Origin Application brought to you by the Energy Web Foundation,\n// a global non-profit organization focused on accelerating blockchain technology across the energy sector, \n// incorporated in Zug, Switzerland.\n//\n// The Origin Application is free software: you can redistribute it and/or modify\n// it under the terms of the GNU General Public License as published by\n// the Free Software Foundation, either version 3 of the License, or\n// (at your option) any later version.\n// This is distributed in the hope that it will be useful,\n// but WITHOUT ANY WARRANTY and without an implied warranty of\n// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n// GNU General Public License for more details, at <http://www.gnu.org/licenses/>.\n//\n// @authors: slock.it GmbH, Simon Jentzsch, simon.jentzsch@slock.it\n\npragma solidity ^0.4.4;\n\ncontract Owned {\n    /// @dev `owner` is the only address that can call a function with this\n    modifier onlyOwner { require (msg.sender == owner); _; }\n\n    event LogChangeOwner(address _newOwner);\n\n    address public owner;\n\n    /// @notice The Constructor assigns the message sender to be `owner`\n    function Owned(address _initOwner) public { owner = _initOwner;}\n\n    /// @notice `owner` can step down and assign some other address to this role\n    /// @param _newOwner The address of the new owner. 0x0 can be used to create\n    function changeOwner (address _newOwner) public onlyOwner {\n        require(_newOwner != address(0));\n        owner = _newOwner;\n        LogChangeOwner(_newOwner);\n    }\n}",
-  "sourcePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Owned.sol",
-  "ast": {
-    "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Owned.sol",
-=======
   "bytecode": "0x608060405234801561001057600080fd5b5060405160208061020c833981016040525160008054600160a060020a03909216600160a060020a03199092169190911790556101ba806100526000396000f30060806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008e575b600080fd5b34801561005c57600080fd5b506100656100be565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561009a57600080fd5b506100bc73ffffffffffffffffffffffffffffffffffffffff600435166100da565b005b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60005473ffffffffffffffffffffffffffffffffffffffff1633146100fe57600080fd5b73ffffffffffffffffffffffffffffffffffffffff8116151561012057600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff831673ffffffffffffffffffffffffffffffffffffffff19909116811790915560408051918252517f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af169181900360200190a1505600a165627a7a723058202b3c4266db8532330b591ce6d5cabfc2b954050c7bd56a4794766d66721a80490029",
   "deployedBytecode": "0x60806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008e575b600080fd5b34801561005c57600080fd5b506100656100be565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561009a57600080fd5b506100bc73ffffffffffffffffffffffffffffffffffffffff600435166100da565b005b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60005473ffffffffffffffffffffffffffffffffffffffff1633146100fe57600080fd5b73ffffffffffffffffffffffffffffffffffffffff8116151561012057600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff831673ffffffffffffffffffffffffffffffffffffffff19909116811790915560408051918252517f95fd54179c11867fb083dd94347ea50f144dd4cfd7612b7bca169f162824af169181900360200190a1505600a165627a7a723058202b3c4266db8532330b591ce6d5cabfc2b954050c7bd56a4794766d66721a80490029",
   "sourceMap": "910:708:14:-;;;1215:64;8:9:-1;5:2;;;30:1;27;20:12;5:2;1215:64:14;;;;;;;;;;;;;1259:5;:18;;-1:-1:-1;;;;;1259:18:14;;;-1:-1:-1;;;;;;1259:18:14;;;;;;;;;910:708;;;;;;",
@@ -71,7 +61,6 @@
   "sourcePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Owned.sol",
   "ast": {
     "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Owned.sol",
->>>>>>> master
     "exportedSymbols": {
       "Owned": [
         7518
@@ -133,11 +122,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-<<<<<<< HEAD
-                            "referencedDeclaration": 8958,
-=======
                             "referencedDeclaration": 8961,
->>>>>>> master
                             "src": "1037:3:14",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -190,16 +175,11 @@
                       "id": 7468,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "1028:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -231,10 +211,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@dev `owner` is the only address that can call a function with this",
->>>>>>> master
             "id": 7477,
             "name": "onlyOwner",
             "nodeType": "ModifierDefinition",
@@ -249,10 +226,7 @@
           },
           {
             "anonymous": false,
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7481,
             "name": "LogChangeOwner",
             "nodeType": "EventDefinition",
@@ -372,10 +346,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice The Constructor assigns the message sender to be `owner`",
->>>>>>> master
             "id": 7493,
             "implemented": true,
             "isConstructor": true,
@@ -538,16 +509,11 @@
                       "id": 7500,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "1515:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -674,21 +640,14 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice `owner` can step down and assign some other address to this role\n @param _newOwner The address of the new owner. 0x0 can be used to create",
->>>>>>> master
             "id": 7517,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
-<<<<<<< HEAD
-                "arguments": [],
-=======
                 "arguments": null,
->>>>>>> master
                 "id": 7498,
                 "modifierName": {
                   "argumentTypes": null,
@@ -763,11 +722,7 @@
     "src": "885:733:14"
   },
   "legacyAST": {
-<<<<<<< HEAD
-    "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Owned.sol",
-=======
     "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Owned.sol",
->>>>>>> master
     "exportedSymbols": {
       "Owned": [
         7518
@@ -829,11 +784,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-<<<<<<< HEAD
-                            "referencedDeclaration": 8958,
-=======
                             "referencedDeclaration": 8961,
->>>>>>> master
                             "src": "1037:3:14",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -886,16 +837,11 @@
                       "id": 7468,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "1028:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -927,10 +873,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@dev `owner` is the only address that can call a function with this",
->>>>>>> master
             "id": 7477,
             "name": "onlyOwner",
             "nodeType": "ModifierDefinition",
@@ -945,10 +888,7 @@
           },
           {
             "anonymous": false,
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7481,
             "name": "LogChangeOwner",
             "nodeType": "EventDefinition",
@@ -1068,10 +1008,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice The Constructor assigns the message sender to be `owner`",
->>>>>>> master
             "id": 7493,
             "implemented": true,
             "isConstructor": true,
@@ -1234,16 +1171,11 @@
                       "id": 7500,
                       "name": "require",
                       "nodeType": "Identifier",
-<<<<<<< HEAD
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 8961,
-=======
                       "overloadedDeclarations": [
                         8964,
                         8965
                       ],
                       "referencedDeclaration": 8964,
->>>>>>> master
                       "src": "1515:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1370,21 +1302,14 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice `owner` can step down and assign some other address to this role\n @param _newOwner The address of the new owner. 0x0 can be used to create",
->>>>>>> master
             "id": 7517,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
-<<<<<<< HEAD
-                "arguments": [],
-=======
                 "arguments": null,
->>>>>>> master
                 "id": 7498,
                 "modifierName": {
                   "argumentTypes": null,
@@ -1460,17 +1385,9 @@
   },
   "compiler": {
     "name": "solc",
-<<<<<<< HEAD
-    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
-  },
-  "networks": {},
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-07-31T09:06:35.575Z"
-=======
     "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.2",
-  "updatedAt": "2019-05-25T11:56:04.207Z"
->>>>>>> master
+  "updatedAt": "2019-05-25T12:04:17.960Z"
 }

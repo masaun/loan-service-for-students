@@ -20,7 +20,8 @@
     "winmigrate": "rmdir build /s && truffle migrate",
     "windeploy": "rmdir build /s && truffle deploy",
     "wintest": "rmdir build /s && truffle compile && truffle test",
-    "start-ganache": "ganache-cli -m 'outer moment twin salmon shuffle amused twice evil rapid hotel burst stand' -g 0 -l 80000000 -e 1000000 -a 20"
+    "start-ganache": "ganache-cli -m 'outer moment twin salmon shuffle amused twice evil rapid hotel burst stand' -g 0 -l 80000000 -e 1000000 -a 20",
+    "start": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --output-public-path=/dist/ -d --watch"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "truffle": "^4.1.0",
     "typescript": "^2.7.1",
     "web3": "1.0.0-beta.33",
+    "webpack": "^4.32.2",
     "webpack-dev-server": "^3.4.1"
   },
   "devDependencies": {

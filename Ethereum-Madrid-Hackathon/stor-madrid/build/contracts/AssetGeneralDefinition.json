@@ -47,15 +47,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// Copyright 2018 Energy Web Foundation\n// This file is part of the Origin Application brought to you by the Energy Web Foundation,\n// a global non-profit organization focused on accelerating blockchain technology across the energy sector, \n// incorporated in Zug, Switzerland.\n//\n// The Origin Application is free software: you can redistribute it and/or modify\n// it under the terms of the GNU General Public License as published by\n// the Free Software Foundation, either version 3 of the License, or\n// (at your option) any later version.\n// This is distributed in the hope that it will be useful,\n// but WITHOUT ANY WARRANTY and without an implied warranty of\n// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n// GNU General Public License for more details, at <http://www.gnu.org/licenses/>.\n//\n// @authors: slock.it GmbH, Martin Kuechler, martin.kuchler@slock.it\npragma solidity ^0.4.19;\n\nimport \"./Owned.sol\";\nimport \"./LocationDefinition.sol\";\n\n/// @title this contracts provides those functions that both consuming and producing assets share\ncontract AssetGeneralDefinition is Owned {\n\n    struct GeneralInformation {\n        address smartMeter;\n        address owner;\n        uint operationalSince;\n        uint lastSmartMeterReadWh;\n        bool active;\n        bytes32 lastSmartMeterReadFileHash;\n        uint lastMeterReadReceived;\n        bool exists;\n    }\n\n    /// @notice function to set all the location Informations for an asset, gets called internally\n    /// @param _loc the storage location of the location informations\n    /// @param _country The country where the asset is located\n    /// @param _region The region / state where the asset is located\n    /// @param _zip The zip-code of the region where the asset is located\n    /// @param _city The city where the asset is located\n    /// @param _street The streetname where the asset is located\n    /// @param _houseNumber the housenumber where the asset is located\n    /// @param _gpsLatitude The gps-latitude\n    /// @param _gpsLongitude The gps-longitude\n    function initLocationInternal(\n        LocationDefinition.Location storage _loc,\n        bytes32 _country,\n        bytes32 _region,\n        bytes32 _zip,\n        bytes32 _city,\n        bytes32 _street,\n        bytes32 _houseNumber,\n        bytes32 _gpsLatitude,\n        bytes32 _gpsLongitude\n    )\n        internal\n    {\n        _loc.country = _country;\n        _loc.region = _region;\n        _loc.zip = _zip;\n        _loc.city = _city;\n        _loc.street = _street;\n        _loc.houseNumber = _houseNumber;\n        _loc.gpsLatitude = _gpsLatitude;\n        _loc.gpsLongitude = _gpsLongitude;\n        _loc.exists = true;\n    }\n\n    /// @notice internal function to set the general information\n    /// @param _gi storage location of the general information\n    /// @param _smartMeter smartMeter-address\n    /// @param _owner owner-of the asset\n    /// @param _operationalSince operatinal since that timestamp\n    /// @param _lastSmartMeterReadWh the last meterreading in Wh\n    /// @param _active flag if the asset is active\n    /// @param _lastSmartMeterReadFileHash the last filehash \n    function setGeneralInformationInternal(\n        GeneralInformation storage _gi,\n        address _smartMeter,\n        address _owner,\n        uint _operationalSince,\n        uint _lastSmartMeterReadWh,\n        bool _active,\n        bytes32 _lastSmartMeterReadFileHash\n    )\n    internal \n    {\n        _gi.smartMeter = _smartMeter;\n        _gi.owner = _owner;\n        _gi.operationalSince = _operationalSince;\n        _gi.lastSmartMeterReadWh = _lastSmartMeterReadWh;\n        _gi.active = _active;\n        _gi.lastSmartMeterReadFileHash = _lastSmartMeterReadFileHash;\n        _gi.lastMeterReadReceived = 0;\n        _gi.exists = true;\n    }\n\n    /// @notice function to get the informations about the location of a struct\n    /// @param _loc storage location of the locationInformations\n    /// @return country, region, zip, city, street, houseNumber, gpsLatitude, gpsLongitude\n    function getAssetLocationInternal(LocationDefinition.Location memory _loc)\n        internal\n        pure\n        returns(\n            bytes32 country,\n            bytes32 region,\n            bytes32 zip,\n            bytes32 city,\n            bytes32 street,\n            bytes32 houseNumber,\n            bytes32 gpsLatitude,\n            bytes32 gpsLongitude\n        )\n    {\n        country = _loc.country;\n        region = _loc.region;\n        zip = _loc.zip;\n        city = _loc.city;\n        street = _loc.street;\n        houseNumber = _loc.houseNumber;\n        gpsLatitude = _loc.gpsLatitude;\n        gpsLongitude = _loc.gpsLongitude;\n\n        return (country, region, zip, city, street, houseNumber, gpsLatitude, gpsLongitude);\n    }\n\n}",
-<<<<<<< HEAD
-  "sourcePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/AssetGeneralDefinition.sol",
-  "ast": {
-    "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/AssetGeneralDefinition.sol",
-=======
   "sourcePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/AssetGeneralDefinition.sol",
   "ast": {
     "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/AssetGeneralDefinition.sol",
->>>>>>> master
     "exportedSymbols": {
       "AssetGeneralDefinition": [
         1440
@@ -76,11 +70,7 @@
         "src": "885:24:3"
       },
       {
-<<<<<<< HEAD
-        "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Owned.sol",
-=======
         "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Owned.sol",
->>>>>>> master
         "file": "./Owned.sol",
         "id": 1205,
         "nodeType": "ImportDirective",
@@ -91,11 +81,7 @@
         "unitAlias": ""
       },
       {
-<<<<<<< HEAD
-        "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/LocationDefinition.sol",
-=======
         "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/LocationDefinition.sol",
->>>>>>> master
         "file": "./LocationDefinition.sol",
         "id": 1206,
         "nodeType": "ImportDirective",
@@ -108,11 +94,7 @@
       {
         "baseContracts": [
           {
-<<<<<<< HEAD
-            "arguments": [],
-=======
             "arguments": null,
->>>>>>> master
             "baseName": {
               "contractScope": null,
               "id": 1207,
@@ -934,10 +916,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice function to set all the location Informations for an asset, gets called internally\n @param _loc the storage location of the location informations\n @param _country The country where the asset is located\n @param _region The region / state where the asset is located\n @param _zip The zip-code of the region where the asset is located\n @param _city The city where the asset is located\n @param _street The streetname where the asset is located\n @param _houseNumber the housenumber where the asset is located\n @param _gpsLatitude The gps-latitude\n @param _gpsLongitude The gps-longitude",
->>>>>>> master
             "id": 1301,
             "implemented": true,
             "isConstructor": false,
@@ -960,11 +939,7 @@
                   "storageLocation": "storage",
                   "typeDescriptions": {
                     "typeIdentifier": "t_struct$_Location_$7406_storage_ptr",
-<<<<<<< HEAD
-                    "typeString": "struct LocationDefinition.Location storage pointer"
-=======
                     "typeString": "struct LocationDefinition.Location"
->>>>>>> master
                   },
                   "typeName": {
                     "contractScope": null,
@@ -975,11 +950,7 @@
                     "src": "2092:27:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Location_$7406_storage_ptr",
-<<<<<<< HEAD
-                      "typeString": "struct LocationDefinition.Location storage pointer"
-=======
                       "typeString": "struct LocationDefinition.Location"
->>>>>>> master
                     }
                   },
                   "value": null,
@@ -1723,10 +1694,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice internal function to set the general information\n @param _gi storage location of the general information\n @param _smartMeter smartMeter-address\n @param _owner owner-of the asset\n @param _operationalSince operatinal since that timestamp\n @param _lastSmartMeterReadWh the last meterreading in Wh\n @param _active flag if the asset is active\n @param _lastSmartMeterReadFileHash the last filehash ",
->>>>>>> master
             "id": 1367,
             "implemented": true,
             "isConstructor": false,
@@ -1749,11 +1717,7 @@
                   "storageLocation": "storage",
                   "typeDescriptions": {
                     "typeIdentifier": "t_struct$_GeneralInformation_$1225_storage_ptr",
-<<<<<<< HEAD
-                    "typeString": "struct AssetGeneralDefinition.GeneralInformation storage pointer"
-=======
                     "typeString": "struct AssetGeneralDefinition.GeneralInformation"
->>>>>>> master
                   },
                   "typeName": {
                     "contractScope": null,
@@ -1764,11 +1728,7 @@
                     "src": "3191:18:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_GeneralInformation_$1225_storage_ptr",
-<<<<<<< HEAD
-                      "typeString": "struct AssetGeneralDefinition.GeneralInformation storage pointer"
-=======
                       "typeString": "struct AssetGeneralDefinition.GeneralInformation"
->>>>>>> master
                     }
                   },
                   "value": null,
@@ -2577,10 +2537,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice function to get the informations about the location of a struct\n @param _loc storage location of the locationInformations\n @return country, region, zip, city, street, houseNumber, gpsLatitude, gpsLongitude",
->>>>>>> master
             "id": 1439,
             "implemented": true,
             "isConstructor": false,
@@ -2603,11 +2560,7 @@
                   "storageLocation": "memory",
                   "typeDescriptions": {
                     "typeIdentifier": "t_struct$_Location_$7406_memory_ptr",
-<<<<<<< HEAD
-                    "typeString": "struct LocationDefinition.Location memory"
-=======
                     "typeString": "struct LocationDefinition.Location"
->>>>>>> master
                   },
                   "typeName": {
                     "contractScope": null,
@@ -2618,11 +2571,7 @@
                     "src": "4057:27:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Location_$7406_storage_ptr",
-<<<<<<< HEAD
-                      "typeString": "struct LocationDefinition.Location storage pointer"
-=======
                       "typeString": "struct LocationDefinition.Location"
->>>>>>> master
                     }
                   },
                   "value": null,
@@ -2861,11 +2810,7 @@
     "src": "885:3877:3"
   },
   "legacyAST": {
-<<<<<<< HEAD
-    "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/AssetGeneralDefinition.sol",
-=======
     "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/AssetGeneralDefinition.sol",
->>>>>>> master
     "exportedSymbols": {
       "AssetGeneralDefinition": [
         1440
@@ -2886,11 +2831,7 @@
         "src": "885:24:3"
       },
       {
-<<<<<<< HEAD
-        "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Owned.sol",
-=======
         "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Owned.sol",
->>>>>>> master
         "file": "./Owned.sol",
         "id": 1205,
         "nodeType": "ImportDirective",
@@ -2901,11 +2842,7 @@
         "unitAlias": ""
       },
       {
-<<<<<<< HEAD
-        "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/LocationDefinition.sol",
-=======
         "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/LocationDefinition.sol",
->>>>>>> master
         "file": "./LocationDefinition.sol",
         "id": 1206,
         "nodeType": "ImportDirective",
@@ -2918,11 +2855,7 @@
       {
         "baseContracts": [
           {
-<<<<<<< HEAD
-            "arguments": [],
-=======
             "arguments": null,
->>>>>>> master
             "baseName": {
               "contractScope": null,
               "id": 1207,
@@ -3744,10 +3677,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice function to set all the location Informations for an asset, gets called internally\n @param _loc the storage location of the location informations\n @param _country The country where the asset is located\n @param _region The region / state where the asset is located\n @param _zip The zip-code of the region where the asset is located\n @param _city The city where the asset is located\n @param _street The streetname where the asset is located\n @param _houseNumber the housenumber where the asset is located\n @param _gpsLatitude The gps-latitude\n @param _gpsLongitude The gps-longitude",
->>>>>>> master
             "id": 1301,
             "implemented": true,
             "isConstructor": false,
@@ -3770,11 +3700,7 @@
                   "storageLocation": "storage",
                   "typeDescriptions": {
                     "typeIdentifier": "t_struct$_Location_$7406_storage_ptr",
-<<<<<<< HEAD
-                    "typeString": "struct LocationDefinition.Location storage pointer"
-=======
                     "typeString": "struct LocationDefinition.Location"
->>>>>>> master
                   },
                   "typeName": {
                     "contractScope": null,
@@ -3785,11 +3711,7 @@
                     "src": "2092:27:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Location_$7406_storage_ptr",
-<<<<<<< HEAD
-                      "typeString": "struct LocationDefinition.Location storage pointer"
-=======
                       "typeString": "struct LocationDefinition.Location"
->>>>>>> master
                     }
                   },
                   "value": null,
@@ -4533,10 +4455,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice internal function to set the general information\n @param _gi storage location of the general information\n @param _smartMeter smartMeter-address\n @param _owner owner-of the asset\n @param _operationalSince operatinal since that timestamp\n @param _lastSmartMeterReadWh the last meterreading in Wh\n @param _active flag if the asset is active\n @param _lastSmartMeterReadFileHash the last filehash ",
->>>>>>> master
             "id": 1367,
             "implemented": true,
             "isConstructor": false,
@@ -4559,11 +4478,7 @@
                   "storageLocation": "storage",
                   "typeDescriptions": {
                     "typeIdentifier": "t_struct$_GeneralInformation_$1225_storage_ptr",
-<<<<<<< HEAD
-                    "typeString": "struct AssetGeneralDefinition.GeneralInformation storage pointer"
-=======
                     "typeString": "struct AssetGeneralDefinition.GeneralInformation"
->>>>>>> master
                   },
                   "typeName": {
                     "contractScope": null,
@@ -4574,11 +4489,7 @@
                     "src": "3191:18:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_GeneralInformation_$1225_storage_ptr",
-<<<<<<< HEAD
-                      "typeString": "struct AssetGeneralDefinition.GeneralInformation storage pointer"
-=======
                       "typeString": "struct AssetGeneralDefinition.GeneralInformation"
->>>>>>> master
                     }
                   },
                   "value": null,
@@ -5387,10 +5298,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": "@notice function to get the informations about the location of a struct\n @param _loc storage location of the locationInformations\n @return country, region, zip, city, street, houseNumber, gpsLatitude, gpsLongitude",
->>>>>>> master
             "id": 1439,
             "implemented": true,
             "isConstructor": false,
@@ -5413,11 +5321,7 @@
                   "storageLocation": "memory",
                   "typeDescriptions": {
                     "typeIdentifier": "t_struct$_Location_$7406_memory_ptr",
-<<<<<<< HEAD
-                    "typeString": "struct LocationDefinition.Location memory"
-=======
                     "typeString": "struct LocationDefinition.Location"
->>>>>>> master
                   },
                   "typeName": {
                     "contractScope": null,
@@ -5428,11 +5332,7 @@
                     "src": "4057:27:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Location_$7406_storage_ptr",
-<<<<<<< HEAD
-                      "typeString": "struct LocationDefinition.Location storage pointer"
-=======
                       "typeString": "struct LocationDefinition.Location"
->>>>>>> master
                     }
                   },
                   "value": null,
@@ -5672,17 +5572,9 @@
   },
   "compiler": {
     "name": "solc",
-<<<<<<< HEAD
-    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
-  },
-  "networks": {},
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-07-31T09:06:35.523Z"
-=======
     "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.2",
-  "updatedAt": "2019-05-25T11:56:04.174Z"
->>>>>>> master
+  "updatedAt": "2019-05-25T12:04:17.926Z"
 }

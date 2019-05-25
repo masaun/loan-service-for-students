@@ -64,16 +64,6 @@
       "type": "function"
     }
   ],
-<<<<<<< HEAD
-  "bytecode": "0x6060604052341561000f57600080fd5b60008054600160a060020a033316600160a060020a03199091161790556101e78061003b6000396000f3006060604052600436106100615763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630900f0108114610066578063445df0ac146100875780638da5cb5b146100ac578063fdacd576146100db575b600080fd5b341561007157600080fd5b610085600160a060020a03600435166100f1565b005b341561009257600080fd5b61009a610186565b60405190815260200160405180910390f35b34156100b757600080fd5b6100bf61018c565b604051600160a060020a03909116815260200160405180910390f35b34156100e657600080fd5b61008560043561019b565b6000805433600160a060020a03908116911614156101825781905080600160a060020a031663fdacd5766001546040517c010000000000000000000000000000000000000000000000000000000063ffffffff84160281526004810191909152602401600060405180830381600087803b151561016d57600080fd5b6102c65a03f1151561017e57600080fd5b5050505b5050565b60015481565b600054600160a060020a031681565b60005433600160a060020a03908116911614156101b85760018190555b505600a165627a7a723058200a7fa5a7de6db66990b9bf2d0d4ed57c708945ae094054b4977988fc1e1979ec0029",
-  "deployedBytecode": "0x6060604052600436106100615763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630900f0108114610066578063445df0ac146100875780638da5cb5b146100ac578063fdacd576146100db575b600080fd5b341561007157600080fd5b610085600160a060020a03600435166100f1565b005b341561009257600080fd5b61009a610186565b60405190815260200160405180910390f35b34156100b757600080fd5b6100bf61018c565b604051600160a060020a03909116815260200160405180910390f35b34156100e657600080fd5b61008560043561019b565b6000805433600160a060020a03908116911614156101825781905080600160a060020a031663fdacd5766001546040517c010000000000000000000000000000000000000000000000000000000063ffffffff84160281526004810191909152602401600060405180830381600087803b151561016d57600080fd5b6102c65a03f1151561017e57600080fd5b5050505b5050565b60015481565b600054600160a060020a031681565b60005433600160a060020a03908116911614156101b85760018190555b505600a165627a7a723058200a7fa5a7de6db66990b9bf2d0d4ed57c708945ae094054b4977988fc1e1979ec0029",
-  "sourceMap": "911:492:13:-;;;1063:58;;;;;;;;1098:5;:18;;-1:-1:-1;;;;;1106:10:13;1098:18;-1:-1:-1;;;;;;1098:18:13;;;;;;911:492;;;;;;",
-  "deployedSourceMap": "911:492:13:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1234:167;;;;;;;;;;-1:-1:-1;;;;;1234:167:13;;;;;;;959:36;;;;;;;;;;;;;;;;;;;;;;;;;;;935:20;;;;;;;;;;;;;;;-1:-1:-1;;;;;935:20:13;;;;;;;;;;;;;;1125:105;;;;;;;;;;;;;;1234:167;1298:19;1046:5;;1032:10;-1:-1:-1;;;;;1032:19:13;;;1046:5;;1032:19;1028:26;;;1331:11;1298:45;;1349:8;-1:-1:-1;;;;;1349:21:13;;1371:24;;1349:47;;;;;;;;;;;;;;;;;;-1:-1:-1;1349:47:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1028:26;1234:167;;:::o;959:36::-;;;;:::o;935:20::-;;;-1:-1:-1;;;;;935:20:13;;:::o;1125:105::-;1046:5;;1032:10;-1:-1:-1;;;;;1032:19:13;;;1046:5;;1032:19;1028:26;;;1189:24;:36;;;1028:26;1125:105;:::o",
-  "source": "// Copyright 2018 Energy Web Foundation\n// This file is part of the Origin Application brought to you by the Energy Web Foundation,\n// a global non-profit organization focused on accelerating blockchain technology across the energy sector, \n// incorporated in Zug, Switzerland.\n//\n// The Origin Application is free software: you can redistribute it and/or modify\n// it under the terms of the GNU General Public License as published by\n// the Free Software Foundation, either version 3 of the License, or\n// (at your option) any later version.\n// This is distributed in the hope that it will be useful,\n// but WITHOUT ANY WARRANTY and without an implied warranty of\n// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n// GNU General Public License for more details, at <http://www.gnu.org/licenses/>.\n//\n// @authors: slock.it GmbH, Martin Kuchler, martin.kuchler@slock.it\n\npragma solidity ^0.4.17;\n\ncontract Migrations {\n  address public owner;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    if (msg.sender == owner) _;\n  }\n\n  function Migrations() public {\n    owner = msg.sender;\n  }\n\n  function setCompleted(uint completed) external restricted {\n    last_completed_migration = completed;\n  }\n\n  function upgrade(address new_address) external restricted {\n    Migrations upgraded = Migrations(new_address);\n    upgraded.setCompleted(last_completed_migration);\n  }\n}\n",
-  "sourcePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Migrations.sol",
-  "ast": {
-    "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Migrations.sol",
-=======
   "bytecode": "0x608060405234801561001057600080fd5b5060008054600160a060020a0319163317905561023c806100326000396000f3006080604052600436106100615763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630900f0108114610066578063445df0ac146100965780638da5cb5b146100bd578063fdacd576146100fb575b600080fd5b34801561007257600080fd5b5061009473ffffffffffffffffffffffffffffffffffffffff60043516610113565b005b3480156100a257600080fd5b506100ab6101c5565b60408051918252519081900360200190f35b3480156100c957600080fd5b506100d26101cb565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561010757600080fd5b506100946004356101e7565b6000805473ffffffffffffffffffffffffffffffffffffffff163314156101c1578190508073ffffffffffffffffffffffffffffffffffffffff1663fdacd5766001546040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180828152602001915050600060405180830381600087803b1580156101a857600080fd5b505af11580156101bc573d6000803e3d6000fd5b505050505b5050565b60015481565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60005473ffffffffffffffffffffffffffffffffffffffff1633141561020d5760018190555b505600a165627a7a72305820387233dde44c4cb7ae37aef56f93e6e372d41b56b1372f52d585a1fc84e626c00029",
   "deployedBytecode": "0x6080604052600436106100615763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630900f0108114610066578063445df0ac146100965780638da5cb5b146100bd578063fdacd576146100fb575b600080fd5b34801561007257600080fd5b5061009473ffffffffffffffffffffffffffffffffffffffff60043516610113565b005b3480156100a257600080fd5b506100ab6101c5565b60408051918252519081900360200190f35b3480156100c957600080fd5b506100d26101cb565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561010757600080fd5b506100946004356101e7565b6000805473ffffffffffffffffffffffffffffffffffffffff163314156101c1578190508073ffffffffffffffffffffffffffffffffffffffff1663fdacd5766001546040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180828152602001915050600060405180830381600087803b1580156101a857600080fd5b505af11580156101bc573d6000803e3d6000fd5b505050505b5050565b60015481565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60005473ffffffffffffffffffffffffffffffffffffffff1633141561020d5760018190555b505600a165627a7a72305820387233dde44c4cb7ae37aef56f93e6e372d41b56b1372f52d585a1fc84e626c00029",
   "sourceMap": "911:492:13:-;;;1063:58;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1098:5:13;:18;;-1:-1:-1;;;;;;1098:18:13;1106:10;1098:18;;;911:492;;;;;;",
@@ -82,7 +72,6 @@
   "sourcePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Migrations.sol",
->>>>>>> master
     "exportedSymbols": {
       "Migrations": [
         7464
@@ -193,11 +182,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-<<<<<<< HEAD
-                        "referencedDeclaration": 8958,
-=======
                         "referencedDeclaration": 8961,
->>>>>>> master
                         "src": "1032:3:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -251,10 +236,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7422,
             "name": "restricted",
             "nodeType": "ModifierDefinition",
@@ -304,11 +286,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-<<<<<<< HEAD
-                        "referencedDeclaration": 8958,
-=======
                         "referencedDeclaration": 8961,
->>>>>>> master
                         "src": "1106:3:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -341,10 +319,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7431,
             "implemented": true,
             "isConstructor": true,
@@ -425,21 +400,14 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7443,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
-<<<<<<< HEAD
-                "arguments": [],
-=======
                 "arguments": null,
->>>>>>> master
                 "id": 7436,
                 "modifierName": {
                   "argumentTypes": null,
@@ -671,21 +639,14 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7463,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
-<<<<<<< HEAD
-                "arguments": [],
-=======
                 "arguments": null,
->>>>>>> master
                 "id": 7448,
                 "modifierName": {
                   "argumentTypes": null,
@@ -760,11 +721,7 @@
     "src": "885:519:13"
   },
   "legacyAST": {
-<<<<<<< HEAD
-    "absolutePath": "/Users/mkuechler/ewf/ewf-pushrepo/certificate_of_origin/contracts/Migrations.sol",
-=======
     "absolutePath": "/Users/unomasanori/projects/DEMO_MVP/Ethereum-Madrid-Hackathon/stor-madrid/contracts/Migrations.sol",
->>>>>>> master
     "exportedSymbols": {
       "Migrations": [
         7464
@@ -875,11 +832,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-<<<<<<< HEAD
-                        "referencedDeclaration": 8958,
-=======
                         "referencedDeclaration": 8961,
->>>>>>> master
                         "src": "1032:3:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -933,10 +886,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7422,
             "name": "restricted",
             "nodeType": "ModifierDefinition",
@@ -986,11 +936,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-<<<<<<< HEAD
-                        "referencedDeclaration": 8958,
-=======
                         "referencedDeclaration": 8961,
->>>>>>> master
                         "src": "1106:3:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1023,10 +969,7 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7431,
             "implemented": true,
             "isConstructor": true,
@@ -1107,21 +1050,14 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7443,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
-<<<<<<< HEAD
-                "arguments": [],
-=======
                 "arguments": null,
->>>>>>> master
                 "id": 7436,
                 "modifierName": {
                   "argumentTypes": null,
@@ -1353,21 +1289,14 @@
                 }
               ]
             },
-<<<<<<< HEAD
-=======
             "documentation": null,
->>>>>>> master
             "id": 7463,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
-<<<<<<< HEAD
-                "arguments": [],
-=======
                 "arguments": null,
->>>>>>> master
                 "id": 7448,
                 "modifierName": {
                   "argumentTypes": null,
@@ -1443,24 +1372,16 @@
   },
   "compiler": {
     "name": "solc",
-<<<<<<< HEAD
-    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
-  },
-  "networks": {},
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-07-31T09:06:35.574Z"
-=======
     "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
   },
   "networks": {
     "1558785329949": {
       "events": {},
       "links": {},
-      "address": "0x657c3fe1ae568887692a1bf4f67749462ebd1753",
-      "transactionHash": "0x32eb721ef8c1e8f8cd362302d9c1ec90fadb0be9a3e0751d57d2ec2f5addb2ce"
+      "address": "0xe237bcad23e6cd61064135a02c595657edd90fc0",
+      "transactionHash": "0xa28dd9e34274909717f31f3e7ecc0b3de17deafd331c07039cfeeb06e3f56236"
     }
   },
   "schemaVersion": "2.0.2",
-  "updatedAt": "2019-05-25T11:56:11.352Z"
->>>>>>> master
+  "updatedAt": "2019-05-25T12:04:23.205Z"
 }
