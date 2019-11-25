@@ -1,0 +1,5 @@
+{
+    "ropsten_mnemonics": "...",
+    "ropsten_provider": "https://ropsten.infura.io/v3/...",
+    "ropsten_ws_provider": "wss://ropsten.infura.io/ws/v3/..."
+}

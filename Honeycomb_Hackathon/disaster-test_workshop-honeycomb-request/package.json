@@ -1,0 +1,17 @@
+{
+  "name": "workshop-making-honeycomb-project",
+  "version": "1.0.0",
+  "description": "An example project used in the workshop, Making a Honeycomb Request",
+  "main": "index.js",
+  "scripts": {
+    "deploy-ropsten": "truffle migrate --network ropsten --reset",
+    "test-ropsten": "truffle exec test.js --network ropsten",
+    "test-ropsten-ws": "truffle exec test.js --network ropsten_ws"
+  },
+  "author": "CLCG",
+  "license": "ISC",
+  "dependencies": {
+    "chainlink": "^0.7.5",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
